@@ -730,6 +730,11 @@
             </div>
           </div>
 
+        </div>
+
+        <!-- Collapsible Stories 9–42 -->
+        <div id="happy-endings-more" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+
           <!-- 9: Brody -->
           <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col group">
             <div class="h-64 bg-slate-50 flex items-center justify-center p-3 overflow-hidden">
@@ -1173,6 +1178,17 @@
           </div>
 
         </div>
+
+        <!-- Expand / Collapse Toggle Button -->
+        <div class="mt-10 text-center">
+          <button id="toggle-happy-endings-btn" type="button" class="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full font-bold text-sm sm:text-base text-white bg-slate-900 hover:bg-dareTeal-600 transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 cursor-pointer">
+            <span id="toggle-happy-endings-text">🐾 View All 42 Success Stories (+34 More)</span>
+            <svg id="toggle-happy-endings-icon" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
+
       </div>
     </section>
 
@@ -2496,6 +2512,33 @@
 
       window.location.href = `mailto:dareanimalrescue@gmail.com?subject=${encodeURIComponent('New Adoption Application - D.A.R.E.')}&body=${encodeURIComponent(details)}`;
     }
+
+    // --- Happy Endings Expand/Collapse ---
+    (function() {
+      const toggleBtn = document.getElementById('toggle-happy-endings-btn');
+      const moreGallery = document.getElementById('happy-endings-more');
+      const toggleText = document.getElementById('toggle-happy-endings-text');
+      const toggleIcon = document.getElementById('toggle-happy-endings-icon');
+
+      if (toggleBtn && moreGallery && toggleText && toggleIcon) {
+        toggleBtn.addEventListener('click', function() {
+          const isExpanded = !moreGallery.classList.contains('hidden');
+          if (isExpanded) {
+            moreGallery.classList.add('hidden');
+            toggleText.textContent = '🐾 View All 42 Success Stories (+34 More)';
+            toggleIcon.style.transform = 'rotate(0deg)';
+            const section = document.getElementById('happy-endings-section');
+            if (section) {
+              section.scrollIntoView({ behavior: 'smooth' });
+            }
+          } else {
+            moreGallery.classList.remove('hidden');
+            toggleText.textContent = '🐾 Show Fewer Stories';
+            toggleIcon.style.transform = 'rotate(180deg)';
+          }
+        });
+      }
+    })();
 
   </script>
 
