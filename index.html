@@ -118,41 +118,37 @@
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-dareTeal-500 selection:text-white flex flex-col min-h-screen overflow-x-hidden">
 
   <!-- ================================================================= -->
-  <!-- TOP ANNOUNCEMENT & CONTACT BAR                                     -->
+  <!-- PERMANENT FIXED NAVIGATION (ACCESSIBLE FROM ANYWHERE ON PAGE)      -->
   <!-- ================================================================= -->
-  <div class="bg-neutral-950 text-slate-300 text-xs sm:text-sm py-2 px-4 border-b border-neutral-800">
-    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-      <div class="flex items-center gap-4 flex-wrap">
-        <span class="inline-flex items-center gap-1.5 font-medium text-dareTeal-400">
-          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-          </svg>
-          Official 501(c)(3) Nonprofit Animal Rescue • Licensed in GA & FL
-        </span>
-        <span class="hidden md:inline text-neutral-600">|</span>
-        <span class="hidden md:inline text-neutral-400">Serving Valdosta, Lowndes County & Surrounding Areas</span>
-      </div>
-      <div class="flex items-center gap-4 text-xs font-semibold">
-        <a href="tel:2292421361" class="hover:text-white flex items-center gap-1 transition-colors">
-          <svg class="w-3.5 h-3.5 text-dareTeal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-          </svg>
-          (229) 242-1361
-        </a>
-        <a href="mailto:dareanimalrescue@gmail.com" class="hover:text-white hidden sm:flex items-center gap-1 transition-colors">
-          <svg class="w-3.5 h-3.5 text-dareTeal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-          </svg>
-          dareanimalrescue@gmail.com
-        </a>
+  <header class="fixed top-0 inset-x-0 z-50 bg-black/95 backdrop-blur-md text-white shadow-xl border-b border-neutral-800">
+    
+    <!-- Top Announcement & Quick Contact Strip (Compact on Mobile, Full on Desktop) -->
+    <div class="bg-neutral-950 text-slate-300 text-xs py-1.5 px-4 border-b border-neutral-800/80 hidden sm:block">
+      <div class="max-w-7xl mx-auto flex justify-between items-center gap-2">
+        <div class="flex items-center gap-2">
+          <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="font-medium text-dareTeal-400">Official 501(c)(3) Nonprofit Animal Rescue</span>
+          <span class="text-neutral-600">|</span>
+          <span class="text-neutral-400">Valdosta &amp; Lowndes County, GA</span>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-semibold">
+          <a href="tel:2292421361" class="hover:text-dareTeal-400 flex items-center gap-1.5 transition-colors">
+            <svg class="w-3.5 h-3.5 text-dareTeal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            (229) 242-1361
+          </a>
+          <a href="mailto:dareanimalrescue@gmail.com" class="hover:text-dareTeal-400 hidden md:flex items-center gap-1.5 transition-colors">
+            <svg class="w-3.5 h-3.5 text-dareTeal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            dareanimalrescue@gmail.com
+          </a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- ================================================================= -->
-  <!-- MAIN STICKY NAVIGATION (MATCHING USER SCREENSHOTS)                -->
-  <!-- ================================================================= -->
-  <header class="sticky top-0 z-40 bg-black text-white shadow-lg border-b border-neutral-800">
+    <!-- Main Navigation Bar -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
 
@@ -165,17 +161,23 @@
           />
         </a>
 
-        <!-- Right side: Donate pill + Hamburger (always visible) -->
-        <div class="flex items-center gap-3 flex-shrink-0">
-          <a href="#donate-section" class="inline-flex items-center justify-center px-4 py-2 text-xs font-black uppercase tracking-wider bg-dareTeal-500 hover:bg-dareTeal-600 text-white rounded-full transition-colors shadow-sm whitespace-nowrap">
+        <!-- Right side: Phone icon (mobile) + Donate pill + Menu button (always visible) -->
+        <div class="flex items-center gap-2.5 sm:gap-3.5 flex-shrink-0">
+          <a href="tel:2292421361" class="sm:hidden p-2 text-neutral-300 hover:text-dareTeal-400 rounded-lg border border-neutral-800 bg-neutral-900/60 transition-colors" aria-label="Call DARE Rescue">
+            <svg class="w-5 h-5 text-dareTeal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+          </a>
+          <a href="#donate-section" class="inline-flex items-center justify-center px-4 py-2 text-xs font-black uppercase tracking-wider bg-dareTeal-500 hover:bg-dareTeal-600 text-white rounded-full transition-all shadow-sm hover:shadow-cyan-500/25 active:scale-95 whitespace-nowrap">
             Donate
           </a>
-          <button id="mobileMenuButton" type="button" class="p-2.5 text-white hover:text-dareTeal-400 focus:outline-none rounded-lg border border-neutral-800 transition-colors" aria-label="Open Navigation Menu" aria-expanded="false">
-            <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          <button id="mobileMenuButton" type="button" class="inline-flex items-center gap-2 px-3 py-2 text-white hover:text-dareTeal-400 focus:outline-none rounded-lg border border-neutral-800 hover:border-neutral-700 bg-neutral-900/80 transition-all cursor-pointer" aria-label="Open Navigation Menu" aria-expanded="false">
+            <span class="text-xs font-bold uppercase tracking-wider hidden sm:inline">Menu</span>
+            <svg id="hamburgerIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
-            <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            <svg id="closeIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
             </svg>
           </button>
         </div>
@@ -185,8 +187,7 @@
 
     <!-- =============================================================== -->
     <!-- MOBILE NAVIGATION DRAWER (MATCHING USER SCREENSHOTS 2, 3, & 4)  -->
-    <!-- =============================================================== -->
-    <div id="mobileMenu" class="hidden bg-neutral-950 border-t border-neutral-800 px-4 pt-3 pb-6 text-sm font-bold uppercase tracking-wider divide-y divide-neutral-800">
+    <div id="mobileMenu" class="hidden bg-neutral-950/98 backdrop-blur-xl border-t border-neutral-800 px-4 sm:px-8 pt-3 pb-8 text-sm font-bold uppercase tracking-wider divide-y divide-neutral-800 max-h-[calc(100vh-5.5rem)] overflow-y-auto shadow-2xl">
       
       <div class="py-2">
         <a href="#home" class="mobile-nav-link block py-2 text-white hover:text-dareTeal-400">HOME</a>
@@ -258,7 +259,7 @@
     </div>
   </header>
 
-  <main class="flex-grow">
+  <main class="flex-grow pt-20 sm:pt-28">
 
     <!-- =============================================================== -->
     <!-- HERO SECTION WITH THE 5 PILL QUICK-ACTION BUTTONS (IMAGE 1)     -->
@@ -431,7 +432,7 @@
     <!-- =============================================================== -->
     
     <!-- 1. HOW TO BECOME A FOSTER PARENT -->
-    <section id="foster-parent-section" class="py-16 sm:py-20 bg-slate-100 border-b border-slate-200 scroll-mt-20">
+    <section id="foster-parent-section" class="py-16 sm:py-20 bg-slate-100 border-b border-slate-200 scroll-mt-24 sm:scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
@@ -513,7 +514,7 @@
     </section>
 
     <!-- 2. HOW TO ADOPT (7 STAGES & $100 FEE) -->
-    <section id="how-to-adopt-section" class="py-16 sm:py-20 bg-white border-b border-slate-200 scroll-mt-20">
+    <section id="how-to-adopt-section" class="py-16 sm:py-20 bg-white border-b border-slate-200 scroll-mt-24 sm:scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-14">
@@ -613,7 +614,7 @@
     </section>
 
     <!-- 3. HAPPY ENDINGS GALLERY -->
-    <section id="happy-endings-section" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200 scroll-mt-20">
+    <section id="happy-endings-section" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200 scroll-mt-24 sm:scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-14">
@@ -1195,7 +1196,7 @@
     <!-- =============================================================== -->
     <!-- PETS FOR ADOPTION (PETFINDER INTEGRATION)                         -->
     <!-- =============================================================== -->
-    <section id="pets-section" class="py-16 sm:py-20 bg-slate-900 text-white scroll-mt-20">
+    <section id="pets-section" class="py-16 sm:py-20 bg-slate-900 text-white scroll-mt-24 sm:scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -1459,7 +1460,7 @@
     <!-- =============================================================== -->
     <!-- UPCOMING EVENTS SECTION                                         -->
     <!-- =============================================================== -->
-    <section id="events-section" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200 scroll-mt-20">
+    <section id="events-section" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200 scroll-mt-24 sm:scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-14">
@@ -1549,7 +1550,7 @@
     <!-- =============================================================== -->
     <!-- REHOMING YOUR PET (FULL COMPASSIONATE GUIDE)                     -->
     <!-- =============================================================== -->
-    <section id="rehoming-section" class="py-16 sm:py-20 bg-white border-b border-slate-200 scroll-mt-20">
+    <section id="rehoming-section" class="py-16 sm:py-20 bg-white border-b border-slate-200 scroll-mt-24 sm:scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-14">
@@ -1631,7 +1632,7 @@
     <!-- =============================================================== -->
     <!-- OPTIONS FOR FOUND ANIMALS (STEP-BY-STEP FOUND STRAY GUIDE)       -->
     <!-- =============================================================== -->
-    <section id="found-animals-section" class="py-16 sm:py-20 bg-slate-100 border-b border-slate-200 scroll-mt-20">
+    <section id="found-animals-section" class="py-16 sm:py-20 bg-slate-100 border-b border-slate-200 scroll-mt-24 sm:scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-14">
@@ -1700,7 +1701,7 @@
     <!-- =============================================================== -->
     <!-- DONATE SECTION (PAYPAL ONE-CLICK & MAILING ADDRESS)             -->
     <!-- =============================================================== -->
-    <section id="donate-section" class="py-16 sm:py-20 bg-white border-b border-slate-200 scroll-mt-20">
+    <section id="donate-section" class="py-16 sm:py-20 bg-white border-b border-slate-200 scroll-mt-24 sm:scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-14">
@@ -1805,7 +1806,7 @@
     <!-- =============================================================== -->
     <!-- CONTACT SECTION (FORM, PHONE, EMAIL, MAP)                       -->
     <!-- =============================================================== -->
-    <section id="contact-section" class="py-16 sm:py-20 bg-slate-100 scroll-mt-20">
+    <section id="contact-section" class="py-16 sm:py-20 bg-slate-100 scroll-mt-24 sm:scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-14">
