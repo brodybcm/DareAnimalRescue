@@ -247,6 +247,17 @@
         <a href="#found-animals-section" class="mobile-nav-link block py-2 text-white hover:text-dareTeal-400">OPTIONS FOR FOUND ANIMALS</a>
       </div>
 
+      <!-- Mobile Facebook Link -->
+      <div class="py-2">
+        <a href="https://www.facebook.com/daretosavealife/" target="_blank" rel="noopener noreferrer" class="fb-deep-link flex items-center justify-between py-2 text-blue-400 hover:text-blue-300 font-bold">
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            FOLLOW ON FACEBOOK
+          </span>
+          <span class="text-xs text-neutral-400">@daretosavealife ↗</span>
+        </a>
+      </div>
+
       <div class="pt-4 flex gap-2">
         <button onclick="openModal('fosterModal')" class="flex-1 py-3 text-center rounded-xl bg-dareTeal-500 text-white font-bold text-xs uppercase tracking-wider">
           Foster Application
@@ -1536,7 +1547,7 @@
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-slate-100">
-              <a href="https://www.facebook.com/daretosavealife" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-dareTeal-600 hover:text-dareTeal-700 flex items-center gap-1">
+              <a href="https://www.facebook.com/daretosavealife/" target="_blank" rel="noopener noreferrer" class="fb-deep-link text-xs font-bold text-dareTeal-600 hover:text-dareTeal-700 flex items-center gap-1">
                 Follow on Facebook for dates &rarr;
               </a>
             </div>
@@ -1881,7 +1892,8 @@
                 <h5 class="font-bold text-sm">Follow on Facebook</h5>
                 <p class="text-xs text-slate-400">Updates, rescues, and adoption events</p>
               </div>
-              <a href="https://www.facebook.com/daretosavealife" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider rounded-full transition-colors">
+              <a href="https://www.facebook.com/daretosavealife/" target="_blank" rel="noopener noreferrer" class="fb-deep-link px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider rounded-full transition-colors flex items-center gap-1.5 shadow-sm">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                 Visit Page
               </a>
             </div>
@@ -1963,6 +1975,10 @@
           <p class="text-slate-400 leading-relaxed">
             Defending, Advocating, Rescuing, and Educating. A registered 501(c)(3) nonprofit animal rescue licensed in Georgia and Florida.
           </p>
+          <a href="https://www.facebook.com/daretosavealife/" target="_blank" rel="noopener noreferrer" class="fb-deep-link inline-flex items-center gap-2 mt-4 px-3.5 py-1.5 rounded-full bg-blue-600/20 text-blue-400 hover:bg-blue-600/30 text-xs font-semibold border border-blue-500/30 transition-colors">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Follow @daretosavealife
+          </a>
         </div>
 
         <!-- Quick Links -->
@@ -2539,6 +2555,32 @@
           }
         });
       }
+    })();
+
+    // --- Smart Facebook Deep Linking (Direct App Open + Mobile Web Fallback) ---
+    (function() {
+      const fbPageId = '100064403212553';
+      const fbMobileUrl = 'https://www.facebook.com/profile.php?id=' + fbPageId;
+
+      document.querySelectorAll('.fb-deep-link').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+          if (isMobile) {
+            e.preventDefault();
+            // Direct native Facebook app protocol using exact Page ID
+            const appUrl = 'fb://profile/' + fbPageId;
+            const clickedTime = Date.now();
+            window.location.href = appUrl;
+
+            // Fallback: If app is not installed or didn't open within 500ms, load mobile web profile
+            setTimeout(function() {
+              if (Date.now() - clickedTime < 1500) {
+                window.location.href = fbMobileUrl;
+              }
+            }, 500);
+          }
+        });
+      });
     })();
 
   </script>
