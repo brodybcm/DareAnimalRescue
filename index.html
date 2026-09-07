@@ -1994,34 +1994,38 @@
       window.location.href = `mailto:dareanimalrescue@gmail.com?subject=${encodeURIComponent('New Adoption Application - D.A.R.E.')}&body=${encodeURIComponent(details)}`;
     }
 
-    // --- Scroll To Top Button ---
-    (function () {
-      const btn = document.getElementById('scrollTopBtn');
-      window.addEventListener('scroll', function () {
-        if (window.scrollY > 300) {
-          btn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
-          btn.classList.add('opacity-100', 'translate-y-0');
-        } else {
-          btn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
-          btn.classList.remove('opacity-100', 'translate-y-0');
-        }
-      }, { passive: true });
-    })();
-
   </script>
-  <!-- ================================================================= -->
-  <!-- SCROLL TO TOP BUTTON                                              -->
-  <!-- ================================================================= -->
+
+  <!-- Scroll To Top Button -->
   <button
     id="scrollTopBtn"
     onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
     aria-label="Scroll to top"
-    class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none translate-y-4"
+    style="opacity:0; pointer-events:none; transform:translateY(16px); transition: opacity 0.3s ease, transform 0.3s ease;"
+    class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 active:scale-95 text-white shadow-xl flex items-center justify-center"
   >
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/>
     </svg>
   </button>
+
+  <script>
+    // Scroll-to-top: runs after button is in DOM
+    (function () {
+      var btn = document.getElementById('scrollTopBtn');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+          btn.style.opacity = '1';
+          btn.style.pointerEvents = 'auto';
+          btn.style.transform = 'translateY(0)';
+        } else {
+          btn.style.opacity = '0';
+          btn.style.pointerEvents = 'none';
+          btn.style.transform = 'translateY(16px)';
+        }
+      }, { passive: true });
+    })();
+  </script>
 
 </body>
 </html>
