@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -115,7 +115,7 @@
     }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-dareTeal-500 selection:text-white flex flex-col min-h-screen">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-dareTeal-500 selection:text-white flex flex-col min-h-screen overflow-x-hidden">
 
   <!-- ================================================================= -->
   <!-- TOP ANNOUNCEMENT & CONTACT BAR                                     -->
@@ -154,113 +154,33 @@
   <!-- ================================================================= -->
   <header class="sticky top-0 z-40 bg-black text-white shadow-lg border-b border-neutral-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        
-        <!-- Brand Logo & Acronym -->
-        <a href="#home" class="flex items-center gap-3 group">
-          <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-dareTeal-600 to-dareTeal-400 flex items-center justify-center font-black text-white text-xl tracking-wider shadow-md group-hover:scale-105 transition-transform">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Brand Logo — compact single-row -->
+        <a href="#home" class="flex items-center gap-2.5 group min-w-0">
+          <div class="w-10 h-10 flex-shrink-0 rounded-full bg-gradient-to-tr from-dareTeal-600 to-dareTeal-400 flex items-center justify-center font-black text-white text-lg shadow-md group-hover:scale-105 transition-transform">
             🐾
           </div>
-          <div>
-            <div class="text-xl sm:text-2xl font-black tracking-tight flex items-center gap-1.5">
-              <span>D.A.R.E.</span>
-              <span class="text-dareTeal-400 font-bold">ANIMAL RESCUE</span>
+          <div class="leading-tight min-w-0">
+            <div class="text-base sm:text-lg font-black tracking-tight whitespace-nowrap">
+              D.A.R.E. <span class="text-dareTeal-400">ANIMAL RESCUE</span>
             </div>
-            <div class="text-[10px] sm:text-xs text-neutral-400 font-medium tracking-wide uppercase">
-              Defending • Advocating • Rescuing • Educating
+            <div class="text-[9px] text-neutral-500 font-medium tracking-widest uppercase hidden sm:block">
+              Defending · Advocating · Rescuing · Educating
             </div>
           </div>
         </a>
 
-        <!-- Desktop Navigation Links (Directly matching user screenshots) -->
-        <nav class="hidden xl:flex items-center space-x-1 lg:space-x-2 text-[13px] font-bold tracking-wide uppercase">
-          
-          <a href="#home" class="px-3 py-2 text-white hover:text-dareTeal-400 transition-colors rounded">
-            HOME
-          </a>
-
-          <!-- FOSTER/ADOPTION PROCESS DROPDOWN -->
-          <div class="relative group">
-            <button type="button" class="px-3 py-2 text-white hover:text-dareTeal-400 flex items-center gap-1 focus:outline-none transition-colors rounded">
-              <span>FOSTER/ADOPTION PROCESS</span>
-              <svg class="w-3.5 h-3.5 text-neutral-400 group-hover:text-dareTeal-400 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <!-- Dropdown Menu -->
-            <div class="absolute left-0 mt-0 w-64 bg-neutral-900 border border-neutral-800 rounded-lg shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 transform group-hover:translate-y-0 translate-y-1">
-              <a href="#foster-parent-section" class="block px-4 py-2.5 text-xs text-neutral-200 hover:bg-neutral-800 hover:text-dareTeal-400 font-semibold tracking-wide transition-colors">
-                HOW TO BECOME A FOSTER PARENT
-              </a>
-              <a href="#how-to-adopt-section" class="block px-4 py-2.5 text-xs text-neutral-200 hover:bg-neutral-800 hover:text-dareTeal-400 font-semibold tracking-wide transition-colors">
-                HOW TO ADOPT
-              </a>
-              <a href="#happy-endings-section" class="block px-4 py-2.5 text-xs text-neutral-200 hover:bg-neutral-800 hover:text-dareTeal-400 font-semibold tracking-wide transition-colors">
-                HAPPY ENDINGS
-              </a>
-            </div>
-          </div>
-
-          <a href="#pets-section" class="px-3 py-2 text-white hover:text-dareTeal-400 transition-colors rounded">
-            PETS FOR ADOPTION
-          </a>
-
-          <!-- VOLUNTEERING/PROGRAMS DROPDOWN -->
-          <div class="relative group">
-            <button type="button" class="px-3 py-2 text-white hover:text-dareTeal-400 flex items-center gap-1 focus:outline-none transition-colors rounded">
-              <span>VOLUNTEERING/PROGRAMS</span>
-              <svg class="w-3.5 h-3.5 text-neutral-400 group-hover:text-dareTeal-400 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <!-- Dropdown Menu -->
-            <div class="absolute left-0 mt-0 w-60 bg-neutral-900 border border-neutral-800 rounded-lg shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 transform group-hover:translate-y-0 translate-y-1">
-              <a href="#volunteer-section" class="block px-4 py-2.5 text-xs text-neutral-200 hover:bg-neutral-800 hover:text-dareTeal-400 font-semibold tracking-wide transition-colors">
-                HOW TO VOLUNTEER
-              </a>
-              <a href="#outreach-section" class="block px-4 py-2.5 text-xs text-neutral-200 hover:bg-neutral-800 hover:text-dareTeal-400 font-semibold tracking-wide transition-colors">
-                COMMUNITY OUTREACH
-              </a>
-              <a href="#tnr-section" class="block px-4 py-2.5 text-xs text-neutral-200 hover:bg-neutral-800 hover:text-dareTeal-400 font-semibold tracking-wide transition-colors">
-                TNR
-              </a>
-            </div>
-          </div>
-
-          <a href="#events-section" class="px-3 py-2 text-white hover:text-dareTeal-400 transition-colors rounded">
-            UPCOMING EVENTS
-          </a>
-
-          <a href="#donate-section" class="px-3 py-2 text-white hover:text-dareTeal-400 transition-colors rounded">
-            DONATE
-          </a>
-
-          <a href="#contact-section" class="px-3 py-2 text-white hover:text-dareTeal-400 transition-colors rounded">
-            CONTACT
-          </a>
-
-          <a href="#rehoming-section" class="px-3 py-2 text-white hover:text-dareTeal-400 transition-colors rounded whitespace-nowrap">
-            REHOMING YOUR PET
-          </a>
-
-          <a href="#found-animals-section" class="px-3 py-2 text-white hover:text-dareTeal-400 transition-colors rounded whitespace-nowrap">
-            OPTIONS FOR FOUND ANIMALS
-          </a>
-
-        </nav>
-
-        <!-- Right Quick Action / Mobile Hamburger Toggle -->
-        <div class="flex items-center gap-3">
-          <a href="#donate-section" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-black uppercase tracking-wider bg-dareTeal-500 hover:bg-dareTeal-600 text-white rounded-full transition-colors shadow-sm">
+        <!-- Right side: Donate pill + Hamburger (always visible) -->
+        <div class="flex items-center gap-3 flex-shrink-0">
+          <a href="#donate-section" class="inline-flex items-center justify-center px-4 py-2 text-xs font-black uppercase tracking-wider bg-dareTeal-500 hover:bg-dareTeal-600 text-white rounded-full transition-colors shadow-sm whitespace-nowrap">
             Donate
           </a>
-
-          <!-- Mobile Hamburger Button -->
-          <button id="mobileMenuButton" type="button" class="xl:hidden p-2.5 text-white hover:text-dareTeal-400 focus:outline-none rounded-lg border border-neutral-800" aria-label="Open Navigation Menu">
-            <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button id="mobileMenuButton" type="button" class="p-2.5 text-white hover:text-dareTeal-400 focus:outline-none rounded-lg border border-neutral-800 transition-colors" aria-label="Open Navigation Menu" aria-expanded="false">
+            <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
-            <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
           </button>
@@ -272,7 +192,7 @@
     <!-- =============================================================== -->
     <!-- MOBILE NAVIGATION DRAWER (MATCHING USER SCREENSHOTS 2, 3, & 4)  -->
     <!-- =============================================================== -->
-    <div id="mobileMenu" class="hidden xl:hidden bg-neutral-950 border-t border-neutral-800 px-4 pt-3 pb-6 text-sm font-bold uppercase tracking-wider divide-y divide-neutral-800">
+    <div id="mobileMenu" class="hidden bg-neutral-950 border-t border-neutral-800 px-4 pt-3 pb-6 text-sm font-bold uppercase tracking-wider divide-y divide-neutral-800">
       
       <div class="py-2">
         <a href="#home" class="mobile-nav-link block py-2 text-white hover:text-dareTeal-400">HOME</a>
