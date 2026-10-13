@@ -323,20 +323,39 @@
         </div>
 
         <!-- ============================================================= -->
-        <!-- ADOPTION PROCESS CARD (UNDER AVAILABLE PETS, ABOVE ANNOUNCEMENT) -->
+        <!-- ADOPTION PROCESS & ELIGIBILITY REQUIREMENTS CARDS             -->
         <!-- ============================================================= -->
-        <div id="adoption-process" class="max-w-4xl mx-auto mb-10 scroll-mt-24 sm:scroll-mt-32 text-center">
-          <div class="max-w-md mx-auto">
-            <button type="button" onclick="openModal('adoptionProcessModal')" class="w-full group rounded-3xl overflow-hidden bg-white hover:bg-teal-50/60 border-2 border-slate-200 hover:border-dareTeal-500 shadow-sm hover:shadow-lg transition-all text-center flex flex-col cursor-pointer">
-              <div class="relative h-56 sm:h-60 w-full overflow-hidden bg-slate-200">
-                <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=700&q=80" alt="Dog and cat together - Adoption Process" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-              </div>
-              <div class="p-5 flex flex-col items-center justify-center gap-3 w-full">
-                <span class="px-6 py-3 rounded-full bg-dareTeal-500 group-hover:bg-dareTeal-600 text-white font-black text-sm uppercase tracking-wider shadow-sm transition-colors w-full sm:w-auto">
-                  Adoption Process
-                </span>
-              </div>
-            </button>
+        <div class="max-w-4xl mx-auto mb-10 text-center">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+
+            <!-- Adoption Process Card -->
+            <div id="adoption-process" class="scroll-mt-24 sm:scroll-mt-32">
+              <button type="button" onclick="openModal('adoptionProcessModal')" class="w-full h-full group rounded-3xl overflow-hidden bg-white hover:bg-teal-50/60 border-2 border-slate-200 hover:border-dareTeal-500 shadow-sm hover:shadow-lg transition-all text-center flex flex-col cursor-pointer">
+                <div class="relative h-56 sm:h-60 w-full overflow-hidden bg-slate-200">
+                  <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=700&q=80" alt="Dog and cat together - Adoption Process" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="p-5 flex-1 flex flex-col items-center justify-center gap-3 w-full">
+                  <span class="px-6 py-3 rounded-full bg-dareTeal-500 group-hover:bg-dareTeal-600 text-white font-black text-sm uppercase tracking-wider shadow-sm transition-colors w-full sm:w-auto">
+                    Adoption Process
+                  </span>
+                </div>
+              </button>
+            </div>
+
+            <!-- Adoption Eligibility Requirements Card -->
+            <div id="adoption-requirements" class="scroll-mt-24 sm:scroll-mt-32">
+              <button type="button" onclick="openModal('adoptionRequirementsModal')" class="w-full h-full group rounded-3xl overflow-hidden bg-white hover:bg-teal-50/60 border-2 border-slate-200 hover:border-dareTeal-500 shadow-sm hover:shadow-lg transition-all text-center flex flex-col cursor-pointer">
+                <div class="relative h-56 sm:h-60 w-full overflow-hidden bg-slate-200">
+                  <img src="two-dogs-two-cats.jpg" alt="Two dogs and two cats together - Adoption Eligibility Requirements" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="p-5 flex-1 flex flex-col items-center justify-center gap-3 w-full">
+                  <span class="px-6 py-3 rounded-full bg-dareTeal-500 group-hover:bg-dareTeal-600 text-white font-black text-sm uppercase tracking-wider shadow-sm transition-colors w-full sm:w-auto">
+                    Adoption Eligibility Requirements
+                  </span>
+                </div>
+              </button>
+            </div>
+
           </div>
         </div>
 
@@ -405,241 +424,6 @@
               <span>🚨</span> Animal Cruelty &amp; Neglect
             </button>
           </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- =============================================================== -->
-    <!-- 3. ADOPTION ELIGIBILITY REQUIREMENTS (PAGES 6–10 VERBATIM)      -->
-    <!-- =============================================================== -->
-    <section id="adoption-requirements" class="py-16 sm:py-20 bg-white border-b border-slate-200 scroll-mt-24 sm:scroll-mt-32">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <span class="inline-block text-xs font-bold uppercase tracking-wider text-dareTeal-700 bg-teal-100/70 px-3 py-1 rounded-full mb-2">
-            Prerequisites &amp; Policies
-          </span>
-          <h3 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-            Adoption Eligibility Requirements
-          </h3>
-          <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
-            To ensure every pet is placed into a safe, lifelong living situation, all applicants must meet our verified eligibility standards:
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-          <!-- 1. Age Guidelines (Page 6) -->
-          <div class="bg-slate-50 rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2.5 mb-4">
-                <div class="w-10 h-10 rounded-2xl bg-teal-100 text-dareTeal-800 flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  🎂
-                </div>
-                <div>
-                  <h4 class="font-bold text-slate-900 text-base">1. Age Guidelines</h4>
-                  <span class="text-[11px] text-slate-500 font-semibold">Adopter, Children &amp; Senior Matching</span>
-                </div>
-              </div>
-              <ul class="space-y-2 text-xs text-slate-600 leading-relaxed mb-4">
-                <li>• <strong class="text-slate-800">All Adopters:</strong> Must be at least <strong>25 years or older</strong> at the time application is submitted. Valid government-issued ID (driver's license or passport) required verifying age and current address.</li>
-                <li>• <strong class="text-slate-800">"6 Under 6" Rule:</strong> Puppies under 6 months old matched with youngest child 6 years of age or older.</li>
-                <li>• <strong class="text-slate-800">Toy &amp; Small Breeds:</strong> Small puppies (under 30 lbs full grown) and toy adults (under 15 lbs) matched with children 8+ years old.</li>
-                <li>• <strong class="text-slate-800">Cats &amp; Kittens:</strong> Matched with families whose youngest child is 6+ years old.</li>
-                <li>• <strong class="text-slate-800">Senior Adopters:</strong> The goal is to match senior adopters to senior pets. No kittens or puppies will be adopted to elderly adopters.</li>
-              </ul>
-            </div>
-            <div class="mt-2 p-3 rounded-xl bg-teal-50 border border-teal-200/80 text-dareTeal-800 text-[11px] font-bold text-center">
-              "We do Age-Appropriate Matching between pets &amp; people"
-            </div>
-          </div>
-
-          <!-- 2. Vet Checks (Page 7) -->
-          <div class="bg-slate-50 rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2.5 mb-4">
-                <div class="w-10 h-10 rounded-2xl bg-teal-100 text-dareTeal-800 flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  🩺
-                </div>
-                <div>
-                  <h4 class="font-bold text-slate-900 text-base">2. Vet Checks</h4>
-                  <span class="text-[11px] text-slate-500 font-semibold">15-Year Pet Care History</span>
-                </div>
-              </div>
-              <p class="text-xs text-slate-700 leading-relaxed mb-3">
-                Vet checks will be done for current &amp; past pets (within the past 15 years):
-              </p>
-              <ul class="space-y-2 text-xs text-slate-600 leading-relaxed">
-                <li>• <strong class="text-slate-800">Spay / Neuter:</strong> All current and past pets must be altered.</li>
-                <li>• <strong class="text-slate-800">Core Vaccines:</strong> Verified up to date with your veterinary clinic.</li>
-                <li>• <strong class="text-slate-800">Heartworm:</strong> Continuous heartworm prevention verified directly through clinic medical purchase records.</li>
-              </ul>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-dareTeal-700 font-bold">
-              ✓ Continuous heartworm prevention required
-            </div>
-          </div>
-
-          <!-- 3. Housing and Living Environment (Page 7) -->
-          <div class="bg-slate-50 rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2.5 mb-4">
-                <div class="w-10 h-10 rounded-2xl bg-teal-100 text-dareTeal-800 flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  🏡
-                </div>
-                <div>
-                  <h4 class="font-bold text-slate-900 text-base">3. Housing &amp; Environment</h4>
-                  <span class="text-[11px] text-slate-500 font-semibold">Ownership &amp; Landlord Checks</span>
-                </div>
-              </div>
-              <ul class="space-y-2.5 text-xs text-slate-600 leading-relaxed">
-                <li>• <strong class="text-slate-800">Homeowners:</strong> If you own your own home, home ownership verification will be required, such as property records or tax notice.</li>
-                <li>• <strong class="text-slate-800">Renters:</strong> If you rent, a landlord verification will be done to determine if pets are allowed, if there are breed restrictions, and if there is a pet deposit &amp; if it has been paid.</li>
-              </ul>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-dareTeal-700 font-bold">
-              ✓ Verified via property tax / landlord contact
-            </div>
-          </div>
-
-          <!-- 4. Fencing & Indoor Living (Page 7) -->
-          <div class="bg-slate-50 rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2.5 mb-4">
-                <div class="w-10 h-10 rounded-2xl bg-teal-100 text-dareTeal-800 flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  🛡️
-                </div>
-                <div>
-                  <h4 class="font-bold text-slate-900 text-base">4. Fencing &amp; Indoor Living</h4>
-                  <span class="text-[11px] text-slate-500 font-semibold">Family Companion Standard</span>
-                </div>
-              </div>
-              <p class="text-xs text-slate-600 leading-relaxed mb-3">
-                We believe that all pets are a part of the family. For the safety of our pets, we require that all cats be kept indoors. We also require that dogs be kept indoors except for plenty of outside time for potty, play &amp; exercise.
-              </p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                We do require fencing for most dogs as a safety precaution when they are outside unattended, especially for high energy &amp; working &amp; flight-risk breeds. Occasionally we make exceptions.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-dareTeal-700 font-bold">
-              ✓ Strictly no outdoor chaining or unattended free roaming
-            </div>
-          </div>
-
-          <!-- 5. 1st Time Pet Owners (Page 8) -->
-          <div class="bg-slate-50 rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2.5 mb-4">
-                <div class="w-10 h-10 rounded-2xl bg-teal-100 text-dareTeal-800 flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  🐾
-                </div>
-                <div>
-                  <h4 class="font-bold text-slate-900 text-base">5. 1st Time Pet Owners</h4>
-                  <span class="text-[11px] text-slate-500 font-semibold">Case-by-Case Matching</span>
-                </div>
-              </div>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                We welcome first-time owners! However, some pets are not suitable for 1st time pet owners due to specific training, medical, or behavioral requirements. This will be determined on a case by case basis to ensure the best outcome for both pet and owner.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-dareTeal-700 font-bold">
-              ✓ Evaluated on an individual pet basis
-            </div>
-          </div>
-
-          <!-- 6. Stable Income Source (Page 8) -->
-          <div class="bg-slate-50 rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2.5 mb-4">
-                <div class="w-10 h-10 rounded-2xl bg-teal-100 text-dareTeal-800 flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  💼
-                </div>
-                <div>
-                  <h4 class="font-bold text-slate-900 text-base">6. Stable Income Source</h4>
-                  <span class="text-[11px] text-slate-500 font-semibold">Financial Capability</span>
-                </div>
-              </div>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                We must verify if an applicant has steady income &amp; is financially capable of caring for a pet. The application will ask for employer's name &amp; contact information.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-dareTeal-700 font-bold">
-              ✓ Employer name &amp; contact info requested
-            </div>
-          </div>
-
-          <!-- 7. Time Commitment (Page 8) -->
-          <div class="bg-slate-50 rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2.5 mb-4">
-                <div class="w-10 h-10 rounded-2xl bg-teal-100 text-dareTeal-800 flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  ⏰
-                </div>
-                <div>
-                  <h4 class="font-bold text-slate-900 text-base">7. Time Commitment</h4>
-                  <span class="text-[11px] text-slate-500 font-semibold">Daily Quality Attention</span>
-                </div>
-              </div>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                We all live busy lives, but it is so important that we make our pets a top priority. Questions will be asked on the application to ensure you have quality time available to spend w/ your pet Every day.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-dareTeal-700 font-bold">
-              ✓ Daily exercise, enrichment &amp; bonding time
-            </div>
-          </div>
-
-          <!-- 8. Sole Adult Household Occupant / Secondary Caregiver (Page 9) -->
-          <div class="bg-slate-50 rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm md:col-span-2 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2.5 mb-4">
-                <div class="w-10 h-10 rounded-2xl bg-teal-100 text-dareTeal-800 flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  🤝
-                </div>
-                <div>
-                  <h4 class="font-bold text-slate-900 text-base">8. Sole Adult Household Occupant or Single Adopter</h4>
-                  <span class="text-[11px] text-slate-500 font-semibold">Contingency Care &amp; Relocation Policy</span>
-                </div>
-              </div>
-              <div class="space-y-2.5 text-xs text-slate-600 leading-relaxed">
-                <p>
-                  Because our rescue is committed to the lifelong well-being of our animals, we require all applicants who live independently, travel frequently, or have occupations subject to sudden relocation (such as corporate travel, travel nursing, or military service) to designate a local, permanent <strong>Secondary Caregiver</strong>.
-                </p>
-                <p>
-                  The Secondary Caregiver must also go thru the screening process, including a home visit (if applicable), vet check, &amp; landlord check (if applicable) and sign a <strong>Secondary Caregiver Agreement</strong>.
-                </p>
-                <p>
-                  In the event that the adopter is deployed, stationed overseas where pets are restricted, or have to endure extended quarantines, or the adopter is permanently unable to care for the pet due to employment relocation, the designated Secondary Caregiver agrees to immediately assume full physical &amp; financial responsibility for the pet.
-                </p>
-              </div>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-dareTeal-700 font-bold">
-              ✓ Guaranteed lifelong safety through designated secondary caregiver
-            </div>
-          </div>
-
-          <!-- 9. Military Personnel (Page 10) -->
-          <div class="bg-slate-50 rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2.5 mb-4">
-                <div class="w-10 h-10 rounded-2xl bg-teal-100 text-dareTeal-800 flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  🎖️
-                </div>
-                <div>
-                  <h4 class="font-bold text-slate-900 text-base">Military Personnel</h4>
-                  <span class="text-[11px] text-dareTeal-700 font-bold">Moody AFB &amp; Beyond</span>
-                </div>
-              </div>
-              <p class="text-xs text-slate-600 leading-relaxed mb-3">
-                We love our military &amp; thank you for your service! Military applicants follow our designated Secondary Caregiver policy above to ensure full contingency coverage and lifelong stability for the pet during any deployments or relocation.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-slate-500 font-semibold">
-              ✓ Secondary Caregiver designation ensures complete readiness
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -2900,6 +2684,223 @@
   </div>
 
   <!-- ================================================================= -->
+  <!-- MODAL: ADOPTION ELIGIBILITY REQUIREMENTS                          -->
+  <!-- ================================================================= -->
+  <div id="adoptionRequirementsModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="relative w-full max-w-4xl rounded-3xl bg-white p-6 sm:p-8 shadow-2xl border border-slate-200 my-8 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-start justify-between gap-4 border-b border-slate-200 pb-4 mb-6 sticky top-0 bg-white z-10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-dareTeal-700">Before You Apply</span>
+          <h3 class="text-2xl font-black text-slate-900 mt-1">Adoption Eligibility Requirements</h3>
+          <p class="text-xs text-slate-600 mt-1">Our goal is a permanent, loving match. Please review our 9 adoption requirements before submitting an application.</p>
+        </div>
+        <button onclick="closeModal('adoptionRequirementsModal')" class="p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors" aria-label="Close Modal">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- 9 Requirements Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+
+        <!-- 1. Age Guidelines -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-9 h-9 rounded-xl bg-dareTeal-500 text-white text-sm font-black flex items-center justify-center shrink-0">1</span>
+              <div>
+                <h4 class="text-sm font-black text-slate-900 uppercase tracking-wider">Age Guidelines</h4>
+                <span class="text-[11px] font-semibold text-dareTeal-700">Adopter, Children &amp; Senior Matching</span>
+              </div>
+            </div>
+            <ul class="space-y-1.5 text-xs text-slate-600 leading-relaxed">
+              <li>• <strong>Primary Adopter:</strong> Must be at least <strong>25 years old</strong> (exceptions considered case-by-case for well-qualified applicants 21+).</li>
+              <li>• <strong>"6 Under 6" Rule:</strong> We do not place puppies under 6 months old or dogs under 6 lbs into homes with children under 6 years old.</li>
+              <li>• <strong>Toy &amp; Small Breeds:</strong> Chihuahuas, Yorkies, Shih Tzus, Dachshunds, etc. require children in the home to be <strong>8–10+ years old</strong> depending on the dog.</li>
+              <li>• <strong>Cats &amp; Kittens:</strong> Children in the home must be <strong>6+ years old</strong> for kittens; adult cats are matched by temperament.</li>
+              <li>• <strong>Senior Adopters:</strong> We pair senior adopters with calm, mature adult or senior companions rather than young puppies/kittens.</li>
+            </ul>
+          </div>
+          <div class="mt-3 pt-2.5 border-t border-slate-200/80">
+            <span class="text-[11px] font-bold text-dareTeal-700">"We do Age-Appropriate Matching between pets &amp; people"</span>
+          </div>
+        </div>
+
+        <!-- 2. Vet Checks -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-9 h-9 rounded-xl bg-dareTeal-500 text-white text-sm font-black flex items-center justify-center shrink-0">2</span>
+              <div>
+                <h4 class="text-sm font-black text-slate-900 uppercase tracking-wider">Vet Checks</h4>
+                <span class="text-[11px] font-semibold text-dareTeal-700">15-Year Pet Care History</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-2">
+              We verify veterinary history going back <strong>15 years</strong> for all current and past pets to confirm consistent standard of care:
+            </p>
+            <ul class="space-y-1.5 text-xs text-slate-600 leading-relaxed">
+              <li>• <strong>Spay / Neuter:</strong> All current/past pets must be spayed or neutered (unless medically exempt by a veterinarian).</li>
+              <li>• <strong>Core Vaccines:</strong> Current on Rabies and annual DHPP / FVRCP boosters.</li>
+              <li>• <strong>Continuous Heartworm Prevention:</strong> Year-round prescription heartworm prevention history is mandatory for all dogs in the Deep South.</li>
+            </ul>
+          </div>
+          <div class="mt-3 pt-2.5 border-t border-slate-200/80">
+            <span class="text-[11px] font-bold text-dareTeal-700">Call your vet ahead to authorize release of records to D.A.R.E.</span>
+          </div>
+        </div>
+
+        <!-- 3. Housing & Environment -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-9 h-9 rounded-xl bg-dareTeal-500 text-white text-sm font-black flex items-center justify-center shrink-0">3</span>
+              <div>
+                <h4 class="text-sm font-black text-slate-900 uppercase tracking-wider">Housing &amp; Environment</h4>
+                <span class="text-[11px] font-semibold text-dareTeal-700">Ownership &amp; Landlord Checks</span>
+              </div>
+            </div>
+            <ul class="space-y-1.5 text-xs text-slate-600 leading-relaxed">
+              <li>• <strong>Homeowners:</strong> Ownership is verified via county property/tax records.</li>
+              <li>• <strong>Renters:</strong> Written or direct verbal landlord verification is required confirming pet permission, breed/weight limits, and pet deposit compliance.</li>
+              <li>• <strong>Safe Living Space:</strong> A home visit (in-person or virtual video walkthrough) is required prior to placement.</li>
+            </ul>
+          </div>
+          <div class="mt-3 pt-2.5 border-t border-slate-200/80">
+            <span class="text-[11px] font-bold text-dareTeal-700">Stable, pet-approved housing required</span>
+          </div>
+        </div>
+
+        <!-- 4. Fencing & Indoor Living -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-9 h-9 rounded-xl bg-dareTeal-500 text-white text-sm font-black flex items-center justify-center shrink-0">4</span>
+              <div>
+                <h4 class="text-sm font-black text-slate-900 uppercase tracking-wider">Fencing &amp; Indoor Living</h4>
+                <span class="text-[11px] font-semibold text-dareTeal-700">Family Companion Standard</span>
+              </div>
+            </div>
+            <ul class="space-y-1.5 text-xs text-slate-600 leading-relaxed">
+              <li>• <strong>Strictly Indoors:</strong> All D.A.R.E. dogs and cats must live indoors as cherished family members — never kept outside on chains, tethers, kennels, or porches.</li>
+              <li>• <strong>Cats:</strong> Must be 100% indoor-only to protect them from traffic, predators, and disease.</li>
+              <li>• <strong>Fencing for Dogs:</strong> Most dogs require a secure, physically fenced yard. Invisible/shock fences are not accepted as primary containment.</li>
+            </ul>
+          </div>
+          <div class="mt-3 pt-2.5 border-t border-slate-200/80">
+            <span class="text-[11px] font-bold text-dareTeal-700">100% indoor family companions</span>
+          </div>
+        </div>
+
+        <!-- 5. 1st Time Pet Owners -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-9 h-9 rounded-xl bg-dareTeal-500 text-white text-sm font-black flex items-center justify-center shrink-0">5</span>
+              <div>
+                <h4 class="text-sm font-black text-slate-900 uppercase tracking-wider">1st Time Pet Owners</h4>
+                <span class="text-[11px] font-semibold text-dareTeal-700">Case-by-Case Matching</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              First-time pet owners are welcomed and evaluated on a case-by-case basis! We require personal references, a pre-selected local veterinarian, and openness to guidance so we can match you with an easygoing, beginner-friendly pet.
+            </p>
+          </div>
+          <div class="mt-3 pt-2.5 border-t border-slate-200/80">
+            <span class="text-[11px] font-bold text-dareTeal-700">Personal references &amp; chosen vet clinic required</span>
+          </div>
+        </div>
+
+        <!-- 6. Stable Income Source -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-9 h-9 rounded-xl bg-dareTeal-500 text-white text-sm font-black flex items-center justify-center shrink-0">6</span>
+              <div>
+                <h4 class="text-sm font-black text-slate-900 uppercase tracking-wider">Stable Income Source</h4>
+                <span class="text-[11px] font-semibold text-dareTeal-700">Financial Capability</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Applicants must have a verifiable, stable source of income (employment, retirement, disability, etc.) to afford quality food, monthly heartworm/flea prevention, annual wellness exams, and unexpected veterinary emergencies. Employer name and contact info are requested on the application.
+            </p>
+          </div>
+          <div class="mt-3 pt-2.5 border-t border-slate-200/80">
+            <span class="text-[11px] font-bold text-dareTeal-700">Prepared for routine &amp; emergency veterinary care</span>
+          </div>
+        </div>
+
+        <!-- 7. Time Commitment -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-9 h-9 rounded-xl bg-dareTeal-500 text-white text-sm font-black flex items-center justify-center shrink-0">7</span>
+              <div>
+                <h4 class="text-sm font-black text-slate-900 uppercase tracking-wider">Time Commitment</h4>
+                <span class="text-[11px] font-semibold text-dareTeal-700">Daily Quality Attention</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Rescue pets need daily companionship, exercise, potty breaks, and training. Dogs should not be crated or left alone for excessive hours every day without a midday break, doggy daycare, or family member present.
+            </p>
+          </div>
+          <div class="mt-3 pt-2.5 border-t border-slate-200/80">
+            <span class="text-[11px] font-bold text-dareTeal-700">A 10–15+ year lifetime commitment</span>
+          </div>
+        </div>
+
+        <!-- 8. Sole Adult Household Occupant or Single Adopter -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-9 h-9 rounded-xl bg-dareTeal-500 text-white text-sm font-black flex items-center justify-center shrink-0">8</span>
+              <div>
+                <h4 class="text-sm font-black text-slate-900 uppercase tracking-wider">Sole Adult / Single Adopter</h4>
+                <span class="text-[11px] font-semibold text-dareTeal-700">Contingency Care &amp; Relocation Policy</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              If you are the sole adult in your household, we require a designated local, permanent <strong>Secondary Caregiver</strong> (family member or close friend) who is screened and signs a Secondary Caregiver Agreement to step in if an emergency, hospitalization, or unexpected life event occurs.
+            </p>
+          </div>
+          <div class="mt-3 pt-2.5 border-t border-slate-200/80">
+            <span class="text-[11px] font-bold text-dareTeal-700">Screened Secondary Caregiver Agreement required</span>
+          </div>
+        </div>
+
+        <!-- 9. Military Personnel -->
+        <div class="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 shadow-sm flex flex-col justify-between md:col-span-2">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-9 h-9 rounded-xl bg-dareTeal-500 text-white text-sm font-black flex items-center justify-center shrink-0">9</span>
+              <div>
+                <h4 class="text-sm font-black text-slate-900 uppercase tracking-wider">Military Personnel</h4>
+                <span class="text-[11px] font-semibold text-dareTeal-700">Moody AFB &amp; Beyond</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              We deeply appreciate our military service members! Because deployments, TDYs, and PCS orders can happen unexpectedly, active-duty military applicants follow our <strong>Secondary Caregiver Policy</strong> (Requirement #8) so your pet always has a pre-approved, loving safety net during deployments or transitions.
+            </p>
+          </div>
+          <div class="mt-3 pt-2.5 border-t border-teal-200/80">
+            <span class="text-[11px] font-bold text-dareTeal-800">Thank you for your service — we help ensure a seamless plan for your pet!</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
+        <button onclick="closeModal('adoptionRequirementsModal'); openModal('adoptModal');" class="flex-1 py-3 px-6 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wider text-center shadow-md transition-colors cursor-pointer">
+          Start Adoption Application
+        </button>
+        <button onclick="closeModal('adoptionRequirementsModal')" class="py-3 px-6 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
   <!-- JAVASCRIPT LOGIC (VANILLA JS ONLY, ZERO EXTERNAL DEPENDENCIES)   -->
   <!-- ================================================================= -->
   <script>
@@ -2984,7 +2985,8 @@
       'seniorPicturesModal',
       'dogsModal',
       'catsModal',
-      'adoptionProcessModal'
+      'adoptionProcessModal',
+      'adoptionRequirementsModal'
     ];
 
     // --- Modal Management ---
