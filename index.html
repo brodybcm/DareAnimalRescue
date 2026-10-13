@@ -281,6 +281,48 @@
         </div>
 
         <!-- ============================================================= -->
+        <!-- AVAILABLE PETS FOR ADOPTION (UNDER MISSION, ABOVE ANNOUNCEMENT) -->
+        <!-- ============================================================= -->
+        <div id="dogs-section"></div>
+        <div id="cats-section"></div>
+        <div id="pets-section" class="max-w-4xl mx-auto mb-10 scroll-mt-24 sm:scroll-mt-32 text-center">
+          <span class="text-xs font-bold uppercase tracking-widest text-dareTeal-600">Forever Homes Wanted</span>
+          <h3 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight mt-1">Available Pets for Adoption</h3>
+          <p class="mt-2 text-slate-600 text-sm sm:text-base max-w-2xl mx-auto mb-6">
+            Click below to view our available dogs or cats. Every pet is fully vaccinated, spayed/neutered, microchipped, and heartworm/FeLV tested.
+          </p>
+
+          <!-- Simplified View Dogs & View Cats Photo Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            
+            <!-- View Dogs Card -->
+            <button type="button" onclick="openModal('dogsModal')" class="group rounded-3xl overflow-hidden bg-white hover:bg-teal-50/60 border-2 border-slate-200 hover:border-dareTeal-500 shadow-sm hover:shadow-lg transition-all text-center flex flex-col cursor-pointer">
+              <div class="relative h-56 sm:h-60 w-full overflow-hidden bg-slate-200">
+                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=80" alt="View Available Dogs" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div class="p-5 flex flex-col items-center justify-center gap-3 w-full">
+                <span class="px-6 py-3 rounded-full bg-dareTeal-500 group-hover:bg-dareTeal-600 text-white font-black text-sm uppercase tracking-wider shadow-sm transition-colors w-full sm:w-auto">
+                  View Dogs
+                </span>
+              </div>
+            </button>
+
+            <!-- View Cats Card -->
+            <button type="button" onclick="openModal('catsModal')" class="group rounded-3xl overflow-hidden bg-white hover:bg-teal-50/60 border-2 border-slate-200 hover:border-dareTeal-500 shadow-sm hover:shadow-lg transition-all text-center flex flex-col cursor-pointer">
+              <div class="relative h-56 sm:h-60 w-full overflow-hidden bg-slate-200">
+                <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=700&q=80" alt="View Available Cats" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div class="p-5 flex flex-col items-center justify-center gap-3 w-full">
+                <span class="px-6 py-3 rounded-full bg-dareTeal-500 group-hover:bg-dareTeal-600 text-white font-black text-sm uppercase tracking-wider shadow-sm transition-colors w-full sm:w-auto">
+                  View Cats
+                </span>
+              </div>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- ============================================================= -->
         <!-- NOTICE REGARDING ANIMAL INTAKE (PAGE 3 VERBATIM)              -->
         <!-- ============================================================= -->
         <div class="p-6 sm:p-8 rounded-3xl bg-teal-50/70 border border-teal-200 text-slate-800 shadow-sm text-left max-w-4xl mx-auto mb-8">
@@ -345,52 +387,6 @@
               <span>🚨</span> Animal Cruelty &amp; Neglect
             </button>
           </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- =============================================================== -->
-    <!-- 1. AVAILABLE PETS FOR ADOPTION (SIMPLIFIED VIEW DOGS / CATS)    -->
-    <!-- =============================================================== -->
-    <div id="dogs-section"></div>
-    <div id="cats-section"></div>
-    <section id="pets-section" class="py-16 sm:py-20 bg-white border-b border-slate-200 scroll-mt-24 sm:scroll-mt-32">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        
-        <span class="text-xs font-bold uppercase tracking-widest text-dareTeal-600">Forever Homes Wanted</span>
-        <h3 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mt-1">Available Pets for Adoption</h3>
-        <p class="mt-3 text-slate-600 text-base max-w-2xl mx-auto mb-10">
-          Click below to view our available dogs or cats. Every pet is fully vaccinated, spayed/neutered, microchipped, and heartworm/FeLV tested.
-        </p>
-
-        <!-- Simplified View Dogs & View Cats Photo Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-3xl mx-auto">
-          
-          <!-- View Dogs Card -->
-          <button type="button" onclick="openModal('dogsModal')" class="group rounded-3xl overflow-hidden bg-slate-50 hover:bg-teal-50/60 border-2 border-slate-200 hover:border-dareTeal-500 shadow-sm hover:shadow-lg transition-all text-center flex flex-col cursor-pointer">
-            <div class="relative h-64 w-full overflow-hidden bg-slate-200">
-              <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=80" alt="View Available Dogs" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="p-6 flex flex-col items-center justify-center gap-3 w-full">
-              <span class="px-6 py-3 rounded-full bg-dareTeal-500 group-hover:bg-dareTeal-600 text-white font-black text-sm uppercase tracking-wider shadow-sm transition-colors w-full sm:w-auto">
-                View Dogs
-              </span>
-            </div>
-          </button>
-
-          <!-- View Cats Card -->
-          <button type="button" onclick="openModal('catsModal')" class="group rounded-3xl overflow-hidden bg-slate-50 hover:bg-teal-50/60 border-2 border-slate-200 hover:border-dareTeal-500 shadow-sm hover:shadow-lg transition-all text-center flex flex-col cursor-pointer">
-            <div class="relative h-64 w-full overflow-hidden bg-slate-200">
-              <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=700&q=80" alt="View Available Cats" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="p-6 flex flex-col items-center justify-center gap-3 w-full">
-              <span class="px-6 py-3 rounded-full bg-dareTeal-500 group-hover:bg-dareTeal-600 text-white font-black text-sm uppercase tracking-wider shadow-sm transition-colors w-full sm:w-auto">
-                View Cats
-              </span>
-            </div>
-          </button>
-
         </div>
 
       </div>
