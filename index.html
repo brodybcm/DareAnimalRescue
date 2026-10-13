@@ -151,9 +151,10 @@
       <div class="flex items-center justify-center lg:justify-between h-14 sm:h-16">
 
         <!-- Desktop Navigation Anchor Links -->
-        <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-xs font-bold uppercase tracking-wider text-slate-700">
+        <nav class="hidden lg:flex items-center gap-4 xl:gap-6 text-xs font-bold uppercase tracking-wider text-slate-700">
           <a href="#home" class="hover:text-dareTeal-600 transition-colors">Mission</a>
-          <a href="#pets-section" class="hover:text-dareTeal-600 transition-colors">Available Pets</a>
+          <a href="#dogs-section" class="hover:text-dareTeal-600 transition-colors">Available Dogs</a>
+          <a href="#cats-section" class="hover:text-dareTeal-600 transition-colors">Available Cats</a>
           <a href="#adoption-process" class="hover:text-dareTeal-600 transition-colors">Process</a>
           <a href="#adoption-requirements" class="hover:text-dareTeal-600 transition-colors">Requirements</a>
           <a href="#adoption-fees" class="hover:text-dareTeal-600 transition-colors">Fees</a>
@@ -196,7 +197,10 @@
         <a href="#home" class="mobile-nav-link block py-1.5 text-slate-900 hover:text-dareTeal-600">HOME / MISSION</a>
       </div>
       <div class="py-2.5">
-        <a href="#pets-section" class="mobile-nav-link block py-1.5 text-slate-900 hover:text-dareTeal-600">AVAILABLE PETS</a>
+        <a href="#dogs-section" class="mobile-nav-link block py-1.5 text-slate-900 hover:text-dareTeal-600">AVAILABLE DOGS</a>
+      </div>
+      <div class="py-2.5">
+        <a href="#cats-section" class="mobile-nav-link block py-1.5 text-slate-900 hover:text-dareTeal-600">AVAILABLE CATS</a>
       </div>
       <div class="py-2.5">
         <a href="#adoption-process" class="mobile-nav-link block py-1.5 text-slate-900 hover:text-dareTeal-600">ADOPTION PROCESS</a>
@@ -351,48 +355,34 @@
     </section>
 
     <!-- =============================================================== -->
-    <!-- 1. AVAILABLE PETS FOR ADOPTION                                  -->
+    <!-- 1A. AVAILABLE DOGS FOR ADOPTION                                 -->
     <!-- =============================================================== -->
-    <section id="pets-section" class="py-16 sm:py-20 bg-white border-b border-slate-200 scroll-mt-24 sm:scroll-mt-32">
+    <div id="pets-section"></div>
+    <section id="dogs-section" class="py-16 sm:py-20 bg-white border-b border-slate-200 scroll-mt-24 sm:scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
           <div>
             <span class="text-xs font-bold uppercase tracking-widest text-dareTeal-600">Forever Homes Wanted</span>
-            <h3 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mt-1">Available Pets for Adoption</h3>
+            <h3 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mt-1">Available Dogs for Adoption</h3>
             <p class="mt-2 text-slate-600 text-base max-w-xl">
-              Meet our wonderful companions ready for adoption! Every pet is fully vaccinated, spayed/neutered, microchipped, and heartworm/FeLV tested.
+              Meet our wonderful canine companions ready for adoption! Every dog is fully vaccinated, spayed/neutered, microchipped, and heartworm tested.
             </p>
           </div>
           <div class="mt-6 md:mt-0 flex items-center gap-3">
             <a href="https://www.petfinder.com/member/us/ga/valdosta/dare-animal-rescue-ga834/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-sm uppercase tracking-wider transition-all shadow-md">
-              <span>View All on Petfinder ↗</span>
+              <span>View All Dogs on Petfinder ↗</span>
             </a>
           </div>
         </div>
 
-        <!-- Dog / Cat Quick Filter Tabs -->
-        <div class="flex items-center gap-2 mb-8">
-          <button onclick="filterPets('all')" id="filter-btn-all" class="pet-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-dareTeal-500 text-white shadow-sm transition-all cursor-pointer">
-            All Pets
-          </button>
-          <button onclick="filterPets('dog')" id="filter-btn-dog" class="pet-filter-btn inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=120&q=80" alt="Dog" class="w-5 h-5 rounded-full object-cover" />
-            <span>Dogs Only</span>
-          </button>
-          <button onclick="filterPets('cat')" id="filter-btn-cat" class="pet-filter-btn inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=120&q=80" alt="Cat" class="w-5 h-5 rounded-full object-cover" />
-            <span>Cats Only</span>
-          </button>
-        </div>
-
-        <!-- Featured Pet Cards Preview -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Featured Dog Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl">
           
-          <!-- Pet 1 (Dog) -->
+          <!-- Dog 1 -->
           <div class="pet-card bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between" data-category="dog">
             <div>
-              <div class="relative h-60 overflow-hidden bg-slate-200">
+              <div class="relative h-64 overflow-hidden bg-slate-200">
                 <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=80" alt="Meet Barnaby" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
                   Dog • Adult
@@ -420,10 +410,10 @@
             </div>
           </div>
 
-          <!-- Pet 2 (Dog) -->
+          <!-- Dog 2 -->
           <div class="pet-card bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between" data-category="dog">
             <div>
-              <div class="relative h-60 overflow-hidden bg-slate-200">
+              <div class="relative h-64 overflow-hidden bg-slate-200">
                 <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?auto=format&fit=crop&w=700&q=80" alt="Meet Copper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
                   Dog • Adult
@@ -451,10 +441,39 @@
             </div>
           </div>
 
-          <!-- Pet 3 (Cat) -->
-          <div class="pet-card bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between" data-category="cat">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================================== -->
+    <!-- 1B. AVAILABLE CATS FOR ADOPTION                                 -->
+    <!-- =============================================================== -->
+    <section id="cats-section" class="py-16 sm:py-20 bg-teal-50/30 border-b border-slate-200 scroll-mt-24 sm:scroll-mt-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-dareTeal-600">Forever Homes Wanted</span>
+            <h3 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mt-1">Available Cats for Adoption</h3>
+            <p class="mt-2 text-slate-600 text-base max-w-xl">
+              Meet our sweet feline companions ready for adoption! Every cat is fully vaccinated, spayed/neutered, microchipped, and FeLV/FIV tested.
+            </p>
+          </div>
+          <div class="mt-6 md:mt-0 flex items-center gap-3">
+            <a href="https://www.petfinder.com/member/us/ga/valdosta/dare-animal-rescue-ga834/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-sm uppercase tracking-wider transition-all shadow-md">
+              <span>View All Cats on Petfinder ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Featured Cat Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl">
+
+          <!-- Cat 1 -->
+          <div class="pet-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between" data-category="cat">
             <div>
-              <div class="relative h-60 overflow-hidden bg-slate-200">
+              <div class="relative h-64 overflow-hidden bg-slate-200">
                 <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=700&q=80" alt="Meet Cleo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
                   Cat • Young
@@ -482,10 +501,10 @@
             </div>
           </div>
 
-          <!-- Pet 4 (Cat) -->
-          <div class="pet-card bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between" data-category="cat">
+          <!-- Cat 2 -->
+          <div class="pet-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between" data-category="cat">
             <div>
-              <div class="relative h-60 overflow-hidden bg-slate-200">
+              <div class="relative h-64 overflow-hidden bg-slate-200">
                 <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=80" alt="Meet Oliver" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
                   Cat • Adult
