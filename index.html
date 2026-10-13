@@ -2684,19 +2684,20 @@
   </div>
 
   <!-- ================================================================= -->
-  <!-- MODAL: ADOPTION ELIGIBILITY REQUIREMENTS                          -->
+  <!-- MODAL 12: ADOPTION ELIGIBILITY REQUIREMENTS                       -->
   <!-- ================================================================= -->
-  <div id="adoptionRequirementsModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="relative w-full max-w-4xl rounded-3xl bg-white p-6 sm:p-8 shadow-2xl border border-slate-200 my-8 max-h-[90vh] overflow-y-auto">
-      <div class="flex items-start justify-between gap-4 border-b border-slate-200 pb-4 mb-6 sticky top-0 bg-white z-10">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-dareTeal-700">Before You Apply</span>
-          <h3 class="text-2xl font-black text-slate-900 mt-1">Adoption Eligibility Requirements</h3>
-          <p class="text-xs text-slate-600 mt-1">Our goal is a permanent, loving match. Please review our 9 adoption requirements before submitting an application.</p>
+  <div id="adoptionRequirementsModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-backdrop p-4 sm:p-6 lg:p-10 flex items-center justify-center">
+    <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8">
+      
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-6">
+        <div class="flex items-center gap-3">
+          <img src="two-dogs-two-cats.jpg" alt="Adoption Eligibility Requirements" class="w-11 h-11 rounded-full object-cover border-2 border-teal-200 shadow-sm flex-shrink-0" />
+          <div>
+            <h3 class="text-xl sm:text-2xl font-black text-slate-900">Adoption Eligibility Requirements</h3>
+            <p class="text-xs text-slate-500">Before You Apply — Please Review Our 9 Adoption Requirements</p>
+          </div>
         </div>
-        <button onclick="closeModal('adoptionRequirementsModal')" class="p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors" aria-label="Close Modal">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
+        <button onclick="closeModal('adoptionRequirementsModal')" class="text-slate-400 hover:text-slate-700 text-xl p-1 font-bold cursor-pointer">✕</button>
       </div>
 
       <!-- 9 Requirements Grid -->
