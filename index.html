@@ -360,6 +360,53 @@
         </div>
 
         <!-- ============================================================= -->
+        <!-- ADOPTION FEES ($100) + ADOPTION APPLICATION BUTTON            -->
+        <!-- ============================================================= -->
+        <div id="adoption-fees" class="bg-slate-50/80 rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 max-w-4xl mx-auto mb-10 text-left scroll-mt-24 sm:scroll-mt-32">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-50 border border-teal-200 text-dareTeal-700 text-xs font-bold uppercase tracking-wider mb-3">
+            All-Inclusive Care Policy
+          </div>
+          <h4 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 mb-3">
+            Flat $100 Adoption Fee — Everything Included
+          </h4>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Our flat $100 adoption donation covers hundreds of dollars in veterinary services so your new family member arrives healthy, fully vaccinated, and protected:
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-xs font-semibold text-slate-800 mb-7">
+            <div class="p-3 rounded-xl bg-white border border-slate-200 flex items-center gap-2">
+              <span class="text-dareTeal-600 font-bold text-sm">✓</span> Spay / Neuter
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 flex items-center gap-2">
+              <span class="text-dareTeal-600 font-bold text-sm">✓</span> Rabies Vaccine
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 flex items-center gap-2">
+              <span class="text-dareTeal-600 font-bold text-sm">✓</span> Core Vaccines
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 flex items-center gap-2">
+              <span class="text-dareTeal-600 font-bold text-sm">✓</span> Heartworm Test
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 flex items-center gap-2">
+              <span class="text-dareTeal-600 font-bold text-sm">✓</span> FeLV / FIV Test
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 flex items-center gap-2">
+              <span class="text-dareTeal-600 font-bold text-sm">✓</span> Deworming &amp; Chip
+            </div>
+            <div class="p-3 rounded-xl bg-teal-50 border border-teal-200 text-dareTeal-900 flex items-center gap-2 font-bold">
+              <span class="text-dareTeal-600 text-sm">✓</span> Heartworm Prev.
+            </div>
+            <div class="p-3 rounded-xl bg-teal-50 border border-teal-200 text-dareTeal-900 flex items-center gap-2 font-bold">
+              <span class="text-dareTeal-600 text-sm">✓</span> Flea Prevention
+            </div>
+          </div>
+
+          <div class="pt-5 border-t border-slate-200 flex justify-center">
+            <button type="button" onclick="openModal('adoptModal')" class="w-full sm:w-auto px-8 py-4 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-black text-sm uppercase tracking-wider shadow-md hover:shadow-lg transition-all cursor-pointer flex items-center justify-center gap-2">
+              <span>📋</span> Adoption Application
+            </button>
+          </div>
+        </div>
+
+        <!-- ============================================================= -->
         <!-- NOTICE REGARDING ANIMAL INTAKE (PAGE 3 VERBATIM)              -->
         <!-- ============================================================= -->
         <div class="p-6 sm:p-8 rounded-3xl bg-teal-50/70 border border-teal-200 text-slate-800 shadow-sm text-left max-w-4xl mx-auto mb-8">
@@ -423,53 +470,6 @@
             <button onclick="openModal('crueltyModal')" class="w-full sm:w-auto px-6 py-3 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all text-center cursor-pointer flex items-center justify-center gap-2">
               <span>🚨</span> Animal Cruelty &amp; Neglect
             </button>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- =============================================================== -->
-    <!-- 4. ADOPTION FEES (PAGE 6 VERBATIM)                              -->
-    <!-- =============================================================== -->
-    <section id="adoption-fees" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200 scroll-mt-24 sm:scroll-mt-32">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="bg-white rounded-3xl p-8 sm:p-10 shadow-sm border border-slate-200 max-w-4xl mx-auto">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-50 text-dareTeal-700 text-xs font-bold uppercase tracking-wider mb-4">
-            All-Inclusive Care Policy
-          </div>
-          <h4 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 mb-3">
-            Flat $100 Adoption Fee — Everything Included
-          </h4>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">
-            Our flat $100 adoption donation covers hundreds of dollars in veterinary services so your new family member arrives healthy, fully vaccinated, and protected:
-          </p>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-semibold text-slate-800">
-            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2">
-              <span class="text-dareTeal-600 font-bold text-sm">✓</span> Spay / Neuter
-            </div>
-            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2">
-              <span class="text-dareTeal-600 font-bold text-sm">✓</span> Rabies Vaccine
-            </div>
-            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2">
-              <span class="text-dareTeal-600 font-bold text-sm">✓</span> Core Vaccines
-            </div>
-            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2">
-              <span class="text-dareTeal-600 font-bold text-sm">✓</span> Heartworm Test
-            </div>
-            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2">
-              <span class="text-dareTeal-600 font-bold text-sm">✓</span> FeLV / FIV Test
-            </div>
-            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2">
-              <span class="text-dareTeal-600 font-bold text-sm">✓</span> Deworming &amp; Chip
-            </div>
-            <div class="p-3 rounded-xl bg-teal-50 border border-teal-200 text-dareTeal-900 flex items-center gap-2 font-bold">
-              <span class="text-dareTeal-600 text-sm">✓</span> Heartworm Prev.
-            </div>
-            <div class="p-3 rounded-xl bg-teal-50 border border-teal-200 text-dareTeal-900 flex items-center gap-2 font-bold">
-              <span class="text-dareTeal-600 text-sm">✓</span> Flea Prevention
-            </div>
           </div>
         </div>
 
