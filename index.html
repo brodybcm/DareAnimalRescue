@@ -1047,19 +1047,6 @@
           <div class="mt-3 p-4 rounded-2xl bg-teal-50 border border-teal-200 text-xs sm:text-sm text-slate-800 leading-relaxed font-medium">
             <em>"Adopting a pet is a lifetime commitment. Please take your time and give as much information as possible. The more information you provide helps us make an informed decision and a good match between you &amp; your potential pet (family member)."</em>
           </div>
-
-          <!-- Adoption Eligibility & Policies Summary -->
-          <div class="mt-3 p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-700 leading-relaxed">
-            <h5 class="font-bold text-slate-900 uppercase tracking-wider text-[11px] mb-2 text-dareTeal-800">D.A.R.E. Adoption Policies &amp; Guidelines</h5>
-            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 list-disc list-inside text-[11px] sm:text-xs text-slate-600">
-              <li>Must be at least 21 years of age with current government photo ID.</li>
-              <li>Current &amp; former pets must be spayed/neutered and up-to-date on vet exams and vaccines.</li>
-              <li>Dogs must be maintained on continuous year-round heartworm prevention.</li>
-              <li>Physical fencing preferred; we do not adopt to homes with hidden or electric fences.</li>
-              <li>Landlord knowledge, consent, and pet deposit required if renting.</li>
-              <li>Must be a stable living environment (no roommate situations).</li>
-            </ul>
-          </div>
         </div>
 
         <form id="adoptForm" onsubmit="handleAdoptSubmit(event)" class="space-y-6 text-xs sm:text-sm">
@@ -1118,7 +1105,7 @@
           <!-- Section 2: Applicant & Household Details -->
           <div>
             <h4 class="font-bold text-slate-900 uppercase tracking-wider text-xs border-b border-slate-100 pb-1 mb-3 text-dareTeal-700">
-              2. Applicant &amp; Household Details (Must Be 21+ Years Old)
+              2. Applicant &amp; Household Details (Must Be 25+ Years Old)
             </h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <div>
@@ -1126,8 +1113,9 @@
                 <input type="text" name="adopt_name" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Jane Doe" />
               </div>
               <div>
-                <label class="block font-semibold text-slate-700 mb-1">Date of Birth &amp; Age (Must be 21+) *</label>
-                <input type="text" name="adopt_age_dob" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="MM/DD/YYYY (Age: 21+)" />
+                <label class="block font-semibold text-slate-700 mb-1">Date of Birth &amp; Age *</label>
+                <input type="text" name="adopt_age_dob" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="MM/DD/YYYY" />
+                <p class="text-[11px] text-slate-500 mt-1">Valid government-issued photo ID required at trial/finalization.</p>
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Phone Number *</label>
@@ -1146,20 +1134,12 @@
                 <input type="text" name="adopt_address" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Street Address, City, State, Zip" />
               </div>
               <div>
-                <label class="block font-semibold text-slate-700 mb-1">Primary Employer &amp; Occupation *</label>
-                <input type="text" name="adopt_employer" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Employer name &amp; your role" />
-              </div>
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Employer Phone / Work Contact *</label>
-                <input type="tel" name="adopt_employer_phone" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="(229) 000-0000" />
-              </div>
-              <div>
                 <label class="block font-semibold text-slate-700 mb-1">Living Situation *</label>
                 <select name="adopt_household_type" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="Live Alone">Live Alone</option>
                   <option value="Live with Spouse / Partner">Live with Spouse / Partner</option>
                   <option value="Live with Parents / Family">Live with Parents / Family</option>
-                  <option value="Other">Other (No Roommates)</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
               <div>
@@ -1169,6 +1149,9 @@
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Children in Home &amp; Ages (if any)</label>
                 <input type="text" name="adopt_children" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="e.g. None, or Ages 8 and 11" />
+                <div class="mt-1.5 p-2 rounded-lg bg-teal-50/70 border border-teal-200 text-[11px] text-dareTeal-800 leading-snug">
+                  <strong>"6 under 6" Safety Rule:</strong> For safety reasons, D.A.R.E. does not adopt dogs weighing under 6 lbs to families with children under 6 years old.
+                </div>
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Any Pet Allergies in Household? *</label>
@@ -1178,7 +1161,7 @@
                 </select>
               </div>
               <div>
-                <label class="block font-semibold text-slate-700 mb-1">Household in Full Agreement? *</label>
+                <label class="block font-semibold text-slate-700 mb-1">Household in Full Agreement of Adopting a Pet? *</label>
                 <select name="adopt_household_agreement" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="Yes">Yes, all members agree</option>
                   <option value="No">No</option>
@@ -1194,11 +1177,6 @@
                   <option value="Yes">Yes, I agree</option>
                   <option value="No">No</option>
                 </select>
-              </div>
-              <div class="sm:col-span-2 lg:col-span-3">
-                <p class="text-[11px] text-dareTeal-800 bg-teal-50/70 p-2.5 rounded-lg border border-teal-200">
-                  <strong>Safety Notice ("6 under 6" Rule):</strong> For safety reasons, D.A.R.E. does not adopt dogs weighing under 6 lbs to families with children under 6 years of age.
-                </p>
               </div>
             </div>
           </div>
@@ -1227,6 +1205,10 @@
                   <option value="Live with Parents / Family">Live with Parents / Family</option>
                 </select>
               </div>
+              <div class="sm:col-span-2">
+                <label class="block font-semibold text-slate-700 mb-1">Landlord Name, Phone &amp; Pet Policy (If Renting)</label>
+                <input type="text" name="adopt_landlord" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Landlord name, phone, deposit status &amp; any breed/weight limits" />
+              </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Yard Fence Status *</label>
                 <select name="adopt_fence_status" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
@@ -1234,10 +1216,6 @@
                   <option value="Partially Fenced Yard">Partially Fenced Yard</option>
                   <option value="No Fence / Leash Walk Only">No Fence (Leash Walk Only)</option>
                 </select>
-              </div>
-              <div class="sm:col-span-2">
-                <label class="block font-semibold text-slate-700 mb-1">Landlord Name, Phone &amp; Pet Policy (If Renting)</label>
-                <input type="text" name="adopt_landlord" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Landlord name, phone, deposit status &amp; any breed/weight limits" />
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Fence Type &amp; Height (if fenced)</label>
@@ -1285,80 +1263,149 @@
               </div>
               <div class="sm:col-span-3">
                 <p class="text-[11px] text-slate-500 italic">
-                  Note: For pet safety, D.A.R.E. does not place dogs in homes utilizing electric, underground, or invisible shock fencing. All pets are companion family members and must live inside the home.
+                  Note: For pet safety, D.A.R.E. does not place dogs in homes utilizing electric, underground, or invisible shock fencing. All pets are companion family members and must live inside the home. Most dogs will require a fenced-in yard for their safety. Although dogs are required to be house pets, they still need plenty of outside time for potty, play &amp; exercise.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- Section 4: Secondary Caregiver & Vacation / Emergency Plan -->
-          <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200">
-            <h4 class="font-bold text-slate-900 uppercase tracking-wider text-xs border-b border-slate-200 pb-1 mb-2 text-dareTeal-700">
-              4. Secondary Caregiver &amp; Vacation / Emergency Plan
-            </h4>
-            <p class="text-xs text-slate-600 mb-3 leading-relaxed">
-              Applicants living alone, active military, or frequent travelers MUST designate an approved Secondary Caregiver who has agreed to assume full custody and care of the pet if needed.
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Section 4: Single Occupants / Military / Frequent Travelers / Vacation (Secondary Caregiver Emergency Plan) -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-5">
+            <div>
+              <h4 class="font-bold text-slate-900 uppercase tracking-wider text-xs border-b border-slate-200 pb-1 mb-2 text-dareTeal-700">
+                4. Single Occupants / Military / Frequent Travelers / Vacation (Secondary Caregiver Emergency Plan)
+              </h4>
+              <p class="text-xs text-slate-600 mb-3 leading-relaxed">
+                Applicants living alone, active military, or frequent travelers MUST designate an approved Secondary Caregiver who has agreed to assume full custody and care of the pet if needed.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">Secondary Caregiver Full Name</label>
+                  <input type="text" name="adopt_caregiver_name" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Full name of backup caregiver" />
+                </div>
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">Caregiver Phone Number</label>
+                  <input type="tel" name="adopt_caregiver_phone" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="(229) 000-0000" />
+                </div>
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">Relationship to Applicant</label>
+                  <input type="text" name="adopt_caregiver_rel" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="e.g. Parent, Sibling, Trusted Friend" />
+                </div>
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">Caregiver Physical Address &amp; Email</label>
+                  <input type="text" name="adopt_caregiver_address" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Physical Address, City, State, Email" />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="block font-semibold text-slate-700 mb-1">Vacation &amp; Travel Arrangements *</label>
+                  <input type="text" name="adopt_vacation_care" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Who will care for this pet when you travel, go on vacation, or in an emergency? (e.g. Secondary caregiver, pet sitter, boarding clinic)" />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="flex items-start gap-2 text-xs text-slate-700 font-medium">
+                    <input type="checkbox" name="adopt_caregiver_consent" value="Yes" class="mt-0.5 rounded text-dareTeal-600 focus:ring-dareTeal-500" />
+                    <span>I confirm my designated secondary caregiver is aware and has agreed to step in and assume full custody and care of this pet if I am ever incapacitated, deployed, or unable to do so.</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Questions In Regard to Secondary Caregiver -->
+            <div class="pt-4 border-t border-slate-200 space-y-3">
+              <h5 class="font-bold text-slate-800 uppercase tracking-wider text-xs text-dareTeal-700">
+                Questions In Regard to Secondary Caregiver — Tell us about your secondary caregiver:
+              </h5>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">1. How close do they live to you?</label>
+                  <input type="text" name="adopt_caregiver_distance" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="e.g. 10 minutes away, Same town" />
+                </div>
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">2. How often do they interact with your pet/pets?</label>
+                  <input type="text" name="adopt_caregiver_interaction" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="e.g. Weekly visits, Frequently" />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="block font-semibold text-slate-700 mb-1">3. Has your secondary caregiver fully agreed to take full-term custody of your pet if you are sent away for work or a medical emergency, or are they just an emergency contact?</label>
+                  <input type="text" name="adopt_caregiver_full_custody" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Please explain their level of commitment" />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="block font-semibold text-slate-700 mb-1">4. If your secondary caregiver's housing situation changes and they can no longer be your back-up, what is your next plan of action to keep your pet safe?</label>
+                  <input type="text" name="adopt_caregiver_backup_plan" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Explain your backup plan if your secondary caregiver is unavailable" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Work Schedule & Unexpected Absences -->
+            <div class="pt-4 border-t border-slate-200 space-y-3">
+              <h5 class="font-bold text-slate-800 uppercase tracking-wider text-xs text-dareTeal-700">
+                Work Schedule &amp; Unexpected Absences
+              </h5>
+              <div class="space-y-3">
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">1. Walk us through a typical workday. How many hours will the pet be alone, and what is your plan for midday bathroom breaks or exercise? *</label>
+                  <textarea name="adopt_workday_plan" rows="2" required class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Describe your typical workday schedule and midday break/exercise plan..."></textarea>
+                </div>
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">2. If you get stuck at work late, called into an unexpected mandatory meeting, or have to travel for a few days on short notice, who is the specific person you will call to step in and care for your pet? *</label>
+                  <input type="text" name="adopt_short_notice_person" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Name and relationship of the specific person you will call" />
+                </div>
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">3. Have you looked into the cost and availability of local dog walkers, pet sitters, or boarding facilities nearby? Do you have room in your budget for these services if needed? *</label>
+                  <input type="text" name="adopt_pet_services_budget" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Yes / Explain local options and budget readiness" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Moving and Relocation -->
+            <div class="pt-4 border-t border-slate-200 space-y-3">
+              <h5 class="font-bold text-slate-800 uppercase tracking-wider text-xs text-dareTeal-700">
+                Moving and Relocation
+              </h5>
+              <div class="space-y-3">
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">1. Where do you see yourself living in the next 2-3 years? If your job or personal life requires you to move across the country or overseas, what steps will you take to ensure this pet comes with you? Have you looked into the cost associated with that? *</label>
+                  <textarea name="adopt_relocation_steps" rows="2" required class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Explain your 2-3 year living plans and steps/costs to bring your pet if relocating..."></textarea>
+                </div>
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">2. Are you familiar with breed bans or size restrictions common in rental housing or community associations? If you have to move, how will you handle finding a pet-friendly home? *</label>
+                  <input type="text" name="adopt_breed_size_restrictions" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Explain how you will ensure pet-friendly housing" />
+                </div>
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">3. If you are ever required to move somewhere that absolutely does not allow pets, or if you face an extended transition period where you can't have animals, what is your back-up plan for your pet? *</label>
+                  <input type="text" name="adopt_no_pet_housing_backup" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Explain your back-up plan during housing transitions" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Illness or Other Tragedy -->
+            <div class="pt-4 border-t border-slate-200 space-y-3">
+              <h5 class="font-bold text-slate-800 uppercase tracking-wider text-xs text-dareTeal-700">
+                Illness or Other Tragedy
+              </h5>
               <div>
-                <label class="block font-semibold text-slate-700 mb-1">Secondary Caregiver Full Name</label>
-                <input type="text" name="adopt_caregiver_name" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Full name of backup caregiver" />
-              </div>
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Caregiver Phone Number</label>
-                <input type="tel" name="adopt_caregiver_phone" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="(229) 000-0000" />
-              </div>
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Relationship to Applicant</label>
-                <input type="text" name="adopt_caregiver_rel" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="e.g. Parent, Sibling, Trusted Friend" />
-              </div>
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Caregiver Address &amp; Email</label>
-                <input type="text" name="adopt_caregiver_address" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Address, City, State, Email" />
-              </div>
-              <div class="sm:col-span-2">
-                <label class="block font-semibold text-slate-700 mb-1">Vacation &amp; Travel Arrangements *</label>
-                <input type="text" name="adopt_vacation_care" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Who will care for this pet when you travel, go on vacation, or in an emergency? (e.g. Secondary caregiver, pet sitter, boarding clinic)" />
-              </div>
-              <div class="sm:col-span-2">
-                <label class="flex items-start gap-2 text-xs text-slate-700 font-medium">
-                  <input type="checkbox" name="adopt_caregiver_consent" value="Yes" class="mt-0.5 rounded text-dareTeal-600 focus:ring-dareTeal-500" />
-                  <span>I confirm my designated secondary caregiver is aware and has agreed to step in and assume full custody and care of this pet if I am ever incapacitated, deployed, or unable to do so.</span>
-                </label>
+                <label class="block font-semibold text-slate-700 mb-1">1. If something should happen to you, such as a debilitating illness, car accident, etc., do you have a plan in place for your pet? Please explain in detail. *</label>
+                <textarea name="adopt_tragedy_plan" rows="2" required class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Please explain your long-term emergency/tragedy care plan in detail..."></textarea>
               </div>
             </div>
           </div>
 
-          <!-- Section 5: Veterinary History & Past 15 Years Pet Record -->
+          <!-- Section 5: Pet Experience & Veterinary History (Past 15 Years) -->
           <div>
             <h4 class="font-bold text-slate-900 uppercase tracking-wider text-xs border-b border-slate-100 pb-1 mb-2 text-dareTeal-700">
-              5. Veterinary History &amp; Past 15 Years Pet Record
+              5. Pet Experience &amp; Veterinary History (Past 15 Years)
             </h4>
             <p class="text-xs text-slate-600 mb-3 leading-relaxed">
               D.A.R.E. checks up to <strong>15 years</strong> of veterinary history. All current and former pets must have been spayed/neutered, up-to-date on vaccines, and maintained on continuous year-round heartworm prevention.
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Do You Have a Vet History? *</label>
-                <select name="adopt_has_vet" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
-                  <option value="Yes">Yes, I currently have a vet</option>
-                  <option value="First-Time Pet Owner">No, First-Time Pet Owner</option>
-                  <option value="Past Pets Only">No current pet, but have past vet records</option>
-                </select>
+              <div class="sm:col-span-2 lg:col-span-3">
+                <label class="block font-semibold text-slate-700 mb-1">List All Current Pets (Breed, Age, Spayed/Neutered?, On HW Prevention?)</label>
+                <textarea name="adopt_current_pets" rows="2" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="List all pets currently living in your home, their breed, age, spay/neuter status, and heartworm prevention status (or write 'None')."></textarea>
+              </div>
+              <div class="sm:col-span-2 lg:col-span-3">
+                <label class="block font-semibold text-slate-700 mb-1">Pets Owned in Past 15 Years (Breed, Age, Spayed/Neutered?, On HW Prevention?, Where are they now?) *</label>
+                <textarea name="adopt_past_pets" rows="3" required class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="List all pets owned in the past 15 years, their spay/neuter status, monthly heartworm prevention routine, and where they are today (still with you, passed of old age, etc.). If first time owner, write 'First time owner'."></textarea>
               </div>
               <div>
-                <label class="block font-semibold text-slate-700 mb-1">Permission to Contact Your Vet? *</label>
-                <select name="adopt_vet_permission" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
-                  <option value="Yes">Yes, permission granted</option>
-                  <option value="No">No</option>
-                </select>
-              </div>
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Years with this Clinic</label>
-                <input type="text" name="adopt_vet_years" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="e.g. 5 years" />
-              </div>
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Primary Vet Clinic Name *</label>
+                <label class="block font-semibold text-slate-700 mb-1">Current/Primary Vet Clinic Name *</label>
                 <input type="text" name="adopt_vet_clinic" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="e.g. Baytree Animal Hospital" />
               </div>
               <div>
@@ -1366,12 +1413,12 @@
                 <input type="tel" name="adopt_vet_phone" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="(229) 000-0000" />
               </div>
               <div>
-                <label class="block font-semibold text-slate-700 mb-1">Account Holder Name on File *</label>
-                <input type="text" name="adopt_vet_account" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Exact name records are filed under" />
+                <label class="block font-semibold text-slate-700 mb-1">Years with This Clinic</label>
+                <input type="text" name="adopt_vet_years" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="e.g. 5 years" />
               </div>
               <div class="sm:col-span-2 lg:col-span-3">
-                <label class="block font-semibold text-slate-700 mb-1">Pets Owned in Past 15 Years (Name, Breed, Age, Spayed/Neutered?, HW Prevention?, Where are they now?) *</label>
-                <textarea name="adopt_past_pets" rows="3" required class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="List all pets owned in the past 15 years, their spay/neuter status, monthly heartworm prevention routine, and where they are today (still with you, passed of old age, etc.). If first time owner, write 'First time owner'."></textarea>
+                <label class="block font-semibold text-slate-700 mb-1">Account Holder Name on Vet File *</label>
+                <input type="text" name="adopt_vet_account" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Exact name records are filed under" />
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">All Pets Spayed/Neutered? *</label>
@@ -1412,7 +1459,7 @@
             <div class="space-y-2.5">
               <label class="flex items-start gap-2.5 text-xs text-slate-600">
                 <input type="checkbox" required class="mt-0.5 rounded text-dareTeal-600 focus:ring-dareTeal-500" />
-                <span>I certify that I am at least 21 years of age and will provide a valid government-issued photo ID showing my current address prior to finalization.</span>
+                <span>I certify that I am at least 25 years of age and will provide a valid government-issued photo ID showing my current address prior to finalization.</span>
               </label>
               <label class="flex items-start gap-2.5 text-xs text-slate-600">
                 <input type="checkbox" required class="mt-0.5 rounded text-dareTeal-600 focus:ring-dareTeal-500" />
