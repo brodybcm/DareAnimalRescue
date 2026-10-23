@@ -366,7 +366,7 @@
             Flat $100 Adoption Fee — Everything Included
           </h4>
           <p class="text-slate-600 text-sm leading-relaxed mb-6">
-            Our flat $100 adoption donation covers hundreds of dollars in veterinary services so your new family member arrives healthy, fully vaccinated, and protected:
+            Our flat $100 adoption fee covers hundreds of dollars in veterinary services so your new family member arrives healthy, fully vaccinated, and protected:
           </p>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-xs font-semibold text-slate-800 mb-7">
             <div class="p-3 rounded-xl bg-white border border-slate-200 flex items-center gap-2">
@@ -395,10 +395,24 @@
             </div>
           </div>
 
-          <div class="pt-5 border-t border-slate-200 flex justify-center">
-            <button type="button" onclick="openModal('adoptModal')" class="w-full sm:w-auto px-8 py-4 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-black text-sm uppercase tracking-wider shadow-md hover:shadow-lg transition-all cursor-pointer flex items-center justify-center">
-              Adoption Application
+          <div class="pt-6 border-t border-slate-200 flex flex-col items-center justify-center">
+            <button type="button" onclick="openModal('adoptModal')" aria-label="Open Pet Adoption Application" class="group relative inline-flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-4 focus:ring-dareTeal-300 rounded-3xl p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" class="w-48 h-48 sm:w-56 sm:h-56 drop-shadow-md group-hover:drop-shadow-2xl transition-all">
+                <!-- Toe 1 -->
+                <ellipse cx="44" cy="92" rx="19" ry="29" transform="rotate(-32 44 92)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
+                <!-- Toe 2 -->
+                <ellipse cx="90" cy="52" rx="21" ry="32" transform="rotate(-10 90 52)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
+                <!-- Toe 3 -->
+                <ellipse cx="150" cy="52" rx="21" ry="32" transform="rotate(10 150 52)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
+                <!-- Toe 4 -->
+                <ellipse cx="196" cy="92" rx="19" ry="29" transform="rotate(32 196 92)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
+                <!-- Main Pad -->
+                <path d="M 120,95 C 145,95 168,105 186,122 C 204,139 196,168 180,185 C 164,202 142,204 120,196 C 98,204 76,202 60,185 C 44,168 36,139 54,122 C 72,105 95,95 120,95 Z" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
+                <text x="120" y="146" text-anchor="middle" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-weight="900" font-size="14.5" letter-spacing="1.2">ADOPTION</text>
+                <text x="120" y="168" text-anchor="middle" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-weight="900" font-size="13" letter-spacing="1.2">APPLICATION</text>
+              </svg>
             </button>
+            <p class="text-xs text-slate-500 font-semibold mt-1">Click paw to open Adoption Application</p>
           </div>
         </div>
 
@@ -1047,6 +1061,11 @@
           <div class="mt-3 p-4 rounded-2xl bg-teal-50 border border-teal-200 text-xs sm:text-sm text-slate-800 leading-relaxed font-medium">
             <em>"Adopting a pet is a lifetime commitment. Please take your time and give as much information as possible. The more information you provide helps us make an informed decision and a good match between you &amp; your potential pet (family member)."</em>
           </div>
+
+          <!-- Process & Eligibility Check Reminder -->
+          <div class="mt-3 p-3.5 rounded-2xl bg-teal-50/70 border border-teal-200 text-xs sm:text-sm text-slate-800 leading-relaxed font-semibold">
+            Before completing this application, have you taken a moment to carefully read over the <button type="button" onclick="openModal('adoptionProcessModal')" class="text-dareTeal-700 underline font-black hover:text-dareTeal-900 cursor-pointer">adoption process</button> &amp; <button type="button" onclick="openModal('adoptionRequirementsModal')" class="text-dareTeal-700 underline font-black hover:text-dareTeal-900 cursor-pointer">eligibility requirements</button>?
+          </div>
         </div>
 
         <form id="adoptForm" onsubmit="handleAdoptSubmit(event)" class="space-y-6 text-xs sm:text-sm">
@@ -1064,10 +1083,12 @@
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Pet Type Preference *</label>
                 <select name="adopt_pet_type" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
-                  <option value="Dog / Puppy">Dog / Puppy</option>
-                  <option value="Dog / Senior">Dog / Senior</option>
-                  <option value="Cat / Kitten">Cat / Kitten</option>
-                  <option value="Cat / Senior">Cat / Senior</option>
+                  <option value="Dog / Puppy (up to 1 year)">Dog / Puppy (up to 1 year)</option>
+                  <option value="Dog / Adult">Dog / Adult</option>
+                  <option value="Dog / Senior (8+)">Dog / Senior (8+)</option>
+                  <option value="Cat / Kitten (up to 1 year)">Cat / Kitten (up to 1 year)</option>
+                  <option value="Cat / Adult">Cat / Adult</option>
+                  <option value="Cat / Senior (10+)">Cat / Senior (10+)</option>
                   <option value="Open to Any">Open to Any</option>
                 </select>
               </div>
@@ -1081,13 +1102,17 @@
               </div>
               <div class="sm:col-span-2">
                 <label class="block font-semibold text-slate-700 mb-1">Primary Reason for Adopting *</label>
-                <select name="adopt_reason" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
+                <select name="adopt_reason" id="adopt_reason" onchange="toggleOtherField('adopt_reason', 'adopt_reason_other_wrap')" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="Family Companion">Family Companion &amp; Indoor Pet</option>
                   <option value="Companion for Another Pet">Companion for Another Pet</option>
                   <option value="Personal / Emotional Support">Personal / Emotional Support</option>
                   <option value="Watchdog / Guard">Watchdog / Guard</option>
                   <option value="Other">Other</option>
                 </select>
+                <div id="adopt_reason_other_wrap" class="hidden mt-2">
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">If "Other", please explain:</label>
+                  <input type="text" name="adopt_reason_other" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Please explain your reason for adopting" />
+                </div>
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Preferred Age / Energy Level</label>
@@ -1135,12 +1160,16 @@
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Living Situation *</label>
-                <select name="adopt_household_type" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
+                <select name="adopt_household_type" id="adopt_household_type" onchange="toggleOtherField('adopt_household_type', 'adopt_household_type_other_wrap')" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="Live Alone">Live Alone</option>
                   <option value="Live with Spouse / Partner">Live with Spouse / Partner</option>
                   <option value="Live with Parents / Family">Live with Parents / Family</option>
                   <option value="Other">Other</option>
                 </select>
+                <div id="adopt_household_type_other_wrap" class="hidden mt-2">
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">If "Other", please explain:</label>
+                  <input type="text" name="adopt_household_type_other" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Please explain living situation" />
+                </div>
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Number of Adults in Home *</label>
@@ -1149,15 +1178,16 @@
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Children in Home &amp; Ages (if any)</label>
                 <input type="text" name="adopt_children" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="e.g. None, or Ages 8 and 11" />
-                <div class="mt-1.5 p-2 rounded-lg bg-teal-50/70 border border-teal-200 text-[11px] text-dareTeal-800 leading-snug">
-                  <strong>"6 under 6" Safety Rule:</strong> For safety reasons, D.A.R.E. does not adopt dogs weighing under 6 lbs to families with children under 6 years old.
+                <div class="mt-1.5 p-2.5 rounded-lg bg-teal-50/70 border border-teal-200 text-[11px] text-dareTeal-900 leading-snug space-y-1">
+                  <p><strong>Age-Appropriate Matching for Children:</strong> We carefully match the right pet for families with children. For safety reasons, D.A.R.E. does not adopt dogs weighing under 6 lbs or puppies under 6 months old to families with children under 6 years old.</p>
+                  <p class="text-slate-600">Toy and small breeds (Chihuahuas, Yorkies, Shih Tzus, etc.) require children in the home to be 8–10+ years old.</p>
                 </div>
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Any Pet Allergies in Household? *</label>
                 <select name="adopt_allergies" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
-                  <option value="No">No allergies</option>
-                  <option value="Yes">Yes (Managed with care)</option>
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
                 </select>
               </div>
               <div>
@@ -1189,21 +1219,30 @@
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Housing Type *</label>
-                <select name="adopt_home_type" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
+                <select name="adopt_home_type" id="adopt_home_type" onchange="toggleOtherField('adopt_home_type', 'adopt_home_type_other_wrap')" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="Single Family House">Single Family House</option>
                   <option value="Townhouse / Condo">Townhouse / Condo</option>
                   <option value="Apartment">Apartment</option>
                   <option value="Mobile Home">Mobile Home</option>
                   <option value="Other">Other</option>
                 </select>
+                <div id="adopt_home_type_other_wrap" class="hidden mt-2">
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">If "Other", please explain:</label>
+                  <input type="text" name="adopt_home_type_other" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Please describe housing type" />
+                </div>
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Own or Rent? *</label>
-                <select name="adopt_own_rent" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
+                <select name="adopt_own_rent" id="adopt_own_rent" onchange="toggleOtherField('adopt_own_rent', 'adopt_own_rent_other_wrap')" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="Own">Own Home</option>
                   <option value="Rent">Rent</option>
                   <option value="Live with Parents / Family">Live with Parents / Family</option>
+                  <option value="Other">Other</option>
                 </select>
+                <div id="adopt_own_rent_other_wrap" class="hidden mt-2">
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">If "Other", please explain:</label>
+                  <input type="text" name="adopt_own_rent_other" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Please explain living/ownership arrangement" />
+                </div>
               </div>
               <div class="sm:col-span-2">
                 <label class="block font-semibold text-slate-700 mb-1">Landlord Name, Phone &amp; Pet Policy (If Renting)</label>
@@ -1221,19 +1260,27 @@
                 <label class="block font-semibold text-slate-700 mb-1">Fence Type &amp; Height (if fenced)</label>
                 <input type="text" name="adopt_fence" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="e.g. 6ft Privacy Wood, Chain link" />
               </div>
+              <div class="sm:col-span-3 p-3.5 rounded-xl bg-teal-50 border border-teal-200 text-teal-950 text-xs leading-relaxed">
+                <strong>Fencing &amp; Living Note:</strong> For pet safety, D.A.R.E. does not place dogs in homes utilizing electric, underground, or invisible shock fencing. All pets are companion family members and must live inside the home. Most dogs will require a fenced-in yard for their safety. Although dogs are required to be house pets, they still need plenty of outside time for potty, play &amp; exercise.
+              </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Hours Pet Alone Daily *</label>
                 <input type="text" name="adopt_hours_alone" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="e.g. 4-6 hours" />
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Where Kept When Home Alone? *</label>
-                <select name="adopt_day_location" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
+                <select name="adopt_day_location" id="adopt_day_location" onchange="toggleOtherField('adopt_day_location', 'adopt_day_location_other_wrap')" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="Inside Free Roam">Inside - Free Roam of House</option>
                   <option value="Inside Crated">Inside - Crated</option>
                   <option value="Inside Designated Room">Inside - Specific Gated Room</option>
+                  <option value="Indoor/Outdoor">Indoor / Outdoor</option>
                   <option value="Fenced Yard / Patio">Fenced Yard / Patio</option>
                   <option value="Other">Other</option>
                 </select>
+                <div id="adopt_day_location_other_wrap" class="hidden mt-2">
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">If "Other", please explain:</label>
+                  <input type="text" name="adopt_day_location_other" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Please explain where pet will be kept" />
+                </div>
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Where Will Pet Sleep at Night? *</label>
@@ -1260,11 +1307,6 @@
                     <option value="Not Applicable (Adopting Dog)">Not Applicable (Adopting Dog)</option>
                   </select>
                 </div>
-              </div>
-              <div class="sm:col-span-3">
-                <p class="text-[11px] text-slate-500 italic">
-                  Note: For pet safety, D.A.R.E. does not place dogs in homes utilizing electric, underground, or invisible shock fencing. All pets are companion family members and must live inside the home. Most dogs will require a fenced-in yard for their safety. Although dogs are required to be house pets, they still need plenty of outside time for potty, play &amp; exercise.
-                </p>
               </div>
             </div>
           </div>
@@ -1401,8 +1443,8 @@
                 <textarea name="adopt_current_pets" rows="2" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="List all pets currently living in your home, their breed, age, spay/neuter status, and heartworm prevention status (or write 'None')."></textarea>
               </div>
               <div class="sm:col-span-2 lg:col-span-3">
-                <label class="block font-semibold text-slate-700 mb-1">Pets Owned in Past 15 Years (Breed, Age, Spayed/Neutered?, On HW Prevention?, Where are they now?) *</label>
-                <textarea name="adopt_past_pets" rows="3" required class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="List all pets owned in the past 15 years, their spay/neuter status, monthly heartworm prevention routine, and where they are today (still with you, passed of old age, etc.). If first time owner, write 'First time owner'."></textarea>
+                <label class="block font-semibold text-slate-700 mb-1">Pets Owned in Past 15 Years — Were they spayed/neutered, on monthly heartworm prevention, and where are they now? *</label>
+                <textarea name="adopt_past_pets" rows="3" required class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="List all pets owned in the past 15 years: Were they spayed/neutered? Were they on monthly heartworm prevention? Where are they now? (If first time owner, write 'First time owner')."></textarea>
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Current/Primary Vet Clinic Name *</label>
@@ -1422,11 +1464,16 @@
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">All Pets Spayed/Neutered? *</label>
-                <select name="adopt_pets_spayed_neutered" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
+                <select name="adopt_pets_spayed_neutered" id="adopt_pets_spayed_neutered" onchange="toggleSpayedExplField()" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="Yes">Yes, 100% of pets</option>
+                  <option value="Some were and some weren't">Some were &amp; some weren't (Please explain below)</option>
                   <option value="No">No (Medical exemption)</option>
                   <option value="First-Time Owner">First-Time Pet Owner</option>
                 </select>
+                <div id="adopt_pets_spayed_explain_wrap" class="hidden mt-2">
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">Some were &amp; some weren't, please explain: *</label>
+                  <input type="text" name="adopt_pets_spayed_explain" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Please explain which pets were/weren't spayed or neutered" />
+                </div>
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Heartworm Prevention Brand *</label>
@@ -1441,8 +1488,8 @@
                 <input type="text" name="adopt_surrender_history" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="No, or please explain circumstance fully" />
               </div>
               <div class="sm:col-span-2 lg:col-span-3">
-                <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs flex items-start gap-2">
-                  <svg class="w-4 h-4 text-amber-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                <div class="p-3.5 rounded-xl bg-teal-50 border border-teal-200 text-teal-950 text-xs flex items-start gap-2">
+                  <svg class="w-4 h-4 text-dareTeal-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                   <div>
                     <strong>Action Required:</strong> Please call your veterinary clinic immediately after submitting this application to authorize release of medical records to <strong>D.A.R.E. Animal Rescue</strong>. Vet checks cannot begin until clinic release is granted.
                   </div>
@@ -1467,7 +1514,7 @@
               </label>
               <label class="flex items-start gap-2.5 text-xs text-slate-600">
                 <input type="checkbox" required class="mt-0.5 rounded text-dareTeal-600 focus:ring-dareTeal-500" />
-                <span>I understand and agree to the mandatory 2-week trial period prior to finalizing the adoption contract, followed by the flat $100 adoption donation.</span>
+                <span>I understand and agree to the mandatory 2-week trial period prior to finalizing the adoption contract, followed by the flat $100 adoption fee.</span>
               </label>
               <label class="flex items-start gap-2.5 text-xs text-slate-600">
                 <input type="checkbox" required class="mt-0.5 rounded text-dareTeal-600 focus:ring-dareTeal-500" />
@@ -1580,18 +1627,19 @@
         </div>
 
         <div class="space-y-3">
-          <div class="p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-950">
-            <h4 class="font-bold text-rose-900 text-sm mb-1">Never Post Pets for Free Online</h4>
-            <p class="text-xs text-rose-800">Never advertise pets as "free to good home" or post on Craigslist/Facebook Marketplace. Free animals are frequently targeted for dog-fighting bait, puppy mills, and fraudulent resale.</p>
-          </div>
-
           <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <h4 class="font-bold text-slate-900 text-sm mb-1">1. Use Safe Peer-to-Peer Rehoming Platforms</h4>
-            <p class="text-slate-600 mb-2">These trusted platforms allow you to keep your pet in your loving home while safely screening adopters:</p>
-            <ul class="list-disc pl-5 space-y-1 text-slate-600 text-xs">
-              <li><strong>Adopt-a-Pet Rehome:</strong> Visit <a href="https://rehome.adoptapet.com" target="_blank" rel="noopener noreferrer" class="text-dareTeal-700 font-bold underline">rehome.adoptapet.com</a> to create a profile and review applications securely.</li>
-              <li><strong>Get Your Pet:</strong> Visit <a href="https://getyourpet.com" target="_blank" rel="noopener noreferrer" class="text-dareTeal-700 font-bold underline">getyourpet.com</a> for direct adopter-to-guardian transfers.</li>
+            <h4 class="font-bold text-slate-900 text-sm mb-1.5">1. Use Safe Rehoming Platforms</h4>
+            <ul class="list-disc pl-5 space-y-1 text-slate-700 text-xs mb-2">
+              <li><a href="https://rehome.adoptapet.com" target="_blank" rel="noopener noreferrer" class="text-dareTeal-700 font-bold underline">rehome.adoptapet.com</a></li>
+              <li><a href="https://home-home.org" target="_blank" rel="noopener noreferrer" class="text-dareTeal-700 font-bold underline">home-home.org</a></li>
+              <li><a href="https://joyfulpets.com" target="_blank" rel="noopener noreferrer" class="text-dareTeal-700 font-bold underline">joyfulpets.com</a></li>
             </ul>
+            <div class="p-2.5 rounded-lg bg-teal-50 border border-teal-200 text-[11px] text-teal-950 font-medium mb-2">
+              <strong>Disclaimer:</strong> D.A.R.E. has not checked out any of these platforms thoroughly. They have been recommended, but it is up to you to do your homework.
+            </div>
+            <p class="text-xs text-slate-700">
+              • <a href="https://petsforpatriots.org" target="_blank" rel="noopener noreferrer" class="text-dareTeal-700 font-bold underline">petsforpatriots.org</a> (gives good suggestions for rehoming your pet)
+            </p>
           </div>
 
           <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
@@ -1600,17 +1648,30 @@
           </div>
 
           <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <h4 class="font-bold text-slate-900 text-sm mb-1">3. Lowndes County Animal Services</h4>
-            <p class="text-slate-600">If you are facing an emergency hardship, contact Lowndes County Animal Services at <a href="tel:2296712760" class="font-bold text-dareTeal-700 underline">(229) 671-2760</a> regarding official surrender intake policies.</p>
+            <h4 class="font-bold text-slate-900 text-sm mb-1">3. Advertise on Facebook, But Screen Thoroughly</h4>
+            <p class="text-slate-600 mb-2">If you decide to advertise your pet on Facebook, it is crucial that you screen all potential adopters thoroughly (read #4 below).</p>
+            <p class="text-slate-600">Take really good pictures of your pet(s) and write up an accurate description. Mention the age, description of your pet, and describe its personality. Does it get along with dogs? Cats? Kids? Always include any vetting that has been done. If possible, please have your pet spayed or neutered before adopting it to someone else.</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <h4 class="font-bold text-slate-900 text-sm mb-1">4. Use D.A.R.E.'s Eligibility Requirements &amp; Application</h4>
+            <p class="text-slate-600">Please feel free to use our eligibility requirements &amp; adoption application questions to help you screen potential adopters. Remember to do vet + landlord checks. A home visit is strongly recommended, but always be safe. Take someone with you. Check references.</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <h4 class="font-bold text-slate-900 text-sm mb-1">5. Contact Lowndes County Animal Services</h4>
+            <p class="text-slate-700 leading-relaxed mb-2">
+              If all else fails, contact Lowndes County Animal Services at <a href="tel:2296712760" class="text-dareTeal-700 font-bold underline">229-671-2760</a>.
+            </p>
+            <div class="p-3 rounded-lg bg-rose-50 border border-rose-200 text-rose-950 font-bold text-xs">
+              Never Abandon Your Pet! Abandoning a pet is not only a crime, but it is the most inhumane option!
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="mt-6 pt-4 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
-        <a href="tel:2296712760" class="flex-1 py-3 px-6 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wider text-center shadow-md transition-colors flex items-center justify-center">
-          Call Lowndes Animal Services (229-671-2760)
-        </a>
-        <button onclick="closeModal('rehomingModal')" class="py-3 px-6 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs uppercase tracking-wider transition-colors">
+      <div class="mt-6 pt-4 border-t border-slate-200 flex justify-end">
+        <button onclick="closeModal('rehomingModal')" class="py-3 px-8 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
           Close
         </button>
       </div>
@@ -1817,69 +1878,18 @@
         <em>"Surrounded by couches, soft beds, and specialized medical care, our permanent senior and unadoptable residents live out their golden years in comfort, warmth, and dignity."</em>
       </div>
 
-      <!-- Senior Residents Photo Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
-        
-        <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
-          <div class="h-56 bg-slate-100 flex items-center justify-center p-2">
-            <img src="happy ending photos/image1.jpg" alt="Senior resident snoozing comfortably" class="max-h-full max-w-full object-contain rounded-xl shadow-sm" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <h4 class="font-bold text-slate-900 text-sm">Couch Snuggles &amp; Warm Blankets</h4>
-            <p class="text-xs text-slate-600 mt-1">Senior resident enjoying quiet afternoon naps on cozy living room couches.</p>
-          </div>
+      <!-- Senior Sanctuary Feature Banner -->
+      <div class="mb-8 rounded-3xl overflow-hidden shadow-md border border-slate-200 bg-slate-100">
+        <img src="senior-pets.jpg" alt="Senior dogs and cats resting together peacefully" class="w-full h-72 sm:h-96 object-cover" />
+        <div class="p-6 bg-slate-50 border-t border-slate-200">
+          <h4 class="font-black text-slate-900 text-base mb-2">Lifelong Sanctuary &amp; Dignified Golden Years</h4>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+            D.A.R.E. provides permanent, comfortable living situations for our senior and unadoptable residents who call our rescue their forever home. Individual photo profiles of our permanent senior residents will be posted here as they are updated.
+          </p>
+          <p class="text-xs text-slate-500 italic">
+            Each senior resident receives ongoing specialized veterinary attention, arthritis medication, nutritious diets, and daily love from our dedicated caregivers.
+          </p>
         </div>
-
-        <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
-          <div class="h-56 bg-slate-100 flex items-center justify-center p-2">
-            <img src="happy ending photos/image3.jpg" alt="Senior pet resting on soft orthopedic bedding" class="max-h-full max-w-full object-contain rounded-xl shadow-sm" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <h4 class="font-bold text-slate-900 text-sm">Orthopedic Comfort</h4>
-            <p class="text-xs text-slate-600 mt-1">Peaceful rest on orthopedic beds designed to support aging joints.</p>
-          </div>
-        </div>
-
-        <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
-          <div class="h-56 bg-slate-100 flex items-center justify-center p-2">
-            <img src="happy ending photos/image9.jpg" alt="Senior resident receiving loving affection" class="max-h-full max-w-full object-contain rounded-xl shadow-sm" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <h4 class="font-bold text-slate-900 text-sm">Gentle Daily Affection</h4>
-            <p class="text-xs text-slate-600 mt-1">Cherished every single day with brushing, treats, and TLC from our volunteers.</p>
-          </div>
-        </div>
-
-        <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
-          <div class="h-56 bg-slate-100 flex items-center justify-center p-2">
-            <img src="happy ending photos/image15.jpg" alt="Golden years resident in secure shelter" class="max-h-full max-w-full object-contain rounded-xl shadow-sm" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <h4 class="font-bold text-slate-900 text-sm">Guaranteed Lifelong Shelter</h4>
-            <p class="text-xs text-slate-600 mt-1">A forever sanctuary where no animal is ever abandoned or left behind.</p>
-          </div>
-        </div>
-
-        <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
-          <div class="h-56 bg-slate-100 flex items-center justify-center p-2">
-            <img src="happy ending photos/image20.jpg" alt="Senior dog receiving specialized veterinary care" class="max-h-full max-w-full object-contain rounded-xl shadow-sm" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <h4 class="font-bold text-slate-900 text-sm">Specialized Medical Care</h4>
-            <p class="text-xs text-slate-600 mt-1">Continuous arthritis therapies, thyroid medications, and veterinary wellness.</p>
-          </div>
-        </div>
-
-        <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
-          <div class="h-56 bg-slate-100 flex items-center justify-center p-2">
-            <img src="happy ending photos/image27.jpg" alt="Senior pet happy and relaxed" class="max-h-full max-w-full object-contain rounded-xl shadow-sm" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <h4 class="font-bold text-slate-900 text-sm">Pure Joy in Golden Years</h4>
-            <p class="text-xs text-slate-600 mt-1">Living with the peace, dignity, and endless love they truly deserve.</p>
-          </div>
-        </div>
-
       </div>
 
       <!-- Page 10 & 11 Verbatim Callout -->
@@ -2163,7 +2173,7 @@
             <span class="w-9 h-9 rounded-xl bg-dareTeal-500 text-white text-sm font-black flex items-center justify-center mb-3 shadow-sm">4</span>
             <h4 class="text-base font-bold text-slate-900 mb-1.5">Welcome Home ($100)</h4>
             <p class="text-slate-600 text-xs leading-relaxed">
-              Finalize the adoption contract &amp; receive all medical &amp; micro-chip info. Our flat $100 adoption donation covers complete vetting.
+              Finalize the adoption contract &amp; receive all medical &amp; micro-chip info. Our flat $100 adoption fee covers complete vetting.
             </p>
           </div>
           <div class="mt-3 pt-2.5 border-t border-slate-200/80">
@@ -2258,12 +2268,12 @@
             <div class="flex items-center gap-3 mb-3">
               <span class="w-9 h-9 rounded-xl bg-dareTeal-500 text-white text-sm font-black flex items-center justify-center shrink-0">3</span>
               <div>
-                <h4 class="text-sm font-black text-slate-900 uppercase tracking-wider">Housing &amp; Environment</h4>
+                <h4 class="text-sm font-black text-slate-900 uppercase tracking-wider">Housing and Living Environment</h4>
                 <span class="text-[11px] font-semibold text-dareTeal-700">Ownership &amp; Landlord Checks</span>
               </div>
             </div>
             <ul class="space-y-1.5 text-xs text-slate-600 leading-relaxed">
-              <li>• <strong>Homeowners:</strong> Ownership is verified via county property/tax records.</li>
+              <li>• <strong>Homeowners:</strong> We must verify ownership. Verification may include deeds, property tax records, etc.</li>
               <li>• <strong>Renters:</strong> Written or direct verbal landlord verification is required confirming pet permission, breed/weight limits, and pet deposit compliance.</li>
               <li>• <strong>Safe Living Space:</strong> A home visit (in-person or virtual video walkthrough) is required prior to placement.</li>
             </ul>
@@ -2301,15 +2311,15 @@
               <span class="w-9 h-9 rounded-xl bg-dareTeal-500 text-white text-sm font-black flex items-center justify-center shrink-0">5</span>
               <div>
                 <h4 class="text-sm font-black text-slate-900 uppercase tracking-wider">1st Time Pet Owners</h4>
-                <span class="text-[11px] font-semibold text-dareTeal-700">Case-by-Case Matching</span>
+                <span class="text-[11px] font-semibold text-dareTeal-700">Welcoming &amp; Guided Matching</span>
               </div>
             </div>
             <p class="text-xs text-slate-600 leading-relaxed">
-              First-time pet owners are welcomed and evaluated on a case-by-case basis! We require personal references, a pre-selected local veterinarian, and openness to guidance so we can match you with an easygoing, beginner-friendly pet.
+              First time pet owners are welcomed. We ask that all first time pet owners be open to guidance so we can match you with the right beginner-friendly pet. Dog training classes may be required at no expense to the adopter.
             </p>
           </div>
           <div class="mt-3 pt-2.5 border-t border-slate-200/80">
-            <span class="text-[11px] font-bold text-dareTeal-700">Personal references &amp; chosen vet clinic required</span>
+            <span class="text-[11px] font-bold text-dareTeal-700">Dog training classes may be required at no expense to adopter</span>
           </div>
         </div>
 
@@ -2347,7 +2357,7 @@
             </p>
           </div>
           <div class="mt-3 pt-2.5 border-t border-slate-200/80">
-            <span class="text-[11px] font-bold text-dareTeal-700">A 10–15+ year lifetime commitment</span>
+            <span class="text-[11px] font-bold text-dareTeal-700">Pets are a 10-15 year lifetime commitment</span>
           </div>
         </div>
 
@@ -2385,7 +2395,7 @@
             </p>
           </div>
           <div class="mt-3 pt-2.5 border-t border-teal-200/80">
-            <span class="text-[11px] font-bold text-dareTeal-800">Thank you for your service — we help ensure a seamless plan for your pet!</span>
+            <span class="text-[11px] font-bold text-dareTeal-800">Thank you for your service!</span>
           </div>
         </div>
 
@@ -2619,6 +2629,31 @@
       feedback.classList.remove('hidden');
 
       window.location.href = `mailto:dareadoptions@gmail.com?subject=${encodeURIComponent('New Adoption Application - D.A.R.E.')}&body=${encodeURIComponent(details)}`;
+    }
+
+    // --- Dynamic Form Field Toggles ---
+    function toggleOtherField(selectId, wrapId) {
+      const select = document.getElementById(selectId);
+      const wrap = document.getElementById(wrapId);
+      if (select && wrap) {
+        if (select.value === 'Other') {
+          wrap.classList.remove('hidden');
+        } else {
+          wrap.classList.add('hidden');
+        }
+      }
+    }
+
+    function toggleSpayedExplField() {
+      const select = document.getElementById('adopt_pets_spayed_neutered');
+      const wrap = document.getElementById('adopt_pets_spayed_explain_wrap');
+      if (select && wrap) {
+        if (select.value === "Some were and some weren't") {
+          wrap.classList.remove('hidden');
+        } else {
+          wrap.classList.add('hidden');
+        }
+      }
     }
 
     // --- Happy Endings Expand/Collapse ---
