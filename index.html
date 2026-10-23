@@ -449,9 +449,6 @@
           </div>
 
           <div class="flex flex-col sm:flex-row items-center gap-3">
-            <button onclick="openModal('strayAnimalsModal')" class="w-full sm:w-auto px-5 py-3 rounded-full bg-white hover:bg-teal-100 text-slate-900 font-bold text-xs uppercase tracking-wider border border-teal-300 shadow-sm transition-all text-center cursor-pointer flex items-center justify-center">
-              Stray Animals
-            </button>
             <button onclick="openModal('rehomingModal')" class="w-full sm:w-auto px-5 py-3 rounded-full bg-white hover:bg-teal-100 text-slate-900 font-bold text-xs uppercase tracking-wider border border-teal-300 shadow-sm transition-all text-center cursor-pointer flex items-center justify-center">
               Rehoming Your Pet
             </button>
@@ -1553,59 +1550,6 @@
     </div>
   </div>
 
-  <!-- ================================================================= -->
-  <!-- MODAL 3: STRAY ANIMALS GUIDANCE                                   -->
-  <!-- ================================================================= -->
-  <div id="strayAnimalsModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-backdrop p-4 sm:p-6 lg:p-10 flex items-center justify-center">
-    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8">
-      
-      <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-6">
-        <div>
-          <h3 class="text-xl font-black text-slate-900">Found a Stray Animal?</h3>
-          <p class="text-xs text-slate-500">Step-by-Step Community Action Guide</p>
-        </div>
-        <button onclick="closeModal('strayAnimalsModal')" class="text-slate-400 hover:text-slate-700 text-xl p-1 font-bold">✕</button>
-      </div>
-
-      <div class="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
-        <div class="p-4 rounded-2xl bg-teal-50/70 border border-teal-200 text-slate-900 font-medium">
-          <strong>Notice Regarding Stray Intake:</strong> D.A.R.E. Animal Rescue is closed to new intake as we focus on our remaining adoptables and senior sanctuary pets. Following these essential steps gives the pet the highest chance of safely reuniting with their family:
-        </div>
-
-        <div class="space-y-3">
-          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <h4 class="font-bold text-slate-900 text-sm mb-1">1. Scan for a Microchip (100% Free)</h4>
-            <p class="text-slate-600">Bring the stray to any veterinary clinic or animal hospital in Lowndes County. They will scan for a registered microchip free of charge with no appointment required.</p>
-          </div>
-
-          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <h4 class="font-bold text-slate-900 text-sm mb-1">2. Contact Lowndes County Animal Services</h4>
-            <p class="text-slate-600">Call <a href="tel:2296712760" class="font-bold text-dareTeal-700 underline">(229) 671-2760</a> or visit 337 Gil Harbin Industrial Blvd, Valdosta, GA. Municipal animal services is the legal central registry where searching pet owners look first.</p>
-          </div>
-
-          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <h4 class="font-bold text-slate-900 text-sm mb-1">3. Post on Local Social Media</h4>
-            <p class="text-slate-600">Post clear photos, the exact location found (cross streets), and contact details to Facebook groups like <em>"Lost and Found Pets of Lowndes County / Valdosta GA"</em>, PawBoost, and Nextdoor.</p>
-          </div>
-
-          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <h4 class="font-bold text-slate-900 text-sm mb-1">4. Provide Safe Temporary Shelter</h4>
-            <p class="text-slate-600">Keep the animal secured in a quiet, shaded space with fresh water. Avoid feeding rich or unfamiliar food right away.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-6 pt-4 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
-        <a href="tel:2296712760" class="flex-1 py-3 px-6 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wider text-center shadow-md transition-colors flex items-center justify-center">
-          Call Lowndes Animal Services (229-671-2760)
-        </a>
-        <button onclick="closeModal('strayAnimalsModal')" class="py-3 px-6 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs uppercase tracking-wider transition-colors">
-          Close
-        </button>
-      </div>
-
-    </div>
-  </div>
 
   <!-- ================================================================= -->
   <!-- MODAL 4: REHOMING YOUR PET                                        -->
@@ -1680,57 +1624,139 @@
   </div>
 
   <!-- ================================================================= -->
-  <!-- MODAL 5: LOST & FOUND PETS / WILDLIFE                             -->
+  <!-- MODAL: LOST & FOUND PETS / WILDLIFE                               -->
   <!-- ================================================================= -->
   <div id="lostFoundModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-backdrop p-4 sm:p-6 lg:p-10 flex items-center justify-center">
-    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8">
+    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8">
       
       <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-6">
         <div>
           <h3 class="text-xl font-black text-slate-900">Lost &amp; Found Pets / Wildlife</h3>
-          <p class="text-xs text-slate-500">Lowndes County Recovery &amp; Georgia Wildlife Resources</p>
+          <p class="text-xs text-slate-500">Lowndes County Pet Recovery &amp; Georgia Wildlife Resources</p>
         </div>
-        <button onclick="closeModal('lostFoundModal')" class="text-slate-400 hover:text-slate-700 text-xl p-1 font-bold">✕</button>
+        <button onclick="closeModal('lostFoundModal')" class="text-slate-400 hover:text-slate-700 text-xl p-1 font-bold cursor-pointer">✕</button>
       </div>
 
-      <div class="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
-        <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-800 text-xs">
-          <strong>Notice:</strong> D.A.R.E. does not have a lost &amp; found coordinator on staff. The resources below provide the fastest assistance for regional pet recovery and native wildlife emergencies:
+      <div class="space-y-6 text-xs sm:text-sm text-slate-700 leading-relaxed">
+        <div class="p-4 rounded-2xl bg-teal-50/70 border border-teal-200 text-slate-900 font-medium">
+          <strong>Notice:</strong> D.A.R.E. Animal Rescue is closed to intake and does not have a lost &amp; found coordinator on staff. Please follow these essential community steps to recover a lost pet, report a found pet, or safely assist wildlife:
         </div>
 
-        <!-- Section A: Domestic Pets -->
-        <div class="p-4 rounded-2xl bg-teal-50/70 border border-teal-200">
-          <h4 class="font-bold text-dareTeal-900 text-sm mb-2">
-            Lost or Found Domestic Pets
-          </h4>
-          <ul class="space-y-2 text-xs text-slate-700">
-            <li><strong>Visit Lowndes County Animal Services in person:</strong> Located at 337 Gil Harbin Industrial Blvd, Valdosta. In-person checks are crucial because breed and coat descriptions often vary on intake forms. Call <a href="tel:2296712760" class="font-bold text-dareTeal-700 underline">229-671-2760</a>.</li>
-            <li><strong>Update Microchip Information:</strong> Immediately contact your pet's microchip registry (HomeAgain, 24PetWatch, AKC Reunite) to verify your current phone number and address.</li>
-            <li><strong>Post on Social Media &amp; PawBoost:</strong> Post clear photos, location details, and your phone number to local Lowndes County lost &amp; found pet groups and PawBoost.</li>
-            <li><strong>Distribute Physical Flyers:</strong> Post brightly colored flyers with clear photos within a 2-mile radius of where your pet was last seen.</li>
-          </ul>
+        <!-- Section 1: Lost A Pet -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 pb-1.5 border-b border-slate-200">
+            <span class="w-3 h-3 rounded-full bg-dareTeal-500 shrink-0"></span>
+            <h4 class="font-black text-slate-900 text-base sm:text-lg">Lost A Pet</h4>
+          </div>
+
+          <div class="space-y-3">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <h5 class="font-bold text-slate-900 text-sm mb-1">1. Visit Lowndes County Animal Services in Person</h5>
+              <p class="text-slate-600">
+                Located at 337 Gil Harbin Industrial Blvd, Valdosta, GA. In-person checks are crucial because breed and coat descriptions often vary on intake forms. Call <a href="tel:2296712760" class="font-bold text-dareTeal-700 underline">229-671-2760</a>.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <h5 class="font-bold text-slate-900 text-sm mb-1">2. Update Micro-chip Information</h5>
+              <p class="text-slate-600">
+                Immediately contact your pet's microchip registry (such as HomeAgain, 24PetWatch, AKC Reunite) to verify that your current phone number and address are up-to-date.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <h5 class="font-bold text-slate-900 text-sm mb-1">3. Contact All Local Veterinarian Clinics</h5>
+              <p class="text-slate-600">
+                If someone finds your pet, they may take them to a local vet to be scanned for a micro-chip. Give your contact information &amp; a description of your pet.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <h5 class="font-bold text-slate-900 text-sm mb-1.5">4. Post on These Lost &amp; Found Sites</h5>
+              <ul class="list-disc pl-5 space-y-1 text-slate-700 text-xs">
+                <li><a href="https://www.pawboost.com" target="_blank" rel="noopener noreferrer" class="text-dareTeal-700 font-bold underline">Pawboost.com</a></li>
+                <li><a href="https://www.petradar.com" target="_blank" rel="noopener noreferrer" class="text-dareTeal-700 font-bold underline">Petradar.com</a></li>
+                <li><a href="https://www.facebook.com/groups/225302660995505/" target="_blank" rel="noopener noreferrer" class="text-dareTeal-700 font-bold underline">Lowndes County Lost &amp; Found Pets</a> (Facebook Group)</li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <h5 class="font-bold text-slate-900 text-sm mb-1">5. Distribute Flyers</h5>
+              <p class="text-slate-600 mb-2">
+                Give out &amp; post flyers with-in a 2 mile radius of where your pet was lost. Make sure your flyers are to the point, not too much information. Make your phone # large enough to be read by a passing car. Most people will not get out of the car to read a posted flyer.
+              </p>
+              <p class="font-bold text-dareTeal-800 text-xs sm:text-sm">
+                Offer a reward!
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <h5 class="font-bold text-slate-900 text-sm mb-1">6. Talk with Neighbors</h5>
+              <p class="text-slate-600">
+                Talk with your neighbors. Hand out flyers with your pet's picture on it. Give flyers to your mailman, UPS driver, etc. Ask your neighbors to check in their closed garages, sheds, locked crawl spaces under houses, etc.
+              </p>
+            </div>
+          </div>
+
+          <!-- Important Note in a teal box (Per Mechelle's exact instruction) -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-teal-50 border border-teal-200 text-slate-800 text-xs sm:text-sm leading-relaxed space-y-2.5">
+            <h5 class="font-bold text-dareTeal-900 uppercase tracking-wider text-xs">Important Note:</h5>
+            <p>
+              If an outdoor pet goes missing, something has happened to prevent them from coming home. For example, they may be stuck somewhere &amp; can't get out, someone may have taken them, or a cat may have gotten in a car &amp; been transported somewhere else.
+            </p>
+            <p>
+              If an indoor pet gets out, they may get scared and hide, often running into a wooded area. They tend to come out early mornings &amp; nite. Those are the best times to search. A cat will stay close, unless there is no food. That's why it is important to keep food &amp; water out for them around your house. Leave doors open whenever possible so the pet can get back in to the house. Sometimes a pet will sneak back to the house when everything is quiet, commonly at night or early morning. If a door is open, they will run in. Last but not least, use a humane trap when necessary. <strong>Don't give up!!</strong>
+            </p>
+          </div>
         </div>
 
-        <!-- Section B: Native Wildlife -->
-        <div class="p-4 rounded-2xl bg-teal-50/70 border border-teal-200">
-          <h4 class="font-bold text-dareTeal-900 text-sm mb-2">
-            Injured or Orphaned Wildlife
-          </h4>
-          <p class="text-xs text-slate-700 mb-2">
-            Under Georgia state law, domestic rescue organizations cannot legally take in or treat native wildlife (fawns, raccoons, bats, birds of prey, opossums, turtles).
-          </p>
-          <ul class="space-y-2 text-xs text-slate-700">
-            <li><strong>Contact a Licensed GA Wildlife Rehabilitator:</strong> Visit the Georgia Department of Natural Resources (DNR) Wildlife Resources Division directory at <a href="https://georgiawildlife.com" target="_blank" rel="noopener noreferrer" class="font-bold text-dareTeal-700 underline">georgiawildlife.com</a>.</li>
-            <li><strong>Safe Containment:</strong> Keep the animal in a warm, dark, ventilated cardboard box in a quiet room. Do not attempt to give water or food without rehabber instruction.</li>
-          </ul>
+        <!-- Section 2: Found A Pet -->
+        <div class="space-y-4 pt-2">
+          <div class="flex items-center gap-2 pb-1.5 border-b border-slate-200">
+            <span class="w-3 h-3 rounded-full bg-dareTeal-500 shrink-0"></span>
+            <h4 class="font-black text-slate-900 text-base sm:text-lg">Found A Pet</h4>
+          </div>
+
+          <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+            <p>
+              If you find a pet, just follow the steps listed above for a lost pet. Be sure to contact <strong>Lowndes County Animal Services (Animal Shelter)</strong> at <a href="tel:2296712760" class="font-bold text-dareTeal-700 underline">229-671-2760</a>. They can pick up the pet, or you can take it to the shelter. The after hours number is <a href="tel:2292455270" class="font-bold text-dareTeal-700 underline">229-245-5270</a>.
+            </p>
+            <p>
+              If the pet is wearing a rabies tag, call the vet clinic on the tag &amp; give them the tag#, so they can contact the owner.
+            </p>
+            <p>
+              Also, you can have the pet scanned for a micro-chip at a vet's office or at the Lowndes County Animal Shelter. They do not charge anything to scan for micro-chips.
+            </p>
+            <div class="p-3.5 rounded-xl bg-teal-50/80 border border-teal-200 text-teal-950 text-xs font-semibold">
+              If you can keep the pet temporarily until the owner is found, that is the best option. Remember to distribute flyers &amp; post on lost &amp; found sites.
+            </div>
+          </div>
         </div>
+
+        <!-- Section 3: Injured or Orphaned Wildlife -->
+        <div class="space-y-4 pt-2">
+          <div class="flex items-center gap-2 pb-1.5 border-b border-slate-200">
+            <span class="w-3 h-3 rounded-full bg-dareTeal-500 shrink-0"></span>
+            <h4 class="font-black text-slate-900 text-base sm:text-lg">Injured or Orphaned Wildlife</h4>
+          </div>
+
+          <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+            <p>
+              Under Georgia state law, domestic rescue organizations cannot legally take in or treat native wildlife (fawns, raccoons, bats, birds of prey, opossums, turtles).
+            </p>
+            <ul class="space-y-2 text-xs text-slate-700">
+              <li>• <strong>Call Lowndes County Animal Services:</strong> Contact animal services directly at <a href="tel:2296712760" class="font-bold text-dareTeal-700 underline">229-671-2760</a>.</li>
+              <li>• <strong>Contact a Licensed GA Wildlife Rehabilitator:</strong> Visit the Georgia Department of Natural Resources (DNR) Wildlife Resources Division directory at <a href="https://georgiawildlife.com" target="_blank" rel="noopener noreferrer" class="font-bold text-dareTeal-700 underline">georgiawildlife.com</a>.</li>
+              <li>• <strong>Safe Containment:</strong> Keep the animal in a warm, dark, ventilated cardboard box in a quiet room. Do not attempt to give water or food without rehabber instruction.</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
 
-      <div class="mt-6 pt-4 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
-        <a href="tel:2296712760" class="flex-1 py-3 px-6 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wider text-center shadow-md transition-colors flex items-center justify-center">
-          Call Lowndes Animal Services (229-671-2760)
-        </a>
-        <button onclick="closeModal('lostFoundModal')" class="py-3 px-6 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs uppercase tracking-wider transition-colors">
+      <!-- Modal Footer (Per Mechelle's instruction: removed call tab, only close button) -->
+      <div class="mt-6 pt-4 border-t border-slate-200 flex justify-end">
+        <button onclick="closeModal('lostFoundModal')" class="py-3 px-8 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
           Close
         </button>
       </div>
@@ -2490,7 +2516,6 @@
     const allModalIds = [
       'fosterModal',
       'adoptModal',
-      'strayAnimalsModal',
       'rehomingModal',
       'lostFoundModal',
       'spayNeuterModal',
