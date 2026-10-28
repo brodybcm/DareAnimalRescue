@@ -621,32 +621,41 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          <!-- PayPal One-Click Donation Box (Page 11 & Newest Notes) -->
+          <!-- PayPal One-Click Donation Box (Page 11) -->
           <div class="lg:col-span-7 bg-white text-slate-800 rounded-3xl p-8 sm:p-10 shadow-sm border border-slate-200 flex flex-col justify-between">
-            <div class="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
-              <p>
-                We spare no expense when it comes to our furry friends. We provide comprehensive medical exams &amp; treatments, including tests for heartworms (dogs) &amp; leukemia/aids (cats), vaccinations, deworming, heartworm &amp; flea prevention, dental exams and cleaning, micro-chips, etc.
-              </p>
-              <p>
-                All of our foster pets are kept in clean, warm &amp; cozy home environments and are provided with hours of love and care, play time, walks, etc.
-              </p>
-              <p>
-                Daily food costs, toys, pet supplies, medical &amp; operational expenses are quite costly. Your generosity helps us provide for our remaining adoptable pets, as well as our senior &amp; unadoptable pets, who will live out the rest of their days with us. Please help us provide for our little furry friends.
+            <div>
+              <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                All donations go directly toward DARE operational expenses, including housing, food, and veterinary medical care.
               </p>
 
+              <!-- Page 11 DARE callout -->
+              <div class="p-4 rounded-2xl bg-teal-50/70 border border-teal-200 text-dareTeal-950 font-bold text-sm space-y-1.5 mb-6">
+                <p>WILL YOU...</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>DARE to get involved?</li>
+                  <li>DARE to save lives?</li>
+                  <li>DARE to make a difference?</li>
+                </ul>
+              </div>
+
               <!-- Page 11: All donations are totally tax deductible -->
-              <div class="inline-block px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 font-extrabold text-xs uppercase tracking-wide mt-2">
+              <div class="inline-block px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 font-extrabold text-xs uppercase tracking-wide mb-6">
                 ✓ All donations are totally tax deductible
               </div>
             </div>
 
-            <!-- Direct PayPal Checkout Form matching the rescue's PayPal ID (Page 11) -->
-            <div>
-              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <!-- Direct PayPal Checkout Heart Form matching the rescue's PayPal ID (Page 11) -->
+            <div class="flex flex-col items-center text-center">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="inline-block">
                 <input type="hidden" name="cmd" value="_s-xclick" />
                 <input type="hidden" name="hosted_button_id" value="D9ZYNDCUYBJRG" />
-                <button type="submit" class="w-full py-4 px-6 rounded-full bg-[#00A1B3] hover:bg-[#008999] text-white font-black text-base uppercase tracking-wider shadow-md hover:shadow-cyan-500/25 transition-all transform hover:scale-[1.01] flex items-center justify-center gap-2 cursor-pointer">
-                  <span>PLEASE DONATE</span>
+                <button type="submit" class="group relative inline-flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 focus:outline-none my-1" title="Click to Donate via PayPal">
+                  <svg viewBox="0 0 260 235" class="w-64 sm:w-72 h-auto drop-shadow-lg">
+                    <path d="M130 222 C130 222 16 148 16 72 C16 34 46 10 82 10 C105 10 122 22 130 38 C138 22 155 10 178 10 C214 10 244 34 244 72 C244 148 130 222 130 222 Z" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors duration-300" stroke="#0f766e" stroke-width="4" />
+                  </svg>
+                  <span class="absolute inset-0 flex items-center justify-center px-11 pb-6 text-center text-white font-black text-xs sm:text-sm leading-snug drop-shadow-sm pointer-events-none">
+                    Click here to make a donation to help us care for our senior &amp; unadoptable pets.
+                  </span>
                 </button>
               </form>
               <p class="text-xs text-slate-500 mt-3 text-center">
@@ -1863,24 +1872,10 @@
         </div>
       </div>
 
-      <!-- Page 10 & 11 Verbatim Callout with Donation Heart -->
-      <div class="p-6 rounded-2xl bg-teal-50/70 border border-teal-200 flex flex-col items-center text-center gap-4">
-        <div>
-          <h4 class="font-black text-slate-900 text-sm sm:text-base">Help Sustain Our Golden Years Program</h4>
-          <p class="text-xs sm:text-sm text-slate-600 mt-1 max-w-xl">It can be quite costly to provide permanent housing, care, and adequate medical attention. All donations are totally tax deductible.</p>
-        </div>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="inline-block">
-          <input type="hidden" name="cmd" value="_s-xclick" />
-          <input type="hidden" name="hosted_button_id" value="D9ZYNDCUYBJRG" />
-          <button type="submit" class="group relative inline-flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 focus:outline-none my-1" title="Click to Donate via PayPal">
-            <svg viewBox="0 0 260 235" class="w-64 sm:w-72 h-auto drop-shadow-lg">
-              <path d="M130 222 C130 222 16 148 16 72 C16 34 46 10 82 10 C105 10 122 22 130 38 C138 22 155 10 178 10 C214 10 244 34 244 72 C244 148 130 222 130 222 Z" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors duration-300" stroke="#0f766e" stroke-width="4" />
-            </svg>
-            <span class="absolute inset-0 flex items-center justify-center px-11 pb-6 text-center text-white font-black text-xs sm:text-sm leading-snug drop-shadow-sm pointer-events-none">
-              Click here to make a donation to help us care for our senior &amp; unadoptable pets.
-            </span>
-          </button>
-        </form>
+      <!-- Page 10 & 11 Verbatim Callout -->
+      <div class="p-6 rounded-2xl bg-teal-50/70 border border-teal-200 flex flex-col items-center text-center gap-2">
+        <h4 class="font-black text-slate-900 text-sm sm:text-base">Help Sustain Our Golden Years Program</h4>
+        <p class="text-xs sm:text-sm text-slate-600 max-w-xl">It can be quite costly to provide permanent housing, care, and adequate medical attention. All donations are totally tax deductible.</p>
       </div>
 
       <div class="mt-6 pt-4 border-t border-slate-200 text-right">
