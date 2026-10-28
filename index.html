@@ -1869,14 +1869,18 @@
           <h4 class="font-black text-slate-900 text-sm sm:text-base">Help Sustain Our Golden Years Program</h4>
           <p class="text-xs sm:text-sm text-slate-600 mt-1 max-w-xl">It can be quite costly to provide permanent housing, care, and adequate medical attention. All donations are totally tax deductible.</p>
         </div>
-        <button type="button" onclick="closeModal('seniorPicturesModal'); openModal('donateModal');" class="group relative inline-flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 focus:outline-none my-1" title="Click to Donate">
-          <svg viewBox="0 0 260 235" class="w-64 sm:w-72 h-auto drop-shadow-lg">
-            <path d="M130 222 C130 222 16 148 16 72 C16 34 46 10 82 10 C105 10 122 22 130 38 C138 22 155 10 178 10 C214 10 244 34 244 72 C244 148 130 222 130 222 Z" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors duration-300" stroke="#0f766e" stroke-width="4" />
-          </svg>
-          <span class="absolute inset-0 flex items-center justify-center px-11 pb-6 text-center text-white font-black text-xs sm:text-sm leading-snug drop-shadow-sm pointer-events-none">
-            Click here to make a donation to help us care for our senior &amp; unadoptable pets.
-          </span>
-        </button>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="inline-block">
+          <input type="hidden" name="cmd" value="_s-xclick" />
+          <input type="hidden" name="hosted_button_id" value="D9ZYNDCUYBJRG" />
+          <button type="submit" class="group relative inline-flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 focus:outline-none my-1" title="Click to Donate via PayPal">
+            <svg viewBox="0 0 260 235" class="w-64 sm:w-72 h-auto drop-shadow-lg">
+              <path d="M130 222 C130 222 16 148 16 72 C16 34 46 10 82 10 C105 10 122 22 130 38 C138 22 155 10 178 10 C214 10 244 34 244 72 C244 148 130 222 130 222 Z" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors duration-300" stroke="#0f766e" stroke-width="4" />
+            </svg>
+            <span class="absolute inset-0 flex items-center justify-center px-11 pb-6 text-center text-white font-black text-xs sm:text-sm leading-snug drop-shadow-sm pointer-events-none">
+              Click here to make a donation to help us care for our senior &amp; unadoptable pets.
+            </span>
+          </button>
+        </form>
       </div>
 
       <div class="mt-6 pt-4 border-t border-slate-200 text-right">
