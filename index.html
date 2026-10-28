@@ -1914,64 +1914,45 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         
-        <!-- Dog 1: Barnaby -->
-        <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+        <!-- Dog 1: Piper (2-Photo Interactive Carousel) -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between sm:col-span-2 max-w-md mx-auto w-full">
           <div>
-            <div class="relative h-56 overflow-hidden bg-slate-200">
-              <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=80" alt="Meet Barnaby" class="w-full h-full object-cover" />
+            <div class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 group">
+              <img id="piper-main-img" src="available dogs for adoption/piper-1.jpg" alt="Meet Piper — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
+              <div class="absolute top-3 left-3 bg-slate-900/75 backdrop-blur px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-sm" id="piper-photo-counter">
+                Photo 1 of 2
+              </div>
               <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
-                Dog • Adult
+                Available Dog
               </div>
-            </div>
-            <div class="p-5">
-              <div class="flex justify-between items-center mb-1">
-                <h4 class="text-lg font-bold text-slate-900">Barnaby</h4>
-                <span class="text-xs font-semibold text-slate-500">Hound Mix</span>
-              </div>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Sweet, gentle soul who loves belly rubs, quiet evening walks, and companionship. Great with other dogs.
-              </p>
-            </div>
-          </div>
-          <div class="px-5 pb-5">
-            <div class="flex items-center gap-2 pt-3 border-t border-slate-200">
-              <button onclick="closeModal('dogsModal'); openModal('adoptModal');" class="flex-1 py-2.5 rounded-xl bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wide transition-colors cursor-pointer">
-                Apply to Adopt
+              <!-- Prev / Next Carousel Arrows -->
+              <button type="button" onclick="switchPiperPhoto(-1)" aria-label="Previous photo of Piper" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-slate-800 font-black text-lg shadow-md flex items-center justify-center cursor-pointer transition-transform active:scale-95">
+                ‹
               </button>
-              <a href="https://www.petfinder.com/member/us/ga/valdosta/dare-animal-rescue-ga834/" target="_blank" rel="noopener noreferrer" class="px-3 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-xs font-bold text-slate-700 border border-slate-300 transition-colors">
-                Petfinder
-              </a>
+              <button type="button" onclick="switchPiperPhoto(1)" aria-label="Next photo of Piper" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-slate-800 font-black text-lg shadow-md flex items-center justify-center cursor-pointer transition-transform active:scale-95">
+                ›
+              </button>
             </div>
-          </div>
-        </div>
 
-        <!-- Dog 2: Copper -->
-        <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="relative h-56 overflow-hidden bg-slate-200">
-              <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?auto=format&fit=crop&w=700&q=80" alt="Meet Copper" class="w-full h-full object-cover" />
-              <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
-                Dog • Adult
-              </div>
+            <!-- Thumbnail / Dot Switcher Bar -->
+            <div class="flex items-center justify-center gap-2.5 py-2.5 bg-slate-100 border-b border-slate-200">
+              <button type="button" onclick="setPiperPhoto(0)" id="piper-thumb-0" class="w-12 h-12 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer">
+                <img src="available dogs for adoption/piper-1.jpg" alt="Piper cover photo thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPiperPhoto(1)" id="piper-thumb-1" class="w-12 h-12 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available dogs for adoption/piper-2.jpg" alt="Piper photo 2 thumbnail" class="w-full h-full object-cover" />
+              </button>
             </div>
-            <div class="p-5">
-              <div class="flex justify-between items-center mb-1">
-                <h4 class="text-lg font-bold text-slate-900">Copper</h4>
-                <span class="text-xs font-semibold text-slate-500">Golden / Lab Mix</span>
-              </div>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Friendly, loyal, and eager to please. Loves playing in the yard, car rides, and relaxing at your feet.
-              </p>
+
+            <div class="p-5 text-center">
+              <h4 class="text-xl font-black text-slate-900">Piper</h4>
             </div>
           </div>
           <div class="px-5 pb-5">
             <div class="flex items-center gap-2 pt-3 border-t border-slate-200">
-              <button onclick="closeModal('dogsModal'); openModal('adoptModal');" class="flex-1 py-2.5 rounded-xl bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wide transition-colors cursor-pointer">
-                Apply to Adopt
+              <button onclick="closeModal('dogsModal'); openModal('adoptModal');" class="flex-1 py-3 rounded-xl bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wide transition-colors cursor-pointer">
+                Apply to Adopt Piper
               </button>
-              <a href="https://www.petfinder.com/member/us/ga/valdosta/dare-animal-rescue-ga834/" target="_blank" rel="noopener noreferrer" class="px-3 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-xs font-bold text-slate-700 border border-slate-300 transition-colors">
-                Petfinder
-              </a>
             </div>
           </div>
         </div>
@@ -2568,6 +2549,42 @@
         });
       }
     });
+
+    // --- Piper Photo Carousel ---
+    const piperPhotos = [
+      'available dogs for adoption/piper-1.jpg',
+      'available dogs for adoption/piper-2.jpg'
+    ];
+    let currentPiperPhotoIndex = 0;
+
+    function setPiperPhoto(index) {
+      currentPiperPhotoIndex = (index + piperPhotos.length) % piperPhotos.length;
+      const mainImg = document.getElementById('piper-main-img');
+      const counter = document.getElementById('piper-photo-counter');
+      const thumb0 = document.getElementById('piper-thumb-0');
+      const thumb1 = document.getElementById('piper-thumb-1');
+
+      if (mainImg) {
+        mainImg.src = piperPhotos[currentPiperPhotoIndex];
+        mainImg.alt = `Meet Piper — Photo ${currentPiperPhotoIndex + 1}`;
+      }
+      if (counter) {
+        counter.textContent = `Photo ${currentPiperPhotoIndex + 1} of ${piperPhotos.length}`;
+      }
+      if (thumb0 && thumb1) {
+        if (currentPiperPhotoIndex === 0) {
+          thumb0.className = 'w-12 h-12 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer';
+          thumb1.className = 'w-12 h-12 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer';
+        } else {
+          thumb0.className = 'w-12 h-12 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer';
+          thumb1.className = 'w-12 h-12 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer';
+        }
+      }
+    }
+
+    function switchPiperPhoto(delta) {
+      setPiperPhoto(currentPiperPhotoIndex + delta);
+    }
 
     // --- Available Pets Filter Tabs ---
     function filterPets(category, shouldScroll) {
