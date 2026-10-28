@@ -1917,7 +1917,7 @@
         <!-- Dog 1: Piper (2-Photo Interactive Carousel) -->
         <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between sm:col-span-2 max-w-md mx-auto w-full">
           <div>
-            <div class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 group">
+            <div onclick="switchPiperPhoto(1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
               <img id="piper-main-img" src="available dogs for adoption/piper-1.jpg" alt="Meet Piper — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
               <div class="absolute top-3 left-3 bg-slate-900/75 backdrop-blur px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-sm" id="piper-photo-counter">
                 Photo 1 of 2
@@ -1925,17 +1925,10 @@
               <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
                 Available Dog
               </div>
-              <!-- Prev / Next Carousel Arrows -->
-              <button type="button" onclick="switchPiperPhoto(-1)" aria-label="Previous photo of Piper" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-slate-800 font-black text-lg shadow-md flex items-center justify-center cursor-pointer transition-transform active:scale-95">
-                ‹
-              </button>
-              <button type="button" onclick="switchPiperPhoto(1)" aria-label="Next photo of Piper" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-slate-800 font-black text-lg shadow-md flex items-center justify-center cursor-pointer transition-transform active:scale-95">
-                ›
-              </button>
             </div>
 
-            <!-- Thumbnail / Dot Switcher Bar -->
-            <div class="flex items-center justify-center gap-2.5 py-2.5 bg-slate-100 border-b border-slate-200">
+            <!-- Thumbnail Switcher Bar -->
+            <div class="flex items-center justify-center gap-3 py-2.5 bg-slate-100 border-b border-slate-200">
               <button type="button" onclick="setPiperPhoto(0)" id="piper-thumb-0" class="w-12 h-12 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer">
                 <img src="available dogs for adoption/piper-1.jpg" alt="Piper cover photo thumbnail" class="w-full h-full object-cover" />
               </button>
