@@ -158,7 +158,7 @@
           <a href="#adoption-requirements" class="hover:text-dareTeal-600 transition-colors">Requirements</a>
           <a href="#adoption-fees" class="hover:text-dareTeal-600 transition-colors">Fees</a>
           <a href="#sanctuary-section" class="hover:text-dareTeal-600 transition-colors">Senior Program</a>
-          <a href="#donate-section" class="hover:text-dareTeal-600 transition-colors">Donate</a>
+          <button type="button" onclick="openModal('donateModal')" class="hover:text-dareTeal-600 transition-colors uppercase font-bold tracking-wider cursor-pointer">Donate</button>
           <a href="#contact-section" class="hover:text-dareTeal-600 transition-colors">Contact</a>
         </nav>
 
@@ -167,9 +167,9 @@
 
           <!-- Donate Pill with Tax Deductible Tooltip / Note (Page 1) -->
           <div class="relative group">
-            <a href="#donate-section" class="inline-flex items-center justify-center px-4 py-2 text-xs font-black uppercase tracking-wider bg-dareTeal-500 hover:bg-dareTeal-600 text-white rounded-full transition-all shadow-sm hover:shadow-cyan-500/25 active:scale-95 whitespace-nowrap">
+            <button type="button" onclick="openModal('donateModal')" class="inline-flex items-center justify-center px-4 py-2 text-xs font-black uppercase tracking-wider bg-dareTeal-500 hover:bg-dareTeal-600 text-white rounded-full transition-all shadow-sm hover:shadow-cyan-500/25 active:scale-95 whitespace-nowrap cursor-pointer">
               Donate
-            </a>
+            </button>
             <span class="absolute -bottom-8 right-0 hidden group-hover:block bg-slate-900 text-white text-[10px] font-semibold py-1 px-2.5 rounded shadow-lg whitespace-nowrap z-50 pointer-events-none">
               All donations are tax deductible
             </span>
@@ -210,7 +210,7 @@
         <a href="#sanctuary-section" class="mobile-nav-link block py-1.5 text-slate-900 hover:text-dareTeal-600">SENIOR PROGRAM</a>
       </div>
       <div class="py-2.5">
-        <a href="#donate-section" class="mobile-nav-link block py-1.5 text-slate-900 hover:text-dareTeal-600">DONATE (TAX DEDUCTIBLE)</a>
+        <button type="button" onclick="openModal('donateModal')" class="mobile-nav-link block w-full text-left py-1.5 text-slate-900 hover:text-dareTeal-600 uppercase font-bold tracking-wider cursor-pointer">DONATE (TAX DEDUCTIBLE)</button>
       </div>
       <div class="py-2.5">
         <a href="#contact-section" class="mobile-nav-link block py-1.5 text-slate-900 hover:text-dareTeal-600">CONTACT US</a>
@@ -621,25 +621,21 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          <!-- PayPal One-Click Donation Box (Page 11) -->
+          <!-- PayPal One-Click Donation Box (Page 11 & Newest Notes) -->
           <div class="lg:col-span-7 bg-white text-slate-800 rounded-3xl p-8 sm:p-10 shadow-sm border border-slate-200 flex flex-col justify-between">
-            <div>
-              <p class="text-slate-700 text-sm leading-relaxed mb-4">
-                All donations go directly toward DARE operational expenses, including housing, food, and veterinary medical care.
+            <div class="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
+              <p>
+                We spare no expense when it comes to our furry friends. We provide comprehensive medical exams &amp; treatments, including tests for heartworms (dogs) &amp; leukemia/aids (cats), vaccinations, deworming, heartworm &amp; flea prevention, dental exams and cleaning, micro-chips, etc.
+              </p>
+              <p>
+                All of our foster pets are kept in clean, warm &amp; cozy home environments and are provided with hours of love and care, play time, walks, etc.
+              </p>
+              <p>
+                Daily food costs, toys, pet supplies, medical &amp; operational expenses are quite costly. Your generosity helps us provide for our remaining adoptable pets, as well as our senior &amp; unadoptable pets, who will live out the rest of their days with us. Please help us provide for our little furry friends.
               </p>
 
-              <!-- Page 11 DARE callout -->
-              <div class="p-4 rounded-2xl bg-teal-50/70 border border-teal-200 text-dareTeal-950 font-bold text-sm space-y-1.5 mb-6">
-                <p>WILL YOU...</p>
-                <ul class="list-disc pl-5 space-y-1">
-                  <li>DARE to get involved?</li>
-                  <li>DARE to save lives?</li>
-                  <li>DARE to make a difference?</li>
-                </ul>
-              </div>
-
               <!-- Page 11: All donations are totally tax deductible -->
-              <div class="inline-block px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 font-extrabold text-xs uppercase tracking-wide mb-6">
+              <div class="inline-block px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 font-extrabold text-xs uppercase tracking-wide mt-2">
                 ✓ All donations are totally tax deductible
               </div>
             </div>
@@ -650,10 +646,7 @@
                 <input type="hidden" name="cmd" value="_s-xclick" />
                 <input type="hidden" name="hosted_button_id" value="D9ZYNDCUYBJRG" />
                 <button type="submit" class="w-full py-4 px-6 rounded-full bg-[#00A1B3] hover:bg-[#008999] text-white font-black text-base uppercase tracking-wider shadow-md hover:shadow-cyan-500/25 transition-all transform hover:scale-[1.01] flex items-center justify-center gap-2 cursor-pointer">
-                  <span>Donate via PayPal</span>
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.82.9 4.966-.013.072-.03.143-.047.215-.928 4.79-4.148 7.23-9.566 7.23H7.817l-1.378 8.742a.641.641 0 0 1-.632.544l1.269-2.17z"/>
-                  </svg>
+                  <span>PLEASE DONATE</span>
                 </button>
               </form>
               <p class="text-xs text-slate-500 mt-3 text-center">
@@ -1797,6 +1790,7 @@
             <p class="text-slate-600 mb-2">Contact Lowndes County Animal Services or the Sheriff's Office:</p>
             <div class="space-y-1 text-xs">
               <div>• <strong>Lowndes County Animal Services:</strong> <a href="tel:2296712760" class="font-bold text-dareTeal-700 underline">(229) 671-2760</a></div>
+              <div class="pl-4 font-semibold text-rose-800">◦ <a href="tel:2292455270" class="font-bold text-rose-700 underline">229-245-5270</a> (after hours emergencies)</div>
               <div>• <strong>Lowndes County Sheriff's Office:</strong> <a href="tel:2296712900" class="font-bold text-dareTeal-700 underline">(229) 671-2900</a> (or 911 for emergency in progress)</div>
             </div>
           </div>
@@ -1875,14 +1869,14 @@
           <h4 class="font-black text-slate-900 text-sm sm:text-base">Help Sustain Our Golden Years Sanctuary</h4>
           <p class="text-xs sm:text-sm text-slate-600 mt-1 max-w-xl">It can be quite costly to provide permanent housing, care, and adequate medical attention. All donations are totally tax deductible.</p>
         </div>
-        <a href="#donate-section" onclick="closeModal('seniorPicturesModal')" class="group relative inline-flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 focus:outline-none my-1" title="Click to Donate">
+        <button type="button" onclick="closeModal('seniorPicturesModal'); openModal('donateModal');" class="group relative inline-flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 focus:outline-none my-1" title="Click to Donate">
           <svg viewBox="0 0 260 235" class="w-64 sm:w-72 h-auto drop-shadow-lg">
             <path d="M130 222 C130 222 16 148 16 72 C16 34 46 10 82 10 C105 10 122 22 130 38 C138 22 155 10 178 10 C214 10 244 34 244 72 C244 148 130 222 130 222 Z" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors duration-300" stroke="#0f766e" stroke-width="4" />
           </svg>
           <span class="absolute inset-0 flex items-center justify-center px-12 pb-6 text-center text-white font-black text-xs sm:text-sm leading-snug drop-shadow-sm pointer-events-none">
             Please make a donation to help us care for our senior &amp; unadoptable pets.
           </span>
-        </a>
+        </button>
       </div>
 
       <div class="mt-6 pt-4 border-t border-slate-200 text-right">
@@ -2396,6 +2390,54 @@
   </div>
 
   <!-- ================================================================= -->
+  <!-- MODAL 13: DONATE MODAL (TOP DONATE BUTTON POPUP)                  -->
+  <!-- ================================================================= -->
+  <div id="donateModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-backdrop p-4 sm:p-6 lg:p-10 flex items-center justify-center">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8">
+
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-6">
+        <div>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900">Support D.A.R.E. Animal Rescue</h3>
+          <p class="text-xs text-slate-500">100% Tax-Deductible 501(c)(3) Nonprofit Contributions</p>
+        </div>
+        <button onclick="closeModal('donateModal')" class="text-slate-400 hover:text-slate-700 text-xl p-1 font-bold cursor-pointer">✕</button>
+      </div>
+
+      <div class="space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed mb-6">
+        <p>
+          We spare no expense when it comes to our furry friends. We provide comprehensive medical exams &amp; treatments, including tests for heartworms (dogs) &amp; leukemia/aids (cats), vaccinations, deworming, heartworm &amp; flea prevention, dental exams and cleaning, micro-chips, etc.
+        </p>
+        <p>
+          All of our foster pets are kept in clean, warm &amp; cozy home environments and are provided with hours of love and care, play time, walks, etc.
+        </p>
+        <p>
+          Daily food costs, toys, pet supplies, medical &amp; operational expenses are quite costly. Your generosity helps us provide for our remaining adoptable pets, as well as our senior &amp; unadoptable pets, who will live out the rest of their days with us. Please help us provide for our little furry friends.
+        </p>
+      </div>
+
+      <div class="pt-2">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_s-xclick" />
+          <input type="hidden" name="hosted_button_id" value="D9ZYNDCUYBJRG" />
+          <button type="submit" class="w-full py-4 px-8 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-black text-base sm:text-lg uppercase tracking-wider shadow-lg hover:shadow-cyan-500/25 transition-all transform hover:scale-[1.01] text-center cursor-pointer">
+            PLEASE DONATE
+          </button>
+        </form>
+        <p class="text-xs text-slate-500 mt-3 text-center">
+          All donations are totally tax deductible • Checks may also be mailed to <strong>D.A.R.E. Animal Rescue, 1709 A Gornto Road, PMB #322, Valdosta, GA 31601</strong>.
+        </p>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-200 text-right">
+        <button onclick="closeModal('donateModal')" class="py-2.5 px-6 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
   <!-- JAVASCRIPT LOGIC (VANILLA JS ONLY, ZERO EXTERNAL DEPENDENCIES)   -->
   <!-- ================================================================= -->
   <script>
@@ -2480,7 +2522,8 @@
       'dogsModal',
       'catsModal',
       'adoptionProcessModal',
-      'adoptionRequirementsModal'
+      'adoptionRequirementsModal',
+      'donateModal'
     ];
 
     // --- Modal Management ---
