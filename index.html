@@ -395,24 +395,46 @@
             </div>
           </div>
 
-          <div class="pt-6 border-t border-slate-200 flex flex-col items-center justify-center">
-            <button type="button" onclick="openModal('adoptModal')" aria-label="Open Pet Adoption Application" class="group relative inline-flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-4 focus:ring-dareTeal-300 rounded-3xl p-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" class="w-48 h-48 sm:w-56 sm:h-56 drop-shadow-md group-hover:drop-shadow-2xl transition-all">
-                <!-- Toe 1 -->
-                <ellipse cx="44" cy="92" rx="19" ry="29" transform="rotate(-32 44 92)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
-                <!-- Toe 2 -->
-                <ellipse cx="90" cy="52" rx="21" ry="32" transform="rotate(-10 90 52)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
-                <!-- Toe 3 -->
-                <ellipse cx="150" cy="52" rx="21" ry="32" transform="rotate(10 150 52)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
-                <!-- Toe 4 -->
-                <ellipse cx="196" cy="92" rx="19" ry="29" transform="rotate(32 196 92)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
-                <!-- Main Pad -->
-                <path d="M 120,95 C 145,95 168,105 186,122 C 204,139 196,168 180,185 C 164,202 142,204 120,196 C 98,204 76,202 60,185 C 44,168 36,139 54,122 C 72,105 95,95 120,95 Z" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
-                <text x="120" y="146" text-anchor="middle" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-weight="900" font-size="14.5" letter-spacing="1.2">ADOPTION</text>
-                <text x="120" y="168" text-anchor="middle" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-weight="900" font-size="13" letter-spacing="1.2">APPLICATION</text>
-              </svg>
-            </button>
-            <p class="text-xs text-slate-500 font-semibold mt-1">Click paw to open Adoption Application</p>
+          <div class="pt-6 border-t border-slate-200 flex flex-col items-center justify-center space-y-6">
+            <div class="flex flex-col items-center justify-center">
+              <button type="button" onclick="openModal('adoptModal')" aria-label="Open Pet Adoption Application" class="group relative inline-flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-4 focus:ring-dareTeal-300 rounded-3xl p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" class="w-48 h-48 sm:w-56 sm:h-56 drop-shadow-md group-hover:drop-shadow-2xl transition-all">
+                  <!-- Toe 1 -->
+                  <ellipse cx="44" cy="92" rx="19" ry="29" transform="rotate(-32 44 92)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
+                  <!-- Toe 2 -->
+                  <ellipse cx="90" cy="52" rx="21" ry="32" transform="rotate(-10 90 52)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
+                  <!-- Toe 3 -->
+                  <ellipse cx="150" cy="52" rx="21" ry="32" transform="rotate(10 150 52)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
+                  <!-- Toe 4 -->
+                  <ellipse cx="196" cy="92" rx="19" ry="29" transform="rotate(32 196 92)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
+                  <!-- Main Pad -->
+                  <path d="M 120,95 C 145,95 168,105 186,122 C 204,139 196,168 180,185 C 164,202 142,204 120,196 C 98,204 76,202 60,185 C 44,168 36,139 54,122 C 72,105 95,95 120,95 Z" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
+                  <text x="120" y="146" text-anchor="middle" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-weight="900" font-size="14.5" letter-spacing="1.2">ADOPTION</text>
+                  <text x="120" y="168" text-anchor="middle" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-weight="900" font-size="13" letter-spacing="1.2">APPLICATION</text>
+                </svg>
+              </button>
+              <p class="text-xs text-slate-500 font-semibold mt-1">Click paw to open Adoption Application</p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center pt-4 border-t border-slate-200/80 w-full">
+              <button type="button" onclick="openModal('fosterModal')" aria-label="Open Process to Be a Foster Parent" class="group relative inline-flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-4 focus:ring-dareTeal-300 rounded-3xl p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" class="w-48 h-48 sm:w-56 sm:h-56 drop-shadow-md group-hover:drop-shadow-2xl transition-all">
+                  <!-- Toe 1 -->
+                  <ellipse cx="44" cy="92" rx="19" ry="29" transform="rotate(-32 44 92)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
+                  <!-- Toe 2 -->
+                  <ellipse cx="90" cy="52" rx="21" ry="32" transform="rotate(-10 90 52)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
+                  <!-- Toe 3 -->
+                  <ellipse cx="150" cy="52" rx="21" ry="32" transform="rotate(10 150 52)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
+                  <!-- Toe 4 -->
+                  <ellipse cx="196" cy="92" rx="19" ry="29" transform="rotate(32 196 92)" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
+                  <!-- Main Pad -->
+                  <path d="M 120,95 C 145,95 168,105 186,122 C 204,139 196,168 180,185 C 164,202 142,204 120,196 C 98,204 76,202 60,185 C 44,168 36,139 54,122 C 72,105 95,95 120,95 Z" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors" />
+                  <text x="120" y="146" text-anchor="middle" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-weight="900" font-size="12.5" letter-spacing="0.8">Process to Be</text>
+                  <text x="120" y="166" text-anchor="middle" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-weight="900" font-size="11.5" letter-spacing="0.6">A Foster Parent</text>
+                </svg>
+              </button>
+              <p class="text-xs text-slate-500 font-semibold mt-1">Click paw for Process to Be a Foster Parent</p>
+            </div>
           </div>
         </div>
 
@@ -839,187 +861,102 @@
   </footer>
 
   <!-- ================================================================= -->
-  <!-- MODAL 1: FOSTER CARE APPLICATION (INTERACTIVE + PRINTABLE)        -->
+  <!-- MODAL 1: PROCESS TO BE A FOSTER PARENT                            -->
   <!-- ================================================================= -->
   <div id="fosterModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-backdrop p-4 sm:p-6 lg:p-10 flex items-center justify-center">
     <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 printable-modal">
       
       <!-- Modal Header -->
-      <div class="bg-white text-slate-900 px-6 py-4 flex items-center justify-between border-b border-slate-200 no-print">
+      <div class="bg-white text-slate-900 px-6 py-4 flex items-center justify-between border-b border-slate-200 no-print sticky top-0 z-10">
         <div>
-          <h3 class="text-lg font-black tracking-wide text-dareTeal-700">FOSTER CARE APPLICATION</h3>
+          <h3 class="text-base sm:text-lg font-black tracking-wide text-dareTeal-700 uppercase">Process to Be a Foster Parent</h3>
           <p class="text-xs text-slate-500">D.A.R.E. Animal Rescue, Inc. • Valdosta, GA</p>
         </div>
         <div class="flex items-center gap-2">
-          <button onclick="window.print()" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-xs font-semibold text-slate-700 border border-slate-200">
+          <button onclick="window.print()" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-xs font-semibold text-slate-700 border border-slate-200 cursor-pointer">
             Print
           </button>
-          <button onclick="closeModal('fosterModal')" class="text-slate-400 hover:text-slate-700 text-xl p-1 font-bold">
+          <button onclick="closeModal('fosterModal')" class="text-slate-400 hover:text-slate-700 text-xl p-1 font-bold cursor-pointer">
             ✕
           </button>
         </div>
       </div>
 
-      <!-- Printable Document Header -->
-      <div class="p-6 sm:p-8">
-        <div class="mb-6 pb-4 border-b border-slate-200">
-          <h2 class="text-2xl font-black text-slate-900">Foster Parent Care Application</h2>
-          <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-            Thank you for opening your heart and home to a rescue animal in need. <strong>Remember: D.A.R.E. pays 100% of approved veterinary medical care, heartworm prevention, and provides all necessary crates and supplies.</strong>
+      <!-- Modal Content -->
+      <div class="p-6 sm:p-8 space-y-6 text-xs sm:text-sm text-slate-700 leading-relaxed">
+        
+        <!-- Intro Box (IMG_2456 verbatim) -->
+        <div class="p-5 rounded-2xl bg-teal-50/80 border border-teal-200 text-slate-800 space-y-3">
+          <p class="font-medium">
+            In order to qualify to become a foster parent, the adoption process, eligibility requirements &amp; application are basically the same.
+          </p>
+          <p>
+            <strong>First,</strong> please read over the <button type="button" onclick="closeModal('fosterModal'); openModal('adoptionProcessModal');" class="text-dareTeal-700 underline font-black hover:text-dareTeal-900 cursor-pointer">adoption process</button> &amp; <button type="button" onclick="closeModal('fosterModal'); openModal('adoptionRequirementsModal');" class="text-dareTeal-700 underline font-black hover:text-dareTeal-900 cursor-pointer">eligibility requirements</button> to ensure that you are qualified to foster.
+          </p>
+          <p>
+            <strong>Second,</strong> complete the <button type="button" onclick="closeModal('fosterModal'); openModal('adoptModal');" class="text-dareTeal-700 underline font-black hover:text-dareTeal-900 cursor-pointer">adoption application</button>, specifically the sections listed below.
+          </p>
+          <p>
+            Once you submit your foster application, a D.A.R.E. Representative will contact you by email or phone.
+          </p>
+          <p class="font-bold text-dareTeal-900 pt-1">
+            Thank you for your interest in fostering one of our furry friends.
           </p>
         </div>
 
-        <form id="fosterForm" onsubmit="handleFosterSubmit(event)" class="space-y-6 text-xs sm:text-sm">
-          
-          <!-- Section 1: Contact Information -->
-          <div>
-            <h4 class="font-bold text-slate-900 uppercase tracking-wider text-xs border-b border-slate-100 pb-1 mb-3 text-dareTeal-700">
-              1. Applicant Information
-            </h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Full Legal Name *</label>
-                <input type="text" name="foster_name" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" />
-              </div>
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Age / Date of Birth *</label>
-                <input type="text" name="foster_age" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Must be 18+" />
-              </div>
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Primary Phone Number *</label>
-                <input type="tel" name="foster_phone" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" />
-              </div>
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Email Address *</label>
-                <input type="email" name="foster_email" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" />
-              </div>
-              <div class="sm:col-span-2">
-                <label class="block font-semibold text-slate-700 mb-1">Physical Street Address (No PO Boxes) *</label>
-                <input type="text" name="foster_address" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Street Address, City, State, Zip" />
-              </div>
+        <!-- Section Instructions (IMG_2457 verbatim) -->
+        <div class="space-y-4">
+          <h4 class="font-black text-slate-900 text-sm sm:text-base border-b border-slate-200 pb-2">
+            On the Adoption Application, please complete the following sections:
+          </h4>
+
+          <div class="space-y-3">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <h5 class="font-bold text-slate-900 text-sm mb-1">1. Pet of Interest &amp; Preferences</h5>
+              <p class="text-slate-600">
+                Please list what type of pet, gender &amp; age you prefer to foster.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <h5 class="font-bold text-slate-900 text-sm mb-1">2. Applicant Household &amp; Details</h5>
+              <p class="text-slate-600">
+                Complete this section.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <h5 class="font-bold text-slate-900 text-sm mb-1">3. Housing &amp; Living Environment</h5>
+              <p class="text-slate-600">
+                Complete this section. Skip sections that don't apply. For example: fencing questions would not apply to someone wishing to foster a cat.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <h5 class="font-bold text-slate-900 text-sm mb-1">4. Secondary Caregiver Emergency Plan</h5>
+              <p class="text-slate-600">
+                Skip this section except for <strong>Work Schedule &amp; Unexpected Absences #1 &amp; #2</strong>.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <h5 class="font-bold text-slate-900 text-sm mb-1">5. Pet Experience &amp; Vet History</h5>
+              <p class="text-slate-600">
+                Complete this section.
+              </p>
             </div>
           </div>
+        </div>
 
-          <!-- Section 2: Housing & Yard -->
-          <div>
-            <h4 class="font-bold text-slate-900 uppercase tracking-wider text-xs border-b border-slate-100 pb-1 mb-3 text-dareTeal-700">
-              2. Housing & Residence Details
-            </h4>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Residence Type *</label>
-                <select name="foster_housing" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
-                  <option value="Single Family House">Single Family House</option>
-                  <option value="Apartment">Apartment</option>
-                  <option value="Townhouse/Condo">Townhouse/Condo</option>
-                  <option value="Mobile Home">Mobile Home</option>
-                </select>
-              </div>
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Do You Own or Rent? *</label>
-                <select name="foster_own_rent" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
-                  <option value="Own">Own Home</option>
-                  <option value="Rent">Rent (Landlord permission required)</option>
-                  <option value="Live with Parents">Live with Parents/Family</option>
-                </select>
-              </div>
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Fenced Yard? *</label>
-                <select name="foster_fence" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
-                  <option value="Fully Fenced (6ft+)">Fully Fenced (6ft+)</option>
-                  <option value="Fully Fenced (4ft)">Fully Fenced (4ft)</option>
-                  <option value="Partial Fence">Partial Fence</option>
-                  <option value="No Fence">No Fence (Leash walked only)</option>
-                </select>
-              </div>
-              <div class="sm:col-span-3">
-                <label class="block font-semibold text-slate-700 mb-1">If Renting: Landlord / Property Manager Name & Phone</label>
-                <input type="text" name="foster_landlord" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Name and phone number for pet policy verification" />
-              </div>
-            </div>
-          </div>
-
-          <!-- Section 3: Household & Other Pets -->
-          <div>
-            <h4 class="font-bold text-slate-900 uppercase tracking-wider text-xs border-b border-slate-100 pb-1 mb-3 text-dareTeal-700">
-              3. Household Members & Current Pets
-            </h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Number of Adults in Home *</label>
-                <input type="number" min="1" name="foster_adults" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" value="1" />
-              </div>
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Children in Home & Their Ages</label>
-                <input type="text" name="foster_children" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="e.g. 2 children (ages 6 and 10), or None" />
-              </div>
-              <div class="sm:col-span-2">
-                <label class="block font-semibold text-slate-700 mb-1">Current Pets (Species, Breeds, Ages, Spayed/Neutered?) *</label>
-                <textarea name="foster_current_pets" rows="2" required class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="e.g. 1 Golden Retriever (4 yrs, neutered, current on vaccines/prevention), 1 Cat (spayed)"></textarea>
-              </div>
-            </div>
-          </div>
-
-          <!-- Section 4: Primary Veterinarian -->
-          <div>
-            <h4 class="font-bold text-slate-900 uppercase tracking-wider text-xs border-b border-slate-100 pb-1 mb-3 text-dareTeal-700">
-              4. Veterinarian Reference Check
-            </h4>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Veterinary Clinic Name *</label>
-                <input type="text" name="foster_vet_clinic" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="e.g. Baytree Animal Hospital" />
-              </div>
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Veterinarian's Name</label>
-                <input type="text" name="foster_vet_name" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Dr. Smith" />
-              </div>
-              <div>
-                <label class="block font-semibold text-slate-700 mb-1">Clinic Phone Number *</label>
-                <input type="tel" name="foster_vet_phone" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="(229) 000-0000" />
-              </div>
-            </div>
-            <p class="text-[11px] text-slate-500 mt-2">
-              *Please call your veterinary clinic to give permission for D.A.R.E. Animal Rescue to verify pet vaccination and heartworm prevention records.
-            </p>
-          </div>
-
-          <!-- Section 5: Fostering Preferences -->
-          <div>
-            <h4 class="font-bold text-slate-900 uppercase tracking-wider text-xs border-b border-slate-100 pb-1 mb-3 text-dareTeal-700">
-              5. Foster Pet Preferences
-            </h4>
-            <label class="block font-semibold text-slate-700 mb-2">What types of animals are you comfortable fostering? (Check all that apply)</label>
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-              <label class="flex items-center gap-2"><input type="checkbox" name="pref_adult_dogs" value="Yes" class="rounded text-dareTeal-600 focus:ring-dareTeal-500" /> Adult Dogs</label>
-              <label class="flex items-center gap-2"><input type="checkbox" name="pref_puppies" value="Yes" class="rounded text-dareTeal-600 focus:ring-dareTeal-500" /> Puppies</label>
-              <label class="flex items-center gap-2"><input type="checkbox" name="pref_senior_dogs" value="Yes" class="rounded text-dareTeal-600 focus:ring-dareTeal-500" /> Senior Dogs</label>
-              <label class="flex items-center gap-2"><input type="checkbox" name="pref_cats" value="Yes" class="rounded text-dareTeal-600 focus:ring-dareTeal-500" /> Adult Cats</label>
-              <label class="flex items-center gap-2"><input type="checkbox" name="pref_kittens" value="Yes" class="rounded text-dareTeal-600 focus:ring-dareTeal-500" /> Kittens / Bottle Babies</label>
-              <label class="flex items-center gap-2"><input type="checkbox" name="pref_medical" value="Yes" class="rounded text-dareTeal-600 focus:ring-dareTeal-500" /> Medical / Heartworm Recovery</label>
-            </div>
-          </div>
-
-          <!-- Acknowledgement & Submit -->
-          <div class="pt-4 border-t border-slate-200">
-            <label class="flex items-start gap-2.5 text-xs text-slate-600">
-              <input type="checkbox" required class="mt-0.5 rounded text-dareTeal-600 focus:ring-dareTeal-500" />
-              <span>I certify that all information provided is accurate. I understand that D.A.R.E. Animal Rescue retains ownership of foster animals and covers approved medical care at designated veterinary clinics.</span>
-            </label>
-
-            <div class="mt-6 flex flex-col sm:flex-row gap-3 no-print">
-              <button type="submit" class="flex-1 py-3.5 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-sm uppercase tracking-wider shadow-lg transition-colors">
-                Submit Foster Application
-              </button>
-              <button type="button" onclick="closeModal('fosterModal')" class="py-3.5 px-6 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-sm uppercase tracking-wider transition-colors">
-                Cancel
-              </button>
-            </div>
-          </div>
-
-        </form>
-
-        <div id="fosterFeedback" class="hidden mt-4 p-4 rounded-xl bg-teal-50 border border-teal-200 text-teal-900 text-xs font-medium text-center"></div>
+        <!-- Footer Buttons -->
+        <div class="pt-4 border-t border-slate-200 flex flex-col sm:flex-row gap-3 no-print">
+          <button type="button" onclick="closeModal('fosterModal'); openModal('adoptModal');" class="flex-1 py-3.5 px-6 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wider text-center shadow-md transition-colors cursor-pointer">
+            Open Application to Foster
+          </button>
+          <button type="button" onclick="closeModal('fosterModal')" class="py-3.5 px-8 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
+            Close
+          </button>
+        </div>
 
       </div>
 
@@ -1099,16 +1036,17 @@
               </div>
               <div class="sm:col-span-2">
                 <label class="block font-semibold text-slate-700 mb-1">Primary Reason for Adopting *</label>
-                <select name="adopt_reason" id="adopt_reason" onchange="toggleOtherField('adopt_reason', 'adopt_reason_other_wrap')" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
+                <select name="adopt_reason" id="adopt_reason" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="Family Companion">Family Companion &amp; Indoor Pet</option>
                   <option value="Companion for Another Pet">Companion for Another Pet</option>
                   <option value="Personal / Emotional Support">Personal / Emotional Support</option>
                   <option value="Watchdog / Guard">Watchdog / Guard</option>
+                  <option value="Fostering a Pet">Fostering a Pet</option>
                   <option value="Other">Other</option>
                 </select>
-                <div id="adopt_reason_other_wrap" class="hidden mt-2">
-                  <label class="block text-xs font-semibold text-slate-600 mb-1">If "Other", please explain:</label>
-                  <input type="text" name="adopt_reason_other" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Please explain your reason for adopting" />
+                <div id="adopt_reason_other_wrap" class="mt-2">
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">If you checked "other," please explain:</label>
+                  <input type="text" name="adopt_reason_other" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="If you checked &quot;other,&quot; please explain..." />
                 </div>
               </div>
               <div>
@@ -1157,15 +1095,15 @@
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Living Situation *</label>
-                <select name="adopt_household_type" id="adopt_household_type" onchange="toggleOtherField('adopt_household_type', 'adopt_household_type_other_wrap')" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
+                <select name="adopt_household_type" id="adopt_household_type" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="Live Alone">Live Alone</option>
                   <option value="Live with Spouse / Partner">Live with Spouse / Partner</option>
                   <option value="Live with Parents / Family">Live with Parents / Family</option>
                   <option value="Other">Other</option>
                 </select>
-                <div id="adopt_household_type_other_wrap" class="hidden mt-2">
-                  <label class="block text-xs font-semibold text-slate-600 mb-1">If "Other", please explain:</label>
-                  <input type="text" name="adopt_household_type_other" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Please explain living situation" />
+                <div id="adopt_household_type_other_wrap" class="mt-2">
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">If you checked "other," please explain:</label>
+                  <input type="text" name="adopt_household_type_other" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="If you checked &quot;other,&quot; please explain..." />
                 </div>
               </div>
               <div>
@@ -1185,6 +1123,7 @@
                 <select name="adopt_allergies" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="No">No</option>
                   <option value="Yes">Yes</option>
+                  <option value="Yes, but under control.">Yes, but under control.</option>
                 </select>
               </div>
               <div>
@@ -1216,29 +1155,29 @@
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Housing Type *</label>
-                <select name="adopt_home_type" id="adopt_home_type" onchange="toggleOtherField('adopt_home_type', 'adopt_home_type_other_wrap')" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
+                <select name="adopt_home_type" id="adopt_home_type" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="Single Family House">Single Family House</option>
                   <option value="Townhouse / Condo">Townhouse / Condo</option>
                   <option value="Apartment">Apartment</option>
                   <option value="Mobile Home">Mobile Home</option>
                   <option value="Other">Other</option>
                 </select>
-                <div id="adopt_home_type_other_wrap" class="hidden mt-2">
-                  <label class="block text-xs font-semibold text-slate-600 mb-1">If "Other", please explain:</label>
-                  <input type="text" name="adopt_home_type_other" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Please describe housing type" />
+                <div id="adopt_home_type_other_wrap" class="mt-2">
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">If you checked "other," please explain:</label>
+                  <input type="text" name="adopt_home_type_other" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="If you checked &quot;other,&quot; please explain..." />
                 </div>
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Own or Rent? *</label>
-                <select name="adopt_own_rent" id="adopt_own_rent" onchange="toggleOtherField('adopt_own_rent', 'adopt_own_rent_other_wrap')" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
+                <select name="adopt_own_rent" id="adopt_own_rent" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="Own">Own Home</option>
                   <option value="Rent">Rent</option>
                   <option value="Live with Parents / Family">Live with Parents / Family</option>
                   <option value="Other">Other</option>
                 </select>
-                <div id="adopt_own_rent_other_wrap" class="hidden mt-2">
-                  <label class="block text-xs font-semibold text-slate-600 mb-1">If "Other", please explain:</label>
-                  <input type="text" name="adopt_own_rent_other" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Please explain living/ownership arrangement" />
+                <div id="adopt_own_rent_other_wrap" class="mt-2">
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">If you checked "other," please explain:</label>
+                  <input type="text" name="adopt_own_rent_other" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="If you checked &quot;other,&quot; please explain..." />
                 </div>
               </div>
               <div class="sm:col-span-2">
@@ -1246,11 +1185,12 @@
                 <input type="text" name="adopt_landlord" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Landlord name, phone, deposit status &amp; any breed/weight limits" />
               </div>
               <div>
-                <label class="block font-semibold text-slate-700 mb-1">Yard Fence Status *</label>
-                <select name="adopt_fence_status" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
+                <label class="block font-semibold text-slate-700 mb-1">Yard Fence Status</label>
+                <select name="adopt_fence_status" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="Fully Fenced Yard">Fully Fenced Yard</option>
                   <option value="Partially Fenced Yard">Partially Fenced Yard</option>
                   <option value="No Fence / Leash Walk Only">No Fence (Leash Walk Only)</option>
+                  <option value="N/A (Cat Only)">Not Applicable (Cat Only)</option>
                 </select>
               </div>
               <div>
@@ -1266,7 +1206,7 @@
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Where Kept When Home Alone? *</label>
-                <select name="adopt_day_location" id="adopt_day_location" onchange="toggleOtherField('adopt_day_location', 'adopt_day_location_other_wrap')" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
+                <select name="adopt_day_location" id="adopt_day_location" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="Inside Free Roam">Inside - Free Roam of House</option>
                   <option value="Inside Crated">Inside - Crated</option>
                   <option value="Inside Designated Room">Inside - Specific Gated Room</option>
@@ -1274,9 +1214,9 @@
                   <option value="Fenced Yard / Patio">Fenced Yard / Patio</option>
                   <option value="Other">Other</option>
                 </select>
-                <div id="adopt_day_location_other_wrap" class="hidden mt-2">
-                  <label class="block text-xs font-semibold text-slate-600 mb-1">If "Other", please explain:</label>
-                  <input type="text" name="adopt_day_location_other" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Please explain where pet will be kept" />
+                <div id="adopt_day_location_other_wrap" class="mt-2">
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">If you checked "other," please explain:</label>
+                  <input type="text" name="adopt_day_location_other" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="If you checked &quot;other,&quot; please explain..." />
                 </div>
               </div>
               <div>
@@ -1284,12 +1224,12 @@
                 <input type="text" name="adopt_night_location" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="e.g. In bedroom with family, Crate, Dog bed" />
               </div>
               <div class="sm:col-span-3">
-                <label class="block font-semibold text-slate-700 mb-1">Daily Quality Time &amp; Exercise Commitment *</label>
-                <input type="text" name="adopt_quality_time" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="How many hours of daily companionship, exercise, leash walks, and play will you provide?" />
+                <label class="block font-semibold text-slate-700 mb-1">Daily Quality Time &amp; Exercise Commitment</label>
+                <input type="text" name="adopt_quality_time" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="How many hours of daily companionship, exercise, leash walks, and play will you provide?" />
               </div>
               <div class="sm:col-span-3">
-                <label class="block font-semibold text-slate-700 mb-1">Plan if You Ever Move to a Residence with Pet Restrictions *</label>
-                <input type="text" name="adopt_move_plan" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="e.g. I only choose pet-friendly housing; pet stays with me for life" />
+                <label class="block font-semibold text-slate-700 mb-1">Plan if You Ever Move to a Residence with Pet Restrictions</label>
+                <input type="text" name="adopt_move_plan" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="e.g. I only choose pet-friendly housing; pet stays with me for life" />
               </div>
               <div class="sm:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
                 <div>
@@ -1335,8 +1275,8 @@
                   <input type="text" name="adopt_caregiver_address" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Physical Address, City, State, Email" />
                 </div>
                 <div class="sm:col-span-2">
-                  <label class="block font-semibold text-slate-700 mb-1">Vacation &amp; Travel Arrangements *</label>
-                  <input type="text" name="adopt_vacation_care" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Who will care for this pet when you travel, go on vacation, or in an emergency? (e.g. Secondary caregiver, pet sitter, boarding clinic)" />
+                  <label class="block font-semibold text-slate-700 mb-1">Vacation &amp; Travel Arrangements</label>
+                  <input type="text" name="adopt_vacation_care" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Who will care for this pet when you travel, go on vacation, or in an emergency? (e.g. Secondary caregiver, pet sitter, boarding clinic)" />
                 </div>
                 <div class="sm:col-span-2">
                   <label class="flex items-start gap-2 text-xs text-slate-700 font-medium">
@@ -1387,8 +1327,8 @@
                   <input type="text" name="adopt_short_notice_person" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Name and relationship of the specific person you will call" />
                 </div>
                 <div>
-                  <label class="block font-semibold text-slate-700 mb-1">3. Have you looked into the cost and availability of local dog walkers, pet sitters, or boarding facilities nearby? Do you have room in your budget for these services if needed? *</label>
-                  <input type="text" name="adopt_pet_services_budget" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Yes / Explain local options and budget readiness" />
+                  <label class="block font-semibold text-slate-700 mb-1">3. Have you looked into the cost and availability of local dog walkers, pet sitters, or boarding facilities nearby? Do you have room in your budget for these services if needed?</label>
+                  <input type="text" name="adopt_pet_services_budget" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Yes / Explain local options and budget readiness" />
                 </div>
               </div>
             </div>
@@ -1400,16 +1340,16 @@
               </h5>
               <div class="space-y-3">
                 <div>
-                  <label class="block font-semibold text-slate-700 mb-1">1. Where do you see yourself living in the next 2-3 years? If your job or personal life requires you to move across the country or overseas, what steps will you take to ensure this pet comes with you? Have you looked into the cost associated with that? *</label>
-                  <textarea name="adopt_relocation_steps" rows="2" required class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Explain your 2-3 year living plans and steps/costs to bring your pet if relocating..."></textarea>
+                  <label class="block font-semibold text-slate-700 mb-1">1. Where do you see yourself living in the next 2-3 years? If your job or personal life requires you to move across the country or overseas, what steps will you take to ensure this pet comes with you? Have you looked into the cost associated with that?</label>
+                  <textarea name="adopt_relocation_steps" rows="2" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Explain your 2-3 year living plans and steps/costs to bring your pet if relocating..."></textarea>
                 </div>
                 <div>
-                  <label class="block font-semibold text-slate-700 mb-1">2. Are you familiar with breed bans or size restrictions common in rental housing or community associations? If you have to move, how will you handle finding a pet-friendly home? *</label>
-                  <input type="text" name="adopt_breed_size_restrictions" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Explain how you will ensure pet-friendly housing" />
+                  <label class="block font-semibold text-slate-700 mb-1">2. Are you familiar with breed bans or size restrictions common in rental housing or community associations? If you have to move, how will you handle finding a pet-friendly home?</label>
+                  <input type="text" name="adopt_breed_size_restrictions" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Explain how you will ensure pet-friendly housing" />
                 </div>
                 <div>
-                  <label class="block font-semibold text-slate-700 mb-1">3. If you are ever required to move somewhere that absolutely does not allow pets, or if you face an extended transition period where you can't have animals, what is your back-up plan for your pet? *</label>
-                  <input type="text" name="adopt_no_pet_housing_backup" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Explain your back-up plan during housing transitions" />
+                  <label class="block font-semibold text-slate-700 mb-1">3. If you are ever required to move somewhere that absolutely does not allow pets, or if you face an extended transition period where you can't have animals, what is your back-up plan for your pet?</label>
+                  <input type="text" name="adopt_no_pet_housing_backup" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Explain your back-up plan during housing transitions" />
                 </div>
               </div>
             </div>
@@ -1420,8 +1360,8 @@
                 Illness or Other Tragedy
               </h5>
               <div>
-                <label class="block font-semibold text-slate-700 mb-1">1. If something should happen to you, such as a debilitating illness, car accident, etc., do you have a plan in place for your pet? Please explain in detail. *</label>
-                <textarea name="adopt_tragedy_plan" rows="2" required class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Please explain your long-term emergency/tragedy care plan in detail..."></textarea>
+                <label class="block font-semibold text-slate-700 mb-1">1. If something should happen to you, such as a debilitating illness, car accident, etc., do you have a plan in place for your pet? Please explain in detail.</label>
+                <textarea name="adopt_tragedy_plan" rows="2" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none bg-white" placeholder="Please explain your long-term emergency/tragedy care plan in detail..."></textarea>
               </div>
             </div>
           </div>
@@ -1461,15 +1401,15 @@
               </div>
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">All Pets Spayed/Neutered? *</label>
-                <select name="adopt_pets_spayed_neutered" id="adopt_pets_spayed_neutered" onchange="toggleSpayedExplField()" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
+                <select name="adopt_pets_spayed_neutered" id="adopt_pets_spayed_neutered" required class="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none">
                   <option value="Yes">Yes, 100% of pets</option>
                   <option value="Some were and some weren't">Some were &amp; some weren't (Please explain below)</option>
                   <option value="No">No (Medical exemption)</option>
                   <option value="First-Time Owner">First-Time Pet Owner</option>
                 </select>
-                <div id="adopt_pets_spayed_explain_wrap" class="hidden mt-2">
-                  <label class="block text-xs font-semibold text-slate-600 mb-1">Some were &amp; some weren't, please explain: *</label>
-                  <input type="text" name="adopt_pets_spayed_explain" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="Please explain which pets were/weren't spayed or neutered" />
+                <div id="adopt_pets_spayed_explain_wrap" class="mt-2">
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">If "some were &amp; some weren't," please explain:</label>
+                  <input type="text" name="adopt_pets_spayed_explain" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dareTeal-500 focus:outline-none" placeholder="If &quot;some were &amp; some weren't,&quot; please explain..." />
                 </div>
               </div>
               <div>
@@ -1488,7 +1428,7 @@
                 <div class="p-3.5 rounded-xl bg-teal-50 border border-teal-200 text-teal-950 text-xs flex items-start gap-2">
                   <svg class="w-4 h-4 text-dareTeal-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                   <div>
-                    <strong>Action Required:</strong> Please call your veterinary clinic immediately after submitting this application to authorize release of medical records to <strong>D.A.R.E. Animal Rescue</strong>. Vet checks cannot begin until clinic release is granted.
+                    <strong>Action Required:</strong> Please call your veterinary clinic immediately after submitting this application to authorize release of medical information to <strong>D.A.R.E. Animal Rescue</strong>. Vet checks cannot begin until clinic release is granted.
                   </div>
                 </div>
               </div>
@@ -1929,14 +1869,19 @@
         </div>
       </div>
 
-      <!-- Page 10 & 11 Verbatim Callout -->
-      <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <!-- Page 10 & 11 Verbatim Callout with Donation Heart -->
+      <div class="p-6 rounded-2xl bg-teal-50/70 border border-teal-200 flex flex-col items-center text-center gap-4">
         <div>
-          <h4 class="font-black text-slate-900 text-sm">Help Sustain Our Golden Years Sanctuary</h4>
-          <p class="text-xs text-slate-600 mt-0.5">It can be quite costly to provide permanent housing, care, and adequate medical... All donations are totally tax deductible.</p>
+          <h4 class="font-black text-slate-900 text-sm sm:text-base">Help Sustain Our Golden Years Sanctuary</h4>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1 max-w-xl">It can be quite costly to provide permanent housing, care, and adequate medical attention. All donations are totally tax deductible.</p>
         </div>
-        <a href="#donate-section" onclick="closeModal('seniorPicturesModal')" class="px-6 py-3 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wider shadow-md transition-colors whitespace-nowrap cursor-pointer">
-          Sponsor a Senior Pet ($25 / $50 / $100)
+        <a href="#donate-section" onclick="closeModal('seniorPicturesModal')" class="group relative inline-flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 focus:outline-none my-1" title="Click to Donate">
+          <svg viewBox="0 0 260 235" class="w-64 sm:w-72 h-auto drop-shadow-lg">
+            <path d="M130 222 C130 222 16 148 16 72 C16 34 46 10 82 10 C105 10 122 22 130 38 C138 22 155 10 178 10 C214 10 244 34 244 72 C244 148 130 222 130 222 Z" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors duration-300" stroke="#0f766e" stroke-width="4" />
+          </svg>
+          <span class="absolute inset-0 flex items-center justify-center px-12 pb-6 text-center text-white font-black text-xs sm:text-sm leading-snug drop-shadow-sm pointer-events-none">
+            Please make a donation to help us care for our senior &amp; unadoptable pets.
+          </span>
         </a>
       </div>
 
@@ -2221,10 +2166,10 @@
       </div>
 
       <div class="mt-6 pt-4 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
-        <button onclick="closeModal('adoptionProcessModal'); openModal('adoptModal');" class="flex-1 py-3 px-6 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wider text-center shadow-md transition-colors cursor-pointer">
-          Start Adoption Application
+        <button onclick="closeModal('adoptionProcessModal'); openModal('adoptionRequirementsModal');" class="flex-1 py-3.5 px-6 rounded-2xl bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs sm:text-sm tracking-wide text-center shadow-md transition-colors cursor-pointer">
+          Continue to eligibility requirements. Please read over thoroughly.
         </button>
-        <button onclick="closeModal('adoptionProcessModal')" class="py-3 px-6 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
+        <button onclick="closeModal('adoptionProcessModal')" class="py-3.5 px-6 rounded-2xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
           Close
         </button>
       </div>
@@ -2667,15 +2612,15 @@
       window.location.href = `mailto:dareadoptions@gmail.com?subject=${encodeURIComponent('New Adoption Application - D.A.R.E.')}&body=${encodeURIComponent(details)}`;
     }
 
-    // --- Dynamic Form Field Toggles ---
+    // --- Dynamic Form Field Helpers (Always visible per Mechelle's notes, auto-focus when selected) ---
     function toggleOtherField(selectId, wrapId) {
       const select = document.getElementById(selectId);
       const wrap = document.getElementById(wrapId);
       if (select && wrap) {
+        wrap.classList.remove('hidden');
         if (select.value === 'Other') {
-          wrap.classList.remove('hidden');
-        } else {
-          wrap.classList.add('hidden');
+          const input = wrap.querySelector('input');
+          if (input) input.focus();
         }
       }
     }
@@ -2684,10 +2629,10 @@
       const select = document.getElementById('adopt_pets_spayed_neutered');
       const wrap = document.getElementById('adopt_pets_spayed_explain_wrap');
       if (select && wrap) {
+        wrap.classList.remove('hidden');
         if (select.value === "Some were and some weren't") {
-          wrap.classList.remove('hidden');
-        } else {
-          wrap.classList.add('hidden');
+          const input = wrap.querySelector('input');
+          if (input) input.focus();
         }
       }
     }
