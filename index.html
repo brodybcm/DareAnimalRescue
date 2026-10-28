@@ -589,9 +589,13 @@
                 </p>
               </div>
               <div class="mt-4 pt-3 border-t border-slate-200">
-                <a href="#donate-section" class="text-xs font-bold text-dareTeal-700 hover:text-dareTeal-800">
-                  Make a Tax-Deductible Donation →
-                </a>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="inline">
+                  <input type="hidden" name="cmd" value="_s-xclick" />
+                  <input type="hidden" name="hosted_button_id" value="D9ZYNDCUYBJRG" />
+                  <button type="submit" class="text-xs font-bold text-dareTeal-700 hover:text-dareTeal-800 cursor-pointer">
+                    Make a Tax-Deductible Donation →
+                  </button>
+                </form>
               </div>
             </div>
 
