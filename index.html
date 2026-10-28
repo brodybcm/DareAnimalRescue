@@ -493,12 +493,15 @@
             Millions of unwanted, neglected &amp; abused animals are being killed at shelters across our nation because of pet owner irresponsibility &amp; cruelty. If you own a pet, please have it spayed or neutered. If you witness animal cruelty or neglect, please report it.
           </p>
 
-          <div class="flex flex-col sm:flex-row items-center gap-3">
+          <div class="flex flex-col sm:flex-row flex-wrap items-center gap-3">
             <button onclick="openModal('spayNeuterModal')" class="w-full sm:w-auto px-6 py-3 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all text-center cursor-pointer flex items-center justify-center">
               Low Cost Spay / Neuter
             </button>
             <button onclick="openModal('crueltyModal')" class="w-full sm:w-auto px-6 py-3 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all text-center cursor-pointer flex items-center justify-center">
               Animal Cruelty &amp; Neglect
+            </button>
+            <button onclick="openModal('outreachModal')" class="w-full sm:w-auto px-6 py-3 rounded-full bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all text-center cursor-pointer flex items-center justify-center">
+              Community Outreach
             </button>
           </div>
         </div>
@@ -2419,6 +2422,54 @@
   </div>
 
   <!-- ================================================================= -->
+  <!-- MODAL 14: COMMUNITY OUTREACH                                      -->
+  <!-- ================================================================= -->
+  <div id="outreachModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-backdrop p-4 sm:p-6 lg:p-10 flex items-center justify-center">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8">
+
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-6">
+        <div>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900">Community Outreach</h3>
+          <p class="text-xs text-slate-500">Helping Pets in Need and Their Owners</p>
+        </div>
+        <button onclick="closeModal('outreachModal')" class="text-slate-400 hover:text-slate-700 text-xl p-1 font-bold cursor-pointer">✕</button>
+      </div>
+
+      <div class="mb-6 rounded-3xl overflow-hidden border border-slate-200 bg-slate-100 shadow-sm">
+        <img src="community-outreach.jpg" alt="D.A.R.E. Community Outreach — Helping dogs in need" class="w-full h-80 sm:h-96 object-cover object-center" />
+      </div>
+
+      <div class="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 text-slate-800 text-sm sm:text-base font-medium leading-relaxed mb-6">
+        <p>
+          We occasionally help w/ outreach cases when funding &amp; time allows. When we are able, we provide dog &amp; cat housing, fencing, pet food, etc. Your generous donations allow us to help pets in need and their owners.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center text-center">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="inline-block">
+          <input type="hidden" name="cmd" value="_s-xclick" />
+          <input type="hidden" name="hosted_button_id" value="D9ZYNDCUYBJRG" />
+          <button type="submit" class="group relative inline-flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 focus:outline-none my-1" title="Click to Donate via PayPal">
+            <svg viewBox="0 0 260 235" class="w-56 sm:w-64 h-auto drop-shadow-lg">
+              <path d="M130 222 C130 222 16 148 16 72 C16 34 46 10 82 10 C105 10 122 22 130 38 C138 22 155 10 178 10 C214 10 244 34 244 72 C244 148 130 222 130 222 Z" class="fill-dareTeal-500 group-hover:fill-dareTeal-600 transition-colors duration-300" stroke="#0f766e" stroke-width="4" />
+            </svg>
+            <span class="absolute inset-0 flex items-center justify-center px-12 pb-6 text-center text-white font-black text-sm sm:text-base leading-snug drop-shadow-sm pointer-events-none">
+              Click here to make a donation
+            </span>
+          </button>
+        </form>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-200 text-right">
+        <button onclick="closeModal('outreachModal')" class="py-2.5 px-6 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
   <!-- JAVASCRIPT LOGIC (VANILLA JS ONLY, ZERO EXTERNAL DEPENDENCIES)   -->
   <!-- ================================================================= -->
   <script>
@@ -2504,7 +2555,8 @@
       'catsModal',
       'adoptionProcessModal',
       'adoptionRequirementsModal',
-      'donateModal'
+      'donateModal',
+      'outreachModal'
     ];
 
     // --- Modal Management ---
