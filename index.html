@@ -1906,6 +1906,118 @@
               </p>
             </div>
           </div>
+
+          <!-- Brody (3 Photos) -->
+          <div class="rounded-3xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm flex flex-col">
+            <div onclick="switchPetPhoto('brody', 1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
+              <img id="brody-main-img" src="senior pet pictures/brody-2.jpg" alt="Brody — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
+              <div class="absolute top-3 left-3 bg-slate-900/75 backdrop-blur px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-sm" id="brody-photo-counter">
+                Photo 1 of 3
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-2.5 py-2.5 bg-slate-100 border-b border-slate-200">
+              <button type="button" onclick="setPetPhoto('brody', 0)" id="brody-thumb-0" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer">
+                <img src="senior pet pictures/brody-2.jpg" alt="Brody photo 1 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('brody', 1)" id="brody-thumb-1" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="senior pet pictures/brody-1.jpg" alt="Brody photo 2 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('brody', 2)" id="brody-thumb-2" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="senior pet pictures/brody-3.jpg" alt="Brody photo 3 thumbnail" class="w-full h-full object-cover" />
+              </button>
+            </div>
+            <div class="p-4 sm:p-5 text-center">
+              <span class="inline-block px-3 py-0.5 rounded-full bg-teal-100 text-dareTeal-800 text-[11px] font-bold uppercase tracking-wider mb-1">Golden Years Resident</span>
+              <h5 class="text-lg font-black text-slate-900">Brody</h5>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2 text-left">
+                Brody is our sweet, content &amp; happy 10 1/2 year old man. He &amp; Peyton are a bonded pair. They spend much of their days, lying together, &amp; grooming one another.
+              </p>
+            </div>
+          </div>
+
+          <!-- Peyton (4 Photos) -->
+          <div class="rounded-3xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm flex flex-col">
+            <div onclick="switchPetPhoto('peyton', 1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
+              <img id="peyton-main-img" src="senior pet pictures/peyton-1.jpg" alt="Peyton — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
+              <div class="absolute top-3 left-3 bg-slate-900/75 backdrop-blur px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-sm" id="peyton-photo-counter">
+                Photo 1 of 4
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-2.5 py-2.5 bg-slate-100 border-b border-slate-200">
+              <button type="button" onclick="setPetPhoto('peyton', 0)" id="peyton-thumb-0" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer">
+                <img src="senior pet pictures/peyton-1.jpg" alt="Peyton photo 1 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('peyton', 1)" id="peyton-thumb-1" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="senior pet pictures/peyton-3.jpg" alt="Peyton photo 2 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('peyton', 2)" id="peyton-thumb-2" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="senior pet pictures/peyton-4.jpg" alt="Peyton photo 3 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('peyton', 3)" id="peyton-thumb-3" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="senior pet pictures/peyton-2.jpg" alt="Peyton photo 4 thumbnail" class="w-full h-full object-cover" />
+              </button>
+            </div>
+            <div class="p-4 sm:p-5 text-center">
+              <span class="inline-block px-3 py-0.5 rounded-full bg-teal-100 text-dareTeal-800 text-[11px] font-bold uppercase tracking-wider mb-1">Golden Years Resident</span>
+              <h5 class="text-lg font-black text-slate-900">Peyton</h5>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2 text-left">
+                Peyton is a mature 10 year old lady. She is Brody's other half. Their love affair has been going on for years. As long as she has Brody, all is well with the world.
+              </p>
+            </div>
+          </div>
+
+          <!-- Little Girl (3 Photos) -->
+          <div class="rounded-3xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm flex flex-col">
+            <div onclick="switchPetPhoto('littlegirl', 1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
+              <img id="littlegirl-main-img" src="senior pet pictures/littlegirl-2.jpg" alt="Little Girl — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
+              <div class="absolute top-3 left-3 bg-slate-900/75 backdrop-blur px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-sm" id="littlegirl-photo-counter">
+                Photo 1 of 3
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-2.5 py-2.5 bg-slate-100 border-b border-slate-200">
+              <button type="button" onclick="setPetPhoto('littlegirl', 0)" id="littlegirl-thumb-0" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer">
+                <img src="senior pet pictures/littlegirl-2.jpg" alt="Little Girl photo 1 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('littlegirl', 1)" id="littlegirl-thumb-1" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="senior pet pictures/littlegirl-1.jpg" alt="Little Girl photo 2 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('littlegirl', 2)" id="littlegirl-thumb-2" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="senior pet pictures/littlegirl-3.jpg" alt="Little Girl photo 3 thumbnail" class="w-full h-full object-cover" />
+              </button>
+            </div>
+            <div class="p-4 sm:p-5 text-center">
+              <span class="inline-block px-3 py-0.5 rounded-full bg-teal-100 text-dareTeal-800 text-[11px] font-bold uppercase tracking-wider mb-1">Golden Years Resident</span>
+              <h5 class="text-lg font-black text-slate-900">Little Girl</h5>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2 text-left">
+                Little Girl was semi-feral when we rescued her. She is now 11 years old. It is still difficult for us to get our hands on her, but she has "her person" who she loves very much. She also has a couple of close kitty friends. She is very happy in her permanent foster home.
+              </p>
+            </div>
+          </div>
+
+          <!-- Seven (3 Photos) -->
+          <div class="rounded-3xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm flex flex-col">
+            <div onclick="switchPetPhoto('seven', 1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
+              <img id="seven-main-img" src="senior pet pictures/seven-3.jpg" alt="Seven — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
+              <div class="absolute top-3 left-3 bg-slate-900/75 backdrop-blur px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-sm" id="seven-photo-counter">
+                Photo 1 of 3
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-2.5 py-2.5 bg-slate-100 border-b border-slate-200">
+              <button type="button" onclick="setPetPhoto('seven', 0)" id="seven-thumb-0" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer">
+                <img src="senior pet pictures/seven-3.jpg" alt="Seven photo 1 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('seven', 1)" id="seven-thumb-1" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="senior pet pictures/seven-1.jpg" alt="Seven photo 2 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('seven', 2)" id="seven-thumb-2" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="senior pet pictures/seven-2.jpg" alt="Seven photo 3 thumbnail" class="w-full h-full object-cover" />
+              </button>
+            </div>
+            <div class="p-4 sm:p-5 text-center">
+              <span class="inline-block px-3 py-0.5 rounded-full bg-teal-100 text-dareTeal-800 text-[11px] font-bold uppercase tracking-wider mb-1">Golden Years Resident</span>
+              <h5 class="text-lg font-black text-slate-900">Seven</h5>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -1926,7 +2038,7 @@
       
       <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-6">
         <div class="flex items-center gap-3">
-          <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=160&q=80" alt="Available Dogs" class="w-11 h-11 rounded-full object-cover border-2 border-teal-200 shadow-sm flex-shrink-0" />
+          <img src="available dogs for adoption/piper-1.jpg" alt="Available Dogs" class="w-11 h-11 rounded-full object-cover border-2 border-teal-200 shadow-sm flex-shrink-0" />
           <div>
             <h3 class="text-xl sm:text-2xl font-black text-slate-900">Available Dogs for Adoption</h3>
             <p class="text-xs text-slate-500">Fully Vaccinated, Spayed/Neutered, Microchipped &amp; Heartworm Tested</p>
@@ -1994,11 +2106,11 @@
   <!-- MODAL 10: AVAILABLE CATS FOR ADOPTION                             -->
   <!-- ================================================================= -->
   <div id="catsModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-backdrop p-4 sm:p-6 lg:p-10 flex items-center justify-center">
-    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8">
+    <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8">
       
       <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-6">
         <div class="flex items-center gap-3">
-          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=160&q=80" alt="Available Cats" class="w-11 h-11 rounded-full object-cover border-2 border-teal-200 shadow-sm flex-shrink-0" />
+          <img src="available cats for adoption/maple-2.jpg" alt="Available Cats" class="w-11 h-11 rounded-full object-cover border-2 border-teal-200 shadow-sm flex-shrink-0" />
           <div>
             <h3 class="text-xl sm:text-2xl font-black text-slate-900">Available Cats for Adoption</h3>
             <p class="text-xs text-slate-500">Fully Vaccinated, Spayed/Neutered, Microchipped &amp; FeLV/FIV Tested</p>
@@ -2007,66 +2119,143 @@
         <button onclick="closeModal('catsModal')" class="text-slate-400 hover:text-slate-700 text-xl p-1 font-bold cursor-pointer">✕</button>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
         
-        <!-- Cat 1: Cleo -->
-        <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+        <!-- Cat 1: Harley-Girl (1 Photo) -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
           <div>
-            <div class="relative h-56 overflow-hidden bg-slate-200">
-              <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=700&q=80" alt="Meet Cleo" class="w-full h-full object-cover" />
+            <div class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200">
+              <img src="available cats for adoption/harley-girl-1.jpg" alt="Meet Harley-Girl" class="w-full h-full object-cover object-center" />
               <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
-                Cat • Young
+                Available Cat
               </div>
             </div>
-            <div class="p-5">
-              <div class="flex justify-between items-center mb-1">
-                <h4 class="text-lg font-bold text-slate-900">Cleo</h4>
-                <span class="text-xs font-semibold text-slate-500">Domestic Shorthair</span>
-              </div>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Playful, affectionate purr-machine who loves feather wands, soft blankets, and sunny windowsill naps.
-              </p>
+            <div class="p-5 text-center">
+              <h4 class="text-xl font-black text-slate-900">Harley-Girl</h4>
             </div>
           </div>
           <div class="px-5 pb-5">
             <div class="flex items-center gap-2 pt-3 border-t border-slate-200">
-              <button onclick="closeModal('catsModal'); openModal('adoptModal');" class="flex-1 py-2.5 px-3 rounded-xl bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wide transition-colors cursor-pointer">
-                Apply to See if You're a Good Match for Cleo
+              <button onclick="closeModal('catsModal'); openModal('adoptModal');" class="flex-1 py-3 px-4 rounded-xl bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wide transition-colors cursor-pointer">
+                Apply to See if You're a Good Match for Harley-Girl
               </button>
-              <a href="https://www.petfinder.com/member/us/ga/valdosta/dare-animal-rescue-ga834/" target="_blank" rel="noopener noreferrer" class="px-3 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-xs font-bold text-slate-700 border border-slate-300 transition-colors">
-                Petfinder
-              </a>
             </div>
           </div>
         </div>
 
-        <!-- Cat 2: Oliver -->
-        <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+        <!-- Cat 2: Maple (6 Photos) -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
           <div>
-            <div class="relative h-56 overflow-hidden bg-slate-200">
-              <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=80" alt="Meet Oliver" class="w-full h-full object-cover" />
+            <div onclick="switchPetPhoto('maple', 1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
+              <img id="maple-main-img" src="available cats for adoption/maple-2.jpg" alt="Meet Maple — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
+              <div class="absolute top-3 left-3 bg-slate-900/75 backdrop-blur px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-sm" id="maple-photo-counter">
+                Photo 1 of 6
+              </div>
               <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
-                Cat • Adult
+                Available Cat
               </div>
             </div>
-            <div class="p-5">
-              <div class="flex justify-between items-center mb-1">
-                <h4 class="text-lg font-bold text-slate-900">Oliver</h4>
-                <span class="text-xs font-semibold text-slate-500">Orange Tabby</span>
-              </div>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Gentle, loving ginger boy who loves chin scratches, lap naps, and quiet companionable evenings.
-              </p>
+            <div class="flex items-center justify-center gap-2 py-2.5 px-2 bg-slate-100 border-b border-slate-200 flex-wrap">
+              <button type="button" onclick="setPetPhoto('maple', 0)" id="maple-thumb-0" class="w-10 h-10 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer">
+                <img src="available cats for adoption/maple-2.jpg" alt="Maple photo 1 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('maple', 1)" id="maple-thumb-1" class="w-10 h-10 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/maple-3.jpg" alt="Maple photo 2 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('maple', 2)" id="maple-thumb-2" class="w-10 h-10 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/maple-4.jpg" alt="Maple photo 3 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('maple', 3)" id="maple-thumb-3" class="w-10 h-10 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/maple-5.jpg" alt="Maple photo 4 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('maple', 4)" id="maple-thumb-4" class="w-10 h-10 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/maple-6.jpg" alt="Maple photo 5 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('maple', 5)" id="maple-thumb-5" class="w-10 h-10 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/maple-1.jpg" alt="Maple photo 6 thumbnail" class="w-full h-full object-cover" />
+              </button>
+            </div>
+            <div class="p-5 text-center">
+              <h4 class="text-xl font-black text-slate-900">Maple</h4>
             </div>
           </div>
           <div class="px-5 pb-5">
             <div class="flex items-center gap-2 pt-3 border-t border-slate-200">
-              <button onclick="closeModal('catsModal'); openModal('adoptModal');" class="flex-1 py-2.5 px-3 rounded-xl bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wide transition-colors cursor-pointer">
-                Apply to See if You're a Good Match for Oliver
+              <button onclick="closeModal('catsModal'); openModal('adoptModal');" class="flex-1 py-3 px-4 rounded-xl bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wide transition-colors cursor-pointer">
+                Apply to See if You're a Good Match for Maple
               </button>
-              <a href="https://www.petfinder.com/member/us/ga/valdosta/dare-animal-rescue-ga834/" target="_blank" rel="noopener noreferrer" class="px-3 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-xs font-bold text-slate-700 border border-slate-300 transition-colors">
-                Petfinder
-              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 3: Moose (3 Photos) -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div onclick="switchPetPhoto('moose', 1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
+              <img id="moose-main-img" src="available cats for adoption/moose-2.jpg" alt="Meet Moose — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
+              <div class="absolute top-3 left-3 bg-slate-900/75 backdrop-blur px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-sm" id="moose-photo-counter">
+                Photo 1 of 3
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
+                Available Cat
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-2.5 py-2.5 bg-slate-100 border-b border-slate-200">
+              <button type="button" onclick="setPetPhoto('moose', 0)" id="moose-thumb-0" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer">
+                <img src="available cats for adoption/moose-2.jpg" alt="Moose photo 1 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('moose', 1)" id="moose-thumb-1" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/moose-3.jpg" alt="Moose photo 2 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('moose', 2)" id="moose-thumb-2" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/moose-1.jpg" alt="Moose photo 3 thumbnail" class="w-full h-full object-cover" />
+              </button>
+            </div>
+            <div class="p-5 text-center">
+              <h4 class="text-xl font-black text-slate-900">Moose</h4>
+            </div>
+          </div>
+          <div class="px-5 pb-5">
+            <div class="flex items-center gap-2 pt-3 border-t border-slate-200">
+              <button onclick="closeModal('catsModal'); openModal('adoptModal');" class="flex-1 py-3 px-4 rounded-xl bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wide transition-colors cursor-pointer">
+                Apply to See if You're a Good Match for Moose
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 4: Pesto (3 Photos) -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div onclick="switchPetPhoto('pesto', 1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
+              <img id="pesto-main-img" src="available cats for adoption/pesto-2.jpg" alt="Meet Pesto — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
+              <div class="absolute top-3 left-3 bg-slate-900/75 backdrop-blur px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-sm" id="pesto-photo-counter">
+                Photo 1 of 3
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
+                Available Cat
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-2.5 py-2.5 bg-slate-100 border-b border-slate-200">
+              <button type="button" onclick="setPetPhoto('pesto', 0)" id="pesto-thumb-0" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer">
+                <img src="available cats for adoption/pesto-2.jpg" alt="Pesto photo 1 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('pesto', 1)" id="pesto-thumb-1" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/pesto-1.jpg" alt="Pesto photo 2 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('pesto', 2)" id="pesto-thumb-2" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/pesto-3.jpg" alt="Pesto photo 3 thumbnail" class="w-full h-full object-cover" />
+              </button>
+            </div>
+            <div class="p-5 text-center">
+              <h4 class="text-xl font-black text-slate-900">Pesto</h4>
+            </div>
+          </div>
+          <div class="px-5 pb-5">
+            <div class="flex items-center gap-2 pt-3 border-t border-slate-200">
+              <button onclick="closeModal('catsModal'); openModal('adoptModal');" class="flex-1 py-3 px-4 rounded-xl bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wide transition-colors cursor-pointer">
+                Apply to See if You're a Good Match for Pesto
+              </button>
             </div>
           </div>
         </div>
@@ -2618,40 +2807,131 @@
       }
     });
 
-    // --- Piper Photo Carousel ---
-    const piperPhotos = [
-      'available dogs for adoption/piper-1.jpg',
-      'available dogs for adoption/piper-2.jpg'
-    ];
-    let currentPiperPhotoIndex = 0;
+    // --- Multi-Photo Pet Galleries (Dogs, Cats & Senior Residents) ---
+    const petGalleries = {
+      piper: {
+        name: 'Piper',
+        thumbSize: 'w-12 h-12',
+        index: 0,
+        photos: [
+          'available dogs for adoption/piper-1.jpg',
+          'available dogs for adoption/piper-2.jpg'
+        ]
+      },
+      maple: {
+        name: 'Maple',
+        thumbSize: 'w-10 h-10',
+        index: 0,
+        photos: [
+          'available cats for adoption/maple-2.jpg',
+          'available cats for adoption/maple-3.jpg',
+          'available cats for adoption/maple-4.jpg',
+          'available cats for adoption/maple-5.jpg',
+          'available cats for adoption/maple-6.jpg',
+          'available cats for adoption/maple-1.jpg'
+        ]
+      },
+      moose: {
+        name: 'Moose',
+        thumbSize: 'w-11 h-11',
+        index: 0,
+        photos: [
+          'available cats for adoption/moose-2.jpg',
+          'available cats for adoption/moose-3.jpg',
+          'available cats for adoption/moose-1.jpg'
+        ]
+      },
+      pesto: {
+        name: 'Pesto',
+        thumbSize: 'w-11 h-11',
+        index: 0,
+        photos: [
+          'available cats for adoption/pesto-2.jpg',
+          'available cats for adoption/pesto-1.jpg',
+          'available cats for adoption/pesto-3.jpg'
+        ]
+      },
+      brody: {
+        name: 'Brody',
+        thumbSize: 'w-11 h-11',
+        index: 0,
+        photos: [
+          'senior pet pictures/brody-2.jpg',
+          'senior pet pictures/brody-1.jpg',
+          'senior pet pictures/brody-3.jpg'
+        ]
+      },
+      peyton: {
+        name: 'Peyton',
+        thumbSize: 'w-11 h-11',
+        index: 0,
+        photos: [
+          'senior pet pictures/peyton-1.jpg',
+          'senior pet pictures/peyton-3.jpg',
+          'senior pet pictures/peyton-4.jpg',
+          'senior pet pictures/peyton-2.jpg'
+        ]
+      },
+      littlegirl: {
+        name: 'Little Girl',
+        thumbSize: 'w-11 h-11',
+        index: 0,
+        photos: [
+          'senior pet pictures/littlegirl-2.jpg',
+          'senior pet pictures/littlegirl-1.jpg',
+          'senior pet pictures/littlegirl-3.jpg'
+        ]
+      },
+      seven: {
+        name: 'Seven',
+        thumbSize: 'w-11 h-11',
+        index: 0,
+        photos: [
+          'senior pet pictures/seven-3.jpg',
+          'senior pet pictures/seven-1.jpg',
+          'senior pet pictures/seven-2.jpg'
+        ]
+      }
+    };
 
-    function setPiperPhoto(index) {
-      currentPiperPhotoIndex = (index + piperPhotos.length) % piperPhotos.length;
-      const mainImg = document.getElementById('piper-main-img');
-      const counter = document.getElementById('piper-photo-counter');
-      const thumb0 = document.getElementById('piper-thumb-0');
-      const thumb1 = document.getElementById('piper-thumb-1');
+    function setPetPhoto(petId, index) {
+      const gallery = petGalleries[petId];
+      if (!gallery) return;
+      gallery.index = (index + gallery.photos.length) % gallery.photos.length;
+      const mainImg = document.getElementById(`${petId}-main-img`);
+      const counter = document.getElementById(`${petId}-photo-counter`);
 
       if (mainImg) {
-        mainImg.src = piperPhotos[currentPiperPhotoIndex];
-        mainImg.alt = `Meet Piper — Photo ${currentPiperPhotoIndex + 1}`;
+        mainImg.src = gallery.photos[gallery.index];
+        mainImg.alt = `${gallery.name} — Photo ${gallery.index + 1}`;
       }
       if (counter) {
-        counter.textContent = `Photo ${currentPiperPhotoIndex + 1} of ${piperPhotos.length}`;
+        counter.textContent = `Photo ${gallery.index + 1} of ${gallery.photos.length}`;
       }
-      if (thumb0 && thumb1) {
-        if (currentPiperPhotoIndex === 0) {
-          thumb0.className = 'w-12 h-12 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer';
-          thumb1.className = 'w-12 h-12 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer';
-        } else {
-          thumb0.className = 'w-12 h-12 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer';
-          thumb1.className = 'w-12 h-12 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer';
+      for (let i = 0; i < gallery.photos.length; i++) {
+        const thumb = document.getElementById(`${petId}-thumb-${i}`);
+        if (thumb) {
+          if (i === gallery.index) {
+            thumb.className = `${gallery.thumbSize} rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer`;
+          } else {
+            thumb.className = `${gallery.thumbSize} rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer`;
+          }
         }
       }
     }
 
+    function switchPetPhoto(petId, delta) {
+      const gallery = petGalleries[petId];
+      if (!gallery) return;
+      setPetPhoto(petId, gallery.index + delta);
+    }
+
+    function setPiperPhoto(index) {
+      setPetPhoto('piper', index);
+    }
+
     function switchPiperPhoto(delta) {
-      setPiperPhoto(currentPiperPhotoIndex + delta);
+      switchPetPhoto('piper', delta);
     }
 
     // --- Available Pets Filter Tabs ---
