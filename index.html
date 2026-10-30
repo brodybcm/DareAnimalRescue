@@ -2132,6 +2132,9 @@
             </div>
             <div class="p-5 text-center">
               <h4 class="text-xl font-black text-slate-900">Harley-Girl</h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2 text-left">
+                Harley is a sweet 4 1/2 month little wallflower. She is a gentle, loving soul, but she also loves to join in with her brother's mischievious behavior &amp; zoomies. It may take her a minute to warm up to a new person, but once she gets to know you, she is very affectionate, and likes to cuddle up for cat naps. She is an observant little girl. She keeps a keen eye on her brother, Moose. They are a bonded pair &amp; we would like to adopt them together.
+              </p>
             </div>
           </div>
           <div class="px-5 pb-5">
@@ -2143,7 +2146,46 @@
           </div>
         </div>
 
-        <!-- Cat 2: Maple (6 Photos) -->
+        <!-- Cat 2: Moose (3 Photos) -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div onclick="switchPetPhoto('moose', 1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
+              <img id="moose-main-img" src="available cats for adoption/moose-2.jpg" alt="Meet Moose — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
+              <div class="absolute top-3 left-3 bg-slate-900/75 backdrop-blur px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-sm" id="moose-photo-counter">
+                Photo 1 of 3
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
+                Available Cat
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-2.5 py-2.5 bg-slate-100 border-b border-slate-200">
+              <button type="button" onclick="setPetPhoto('moose', 0)" id="moose-thumb-0" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer">
+                <img src="available cats for adoption/moose-2.jpg" alt="Moose photo 1 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('moose', 1)" id="moose-thumb-1" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/moose-3.jpg" alt="Moose photo 2 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('moose', 2)" id="moose-thumb-2" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/moose-1.jpg" alt="Moose photo 3 thumbnail" class="w-full h-full object-cover" />
+              </button>
+            </div>
+            <div class="p-5 text-center">
+              <h4 class="text-xl font-black text-slate-900">Moose</h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2 text-left">
+                At only 4 1/2 months, Moose is a brave and adventurous kitty. He is also a goofy clown &amp; will keep you entertained with his silly personality, especially when he gets the zoomies. He loves to catch you off guard with surprise attacks, and then he runs away, very proud of himself. He is obsessed w/ feather wands &amp; spring toys. In addition to his playful personality, he is a very loving kitty. You know he is happy, happy, happy when starts purring. Moose and his sister Harley are a bonded pair. We would like to adopt them together.
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-5">
+            <div class="flex items-center gap-2 pt-3 border-t border-slate-200">
+              <button onclick="closeModal('catsModal'); openModal('adoptModal');" class="flex-1 py-3 px-4 rounded-xl bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wide transition-colors cursor-pointer">
+                Apply to See if You're a Good Match for Moose
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 3: Maple (6 Photos) -->
         <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
           <div>
             <div onclick="switchPetPhoto('maple', 1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
@@ -2191,42 +2233,6 @@
             <div class="flex items-center gap-2 pt-3 border-t border-slate-200">
               <button onclick="closeModal('catsModal'); openModal('adoptModal');" class="flex-1 py-3 px-4 rounded-xl bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wide transition-colors cursor-pointer">
                 Apply to See if You're a Good Match for Maple
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cat 3: Moose (3 Photos) -->
-        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
-          <div>
-            <div onclick="switchPetPhoto('moose', 1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
-              <img id="moose-main-img" src="available cats for adoption/moose-2.jpg" alt="Meet Moose — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
-              <div class="absolute top-3 left-3 bg-slate-900/75 backdrop-blur px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-sm" id="moose-photo-counter">
-                Photo 1 of 3
-              </div>
-              <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
-                Available Cat
-              </div>
-            </div>
-            <div class="flex items-center justify-center gap-2.5 py-2.5 bg-slate-100 border-b border-slate-200">
-              <button type="button" onclick="setPetPhoto('moose', 0)" id="moose-thumb-0" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer">
-                <img src="available cats for adoption/moose-2.jpg" alt="Moose photo 1 thumbnail" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="setPetPhoto('moose', 1)" id="moose-thumb-1" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
-                <img src="available cats for adoption/moose-3.jpg" alt="Moose photo 2 thumbnail" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="setPetPhoto('moose', 2)" id="moose-thumb-2" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
-                <img src="available cats for adoption/moose-1.jpg" alt="Moose photo 3 thumbnail" class="w-full h-full object-cover" />
-              </button>
-            </div>
-            <div class="p-5 text-center">
-              <h4 class="text-xl font-black text-slate-900">Moose</h4>
-            </div>
-          </div>
-          <div class="px-5 pb-5">
-            <div class="flex items-center gap-2 pt-3 border-t border-slate-200">
-              <button onclick="closeModal('catsModal'); openModal('adoptModal');" class="flex-1 py-3 px-4 rounded-xl bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wide transition-colors cursor-pointer">
-                Apply to See if You're a Good Match for Moose
               </button>
             </div>
           </div>
