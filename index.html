@@ -2037,7 +2037,7 @@
   <!-- MODAL 9: AVAILABLE DOGS FOR ADOPTION                              -->
   <!-- ================================================================= -->
   <div id="dogsModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-backdrop p-4 sm:p-6 lg:p-10 flex items-center justify-center">
-    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8">
+    <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8">
       
       <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-6">
         <div class="flex items-center gap-3">
@@ -2050,10 +2050,10 @@
         <button onclick="closeModal('dogsModal')" class="text-slate-400 hover:text-slate-700 text-xl p-1 font-bold cursor-pointer">✕</button>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
         
         <!-- Dog 1: Piper (2-Photo Interactive Carousel) -->
-        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between sm:col-span-2 max-w-md mx-auto w-full">
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
           <div>
             <div onclick="switchPiperPhoto(1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
               <img id="piper-main-img" src="available dogs for adoption/piper-1.jpg" alt="Meet Piper — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
@@ -2086,6 +2086,59 @@
             <div class="flex items-center gap-2 pt-3 border-t border-slate-200">
               <button onclick="closeModal('dogsModal'); openModal('adoptModal');" class="flex-1 py-3 px-4 rounded-xl bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wide transition-colors cursor-pointer">
                 Apply to See if You're a Good Match for Piper
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dog 2: Buddy (2-Photo Interactive Carousel) -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div onclick="switchPetPhoto('buddy', 1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
+              <img id="buddy-main-img" src="available dogs for adoption/buddy-1.jpg" alt="Meet Buddy — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
+              <div class="absolute top-3 left-3 bg-slate-900/75 backdrop-blur px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-sm" id="buddy-photo-counter">
+                Photo 1 of 2
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
+                Available Dog
+              </div>
+            </div>
+
+            <!-- Thumbnail Switcher Bar -->
+            <div class="flex items-center justify-center gap-3 py-2.5 bg-slate-100 border-b border-slate-200">
+              <button type="button" onclick="setPetPhoto('buddy', 0)" id="buddy-thumb-0" class="w-12 h-12 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer">
+                <img src="available dogs for adoption/buddy-1.jpg" alt="Buddy photo 1 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('buddy', 1)" id="buddy-thumb-1" class="w-12 h-12 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available dogs for adoption/buddy-2.jpg" alt="Buddy photo 2 thumbnail" class="w-full h-full object-cover" />
+              </button>
+            </div>
+
+            <div class="p-5 text-center">
+              <h4 class="text-xl font-black text-slate-900">Buddy</h4>
+              <div class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2 text-left space-y-2.5">
+                <p>
+                  Buddy is one of 4 dogs that were abandoned when their owner moved away &amp; left them. Thankfully we were able to rescue them before they starved to death.
+                </p>
+                <p>
+                  Buddy was the only male, and he would let the females run up &amp; get the attention and eat the food. He would stand back and watch. We could tell that he wanted to come to us, but he was hesitant. We had to go to him and assure him that we were not going to hurt him.
+                </p>
+                <p>
+                  He is very sweet and passive. He loves attention, but he is timid. We feel certain that he was mistreated. We take everything slowly with Buddy, but he is quickly coming out of his shell. At first he was afraid to walk on leash, but now he looks forward to his daily walks. He is even playing w/ toys. He also loves the company of other dogs. Buddy is about 5 1/2 years old.
+                </p>
+                <p>
+                  Buddy will need a home that is calm &amp; quiet w/ owners who will be patient &amp; kind. We will do everything in our power to make sure Buddy gets the home he deserves.
+                </p>
+                <p>
+                  One last thing - Buddy can climb a 4 foot chainlink fence. We will take that into consideration at time of adoption and are willing to do whatever is necessary to secure a fence so Buddy will be safe.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-5">
+            <div class="flex items-center gap-2 pt-3 border-t border-slate-200">
+              <button onclick="closeModal('dogsModal'); openModal('adoptModal');" class="flex-1 py-3 px-4 rounded-xl bg-dareTeal-500 hover:bg-dareTeal-600 text-white font-bold text-xs uppercase tracking-wide transition-colors cursor-pointer">
+                Apply to See if You're a Good Match for Buddy
               </button>
             </div>
           </div>
@@ -2844,6 +2897,15 @@
         photos: [
           'available dogs for adoption/piper-1.jpg',
           'available dogs for adoption/piper-2.jpg'
+        ]
+      },
+      buddy: {
+        name: 'Buddy',
+        thumbSize: 'w-12 h-12',
+        index: 0,
+        photos: [
+          'available dogs for adoption/buddy-1.jpg',
+          'available dogs for adoption/buddy-2.jpg'
         ]
       },
       maple: {
