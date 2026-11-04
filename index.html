@@ -3414,29 +3414,7 @@
       }
     })();
 
-    // --- Smart Facebook Deep Linking (Direct App Open + Mobile Web Fallback) ---
-    (function() {
-      const fbPageId = '100064403212553';
-      const fbMobileUrl = 'https://www.facebook.com/profile.php?id=' + fbPageId;
-
-      document.querySelectorAll('.fb-deep-link').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-          const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-          if (isMobile) {
-            e.preventDefault();
-            const appUrl = 'fb://profile/' + fbPageId;
-            const clickedTime = Date.now();
-            window.location.href = appUrl;
-
-            setTimeout(function() {
-              if (Date.now() - clickedTime < 1500) {
-                window.location.href = fbMobileUrl;
-              }
-            }, 500);
-          }
-        });
-      });
-    })();
+    //Universal links (https://www.facebook.com/daretosavealife/) open natively on iOS/Android without userAgent sniffing.
 
   </script>
 
