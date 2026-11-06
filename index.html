@@ -2261,14 +2261,25 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
         
-        <!-- Cat 1: Harley-Girl (1 Photo) -->
+        <!-- Cat 1: Harley-Girl (2 Photos) -->
         <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
           <div>
-            <div class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200">
-              <img src="available cats for adoption/harley-girl-1.jpg" alt="Meet Harley-Girl" class="w-full h-full object-cover object-center" />
+            <div onclick="switchPetPhoto('harley', 1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
+              <img id="harley-main-img" src="available cats for adoption/harley-girl-1.jpg" alt="Meet Harley-Girl — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
+              <div class="absolute top-3 left-3 bg-slate-900/75 backdrop-blur px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-sm" id="harley-photo-counter">
+                Photo 1 of 2
+              </div>
               <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
                 Available Cat
               </div>
+            </div>
+            <div class="flex items-center justify-center gap-2.5 py-2.5 bg-slate-100 border-b border-slate-200">
+              <button type="button" onclick="setPetPhoto('harley', 0)" id="harley-thumb-0" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer">
+                <img src="available cats for adoption/harley-girl-1.jpg" alt="Harley-Girl photo 1 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('harley', 1)" id="harley-thumb-1" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/harley-girl-2.jpg" alt="Harley-Girl photo 2 thumbnail" class="w-full h-full object-cover" />
+              </button>
             </div>
             <div class="p-5 text-center">
               <h4 class="text-xl font-black text-slate-900">Harley-Girl</h4>
@@ -2286,13 +2297,13 @@
           </div>
         </div>
 
-        <!-- Cat 2: Moose (3 Photos) -->
+        <!-- Cat 2: Moose (4 Photos) -->
         <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
           <div>
             <div onclick="switchPetPhoto('moose', 1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
               <img id="moose-main-img" src="available cats for adoption/moose-2.jpg" alt="Meet Moose — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
               <div class="absolute top-3 left-3 bg-slate-900/75 backdrop-blur px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-sm" id="moose-photo-counter">
-                Photo 1 of 3
+                Photo 1 of 4
               </div>
               <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
                 Available Cat
@@ -2307,6 +2318,9 @@
               </button>
               <button type="button" onclick="setPetPhoto('moose', 2)" id="moose-thumb-2" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
                 <img src="available cats for adoption/moose-1.jpg" alt="Moose photo 3 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('moose', 3)" id="moose-thumb-3" class="w-11 h-11 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/moose-4.jpg" alt="Moose photo 4 thumbnail" class="w-full h-full object-cover" />
               </button>
             </div>
             <div class="p-5 text-center">
@@ -3118,6 +3132,15 @@
           'available dogs for adoption/buddy-2.jpg'
         ]
       },
+      harley: {
+        name: 'Harley-Girl',
+        thumbSize: 'w-11 h-11',
+        index: 0,
+        photos: [
+          'available cats for adoption/harley-girl-1.jpg',
+          'available cats for adoption/harley-girl-2.jpg'
+        ]
+      },
       maple: {
         name: 'Maple',
         thumbSize: 'w-10 h-10',
@@ -3138,7 +3161,8 @@
         photos: [
           'available cats for adoption/moose-2.jpg',
           'available cats for adoption/moose-3.jpg',
-          'available cats for adoption/moose-1.jpg'
+          'available cats for adoption/moose-1.jpg',
+          'available cats for adoption/moose-4.jpg'
         ]
       },
       pesto: {
