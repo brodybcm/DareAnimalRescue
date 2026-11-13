@@ -2439,14 +2439,34 @@
           </div>
         </div>
 
-        <!-- Cat 5: Lexi (1 Photo) -->
+        <!-- Cat 5: Lexi (5 Photos) -->
         <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
           <div>
-            <div class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200">
-              <img src="available cats for adoption/lexi-1.jpg" alt="Meet Lexi" class="w-full h-full object-cover object-center" />
+            <div onclick="switchPetPhoto('lexi', 1)" class="relative aspect-[4/5] w-full overflow-hidden bg-slate-200 cursor-pointer" title="Click or tap photo to view next picture">
+              <img id="lexi-main-img" src="available cats for adoption/lexi-1.jpg" alt="Meet Lexi — Photo 1" class="w-full h-full object-cover object-center transition-all duration-300" />
+              <div class="absolute top-3 left-3 bg-slate-900/75 backdrop-blur px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-sm" id="lexi-photo-counter">
+                Photo 1 of 5
+              </div>
               <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-dareTeal-700 shadow-sm">
                 Available Cat
               </div>
+            </div>
+            <div class="flex items-center justify-center gap-2 py-2.5 px-2 bg-slate-100 border-b border-slate-200 flex-wrap">
+              <button type="button" onclick="setPetPhoto('lexi', 0)" id="lexi-thumb-0" class="w-10 h-10 rounded-xl overflow-hidden border-2 border-dareTeal-500 ring-2 ring-dareTeal-300 transition-all cursor-pointer">
+                <img src="available cats for adoption/lexi-1.jpg" alt="Lexi photo 1 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('lexi', 1)" id="lexi-thumb-1" class="w-10 h-10 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/lexi-2.jpg" alt="Lexi photo 2 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('lexi', 2)" id="lexi-thumb-2" class="w-10 h-10 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/lexi-3.jpg" alt="Lexi photo 3 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('lexi', 3)" id="lexi-thumb-3" class="w-10 h-10 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/lexi-4.jpg" alt="Lexi photo 4 thumbnail" class="w-full h-full object-cover" />
+              </button>
+              <button type="button" onclick="setPetPhoto('lexi', 4)" id="lexi-thumb-4" class="w-10 h-10 rounded-xl overflow-hidden border-2 border-transparent opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                <img src="available cats for adoption/lexi-5.jpg" alt="Lexi photo 5 thumbnail" class="w-full h-full object-cover" />
+              </button>
             </div>
             <div class="p-5 text-center">
               <h4 class="text-xl font-black text-slate-900">Lexi</h4>
@@ -3173,6 +3193,18 @@
           'available cats for adoption/pesto-2.jpg',
           'available cats for adoption/pesto-1.jpg',
           'available cats for adoption/pesto-3.jpg'
+        ]
+      },
+      lexi: {
+        name: 'Lexi',
+        thumbSize: 'w-10 h-10',
+        index: 0,
+        photos: [
+          'available cats for adoption/lexi-1.jpg',
+          'available cats for adoption/lexi-2.jpg',
+          'available cats for adoption/lexi-3.jpg',
+          'available cats for adoption/lexi-4.jpg',
+          'available cats for adoption/lexi-5.jpg'
         ]
       },
       shadow: {
