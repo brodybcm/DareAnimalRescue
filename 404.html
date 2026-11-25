@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting | D.A.R.E. Animal Rescue</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://dareanimalrescue.com/" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+  <script>
+    (function () {
+      var p = (window.location.pathname || '').toLowerCase();
+      var target = '/#home';
+
+      if (p.indexOf('rehom') !== -1 || p.indexOf('surrender') !== -1) {
+        target = '/#rehoming';
+      } else if (p.indexOf('lost') !== -1 || p.indexOf('found') !== -1 || p.indexOf('stray') !== -1 || p.indexOf('wildlife') !== -1) {
+        target = '/#lost-found';
+      } else if (p.indexOf('spay') !== -1 || p.indexOf('neuter') !== -1) {
+        target = '/#spay-neuter';
+      } else if (p.indexOf('cruel') !== -1 || p.indexOf('neglect') !== -1 || p.indexOf('abuse') !== -1) {
+        target = '/#cruelty';
+      } else if (p.indexOf('outreach') !== -1 || p.indexOf('educat') !== -1 || p.indexOf('volunteer') !== -1) {
+        target = '/#outreach';
+      } else if (p.indexOf('how-to-adopt') !== -1 || p.indexOf('process') !== -1) {
+        target = '/#how-to-adopt';
+      } else if (p.indexOf('require') !== -1 || p.indexOf('eligib') !== -1) {
+        target = '/#adoption-requirements';
+      } else if (p.indexOf('application') !== -1 || p.indexOf('apply') !== -1) {
+        target = '/#apply';
+      } else if (p.indexOf('foster') !== -1 && p.indexOf('adopt') === -1) {
+        target = '/#foster';
+      } else if (p.indexOf('dog') !== -1) {
+        target = '/#dogs';
+      } else if (p.indexOf('cat') !== -1) {
+        target = '/#cats';
+      } else if (p.indexOf('pet') !== -1 || p.indexOf('adopt') !== -1) {
+        target = '/#pets-section';
+      } else if (p.indexOf('senior') !== -1 || p.indexOf('sanctuary') !== -1) {
+        target = '/#sanctuary-section';
+      } else if (p.indexOf('donat') !== -1 || p.indexOf('sponsor') !== -1 || p.indexOf('support') !== -1) {
+        target = '/#donate-section';
+      } else if (p.indexOf('contact') !== -1 || p.indexOf('event') !== -1) {
+        target = '/#contact-section';
+      } else if (p.indexOf('fee') !== -1) {
+        target = '/#adoption-fees';
+      } else {
+        target = '/';
+      }
+
+      window.location.replace(target);
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://dareanimalrescue.com/" />
+  </noscript>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      padding: 24px;
+      text-align: center;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 32px 28px;
+      max-width: 420px;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      background: #00A1B3;
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="/favicon-96x96.png" alt="D.A.R.E. Animal Rescue" width="64" height="64" style="border-radius: 12px; margin-bottom: 12px;" />
+    <h1 style="font-size: 20px; margin: 0 0 8px;">Redirecting to D.A.R.E. Animal Rescue…</h1>
+    <p style="font-size: 14px; color: #475569; margin: 0;">Taking you to our updated website right now.</p>
+    <a class="btn" href="https://dareanimalrescue.com/">Go to Homepage</a>
+  </div>
+</body>
+</html>

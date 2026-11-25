@@ -7,6 +7,13 @@
   <meta name="description" content="D.A.R.E. Animal Rescue (Defending, Advocating, Rescuing, Educating) is a 501(c)(3) nonprofit animal rescue serving Valdosta, Lowndes County, GA and surrounding communities. Adopt, foster, donate, and volunteer today." />
   <link rel="canonical" href="https://dareanimalrescue.com/" />
 
+  <!-- Website Favicons (Browser Tabs, Bookmarks, Mobile & Google Search 48px-Multiple Compliance) -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
   <!-- Open Graph / Social Sharing (Optimized for Dogs & Cats - No Rodents) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="D.A.R.E. Animal Rescue" />
@@ -64,6 +71,8 @@
     "alternateName": "DARE Animal Rescue",
     "description": "D.A.R.E. Animal Rescue is a 501(c)(3) nonprofit, foster-home-based animal rescue serving Valdosta and Lowndes County, GA. We are not an animal shelter and do not have a physical location; we rely solely on a dedicated network of foster homes.",
     "url": "https://dareanimalrescue.com",
+    "logo": "https://dareanimalrescue.com/favicon-192x192.png",
+    "image": "https://dareanimalrescue.com/logo.png",
     "email": "dareadoptions@gmail.com",
     "address": {
       "@type": "PostalAddress",
@@ -499,7 +508,7 @@
         <!-- ============================================================= -->
         <!-- LOST & FOUND PETS, STRAYS & REHOMING (SEPARATE SECTION)       -->
         <!-- ============================================================= -->
-        <div class="p-6 sm:p-8 rounded-3xl bg-teal-50/70 border border-teal-200 text-slate-800 shadow-sm text-left max-w-4xl mx-auto mb-8">
+        <div id="rehoming-section" class="p-6 sm:p-8 rounded-3xl bg-teal-50/70 border border-teal-200 text-slate-800 shadow-sm text-left max-w-4xl mx-auto mb-8 scroll-mt-24 sm:scroll-mt-32">
           <div class="mb-4">
             <span class="text-[11px] font-black uppercase tracking-wider text-dareTeal-700">Community Resources</span>
             <h3 class="text-lg sm:text-xl font-black text-slate-900">Lost &amp; Found Pets, Strays &amp; Rehoming</h3>
@@ -527,7 +536,7 @@
         <!-- ============================================================= -->
         <!-- PET OVERPOPULATION IS REAL! (PAGE 4 VERBATIM)                 -->
         <!-- ============================================================= -->
-        <div class="p-6 sm:p-8 rounded-3xl bg-teal-50/70 border border-teal-200 text-slate-800 shadow-sm text-left max-w-4xl mx-auto">
+        <div id="awareness-section" class="p-6 sm:p-8 rounded-3xl bg-teal-50/70 border border-teal-200 text-slate-800 shadow-sm text-left max-w-4xl mx-auto scroll-mt-24 sm:scroll-mt-32">
           <div class="mb-4">
             <span class="text-[11px] font-black uppercase tracking-wider text-dareTeal-700">Urgent Humane Awareness</span>
             <h3 class="text-lg sm:text-xl font-black text-slate-900">Pet Overpopulation is REAL!</h3>
@@ -3475,6 +3484,48 @@
     })();
 
     //Universal links (https://www.facebook.com/daretosavealife/) open natively on iOS/Android without userAgent sniffing.
+
+    // --- Deep-Link Hash Router (Handles Old Google Search Sitelinks & Direct Modal Links) ---
+    (function () {
+      const hashRoutes = {
+        '#rehoming': { section: 'rehoming-section', modal: 'rehomingModal' },
+        '#rehoming-your-pet': { section: 'rehoming-section', modal: 'rehomingModal' },
+        '#lost-found': { section: 'rehoming-section', modal: 'lostFoundModal' },
+        '#spay-neuter': { section: 'awareness-section', modal: 'spayNeuterModal' },
+        '#cruelty': { section: 'awareness-section', modal: 'crueltyModal' },
+        '#outreach': { section: 'awareness-section', modal: 'outreachModal' },
+        '#community-outreach': { section: 'awareness-section', modal: 'outreachModal' },
+        '#how-to-adopt': { section: 'adoption-process', modal: 'adoptionProcessModal' },
+        '#pet-adoption': { section: 'adoption-process', modal: 'adoptionProcessModal' },
+        '#requirements': { section: 'adoption-requirements', modal: 'adoptionRequirementsModal' },
+        '#dogs': { section: 'pets-section', modal: 'dogsModal' },
+        '#cats': { section: 'pets-section', modal: 'catsModal' },
+        '#foster': { section: 'adoption-fees', modal: 'fosterModal' },
+        '#apply': { section: 'adoption-fees', modal: 'adoptModal' },
+        '#adoption-application': { section: 'adoption-fees', modal: 'adoptModal' },
+        '#donate': { section: 'donate-section', modal: 'donateModal' }
+      };
+
+      function handleHashRoute() {
+        const hash = (window.location.hash || '').toLowerCase();
+        const route = hashRoutes[hash];
+        if (!route) return;
+        if (route.section) {
+          const el = document.getElementById(route.section);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+        if (route.modal) {
+          openModal(route.modal);
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', handleHashRoute);
+      } else {
+        handleHashRoute();
+      }
+      window.addEventListener('hashchange', handleHashRoute);
+    })();
 
   </script>
 
